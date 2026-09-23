@@ -3,6 +3,7 @@ from datetime import timedelta
 import json
 from pathlib import Path
 import tempfile
+import time
 from urllib.parse import urlencode
 
 from agent.weather_adapter import digest
@@ -50,7 +51,21 @@ def obtain(issue, run, cache_dir, seed_dir, offline=False):
     with tempfile.TemporaryDirectory(prefix=".weather-", dir=cache.parent) as temporary:
         staging = Path(temporary)
         if seed is None:
-            body, metadata = fetch(url, staging / "response.json", staging / "request.json", params)
+            # At most three attempts for transient network/HTTP failures. Invalid
+            # data and permanent HTTP errors are never replaced with another run.
+            for attempt in range(1, 4):
+                try:
+                    body, metadata = fetch(url, staging / "response.json", staging / "request.json", params)
+                except RuntimeError:
+                    if attempt == 3:
+                        raise
+                else:
+                    metadata["download_attempts"] = attempt
+                    status = metadata["http_status"]
+                    if status != 429 and not 500 <= status < 600 or attempt == 3:
+                        (staging / "request.json").write_text(json.dumps(metadata, indent=2) + "\n", encoding="utf-8")
+                        break
+                time.sleep(2 ** attempt)
             origin = "api"
         else:
             body, metadata = seed

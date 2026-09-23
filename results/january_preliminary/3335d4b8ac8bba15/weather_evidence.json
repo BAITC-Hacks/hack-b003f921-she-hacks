@@ -1,0 +1,4621 @@
+[
+  {
+    "forecast_sha256": "fb2a9dff8b65b753e0fc32a6ec7b44faeb6b63c2f24c9be62ddb7272b8b2f468",
+    "issue_time_utc": "2026-01-01T12:00:00Z",
+    "model_time_check": {
+      "eligible_from_utc": "2025-12-31T19:00:00Z",
+      "interval_hours": 1,
+      "observation_delay_hours": 0.0,
+      "source_timezone": "Etc/GMT-5",
+      "timestamp_label": "interval_start_assumed",
+      "timezone_status": "assumed",
+      "training_publication_availability_verified": false
+    },
+    "request": {
+      "content_type": "application/json; charset=utf-8",
+      "historical_publication_time_utc": null,
+      "http_date": "Wed, 23 Sep 2026 11:48:07 GMT",
+      "http_status": 200,
+      "raw_file": "response.json",
+      "request_parameters": {
+        "cell_selection": "nearest",
+        "elevation": "nan,nan",
+        "forecast_hours": 61,
+        "hourly": "temperature_2m,wind_speed_10m,wind_speed_100m,wind_speed_200m,wind_direction_100m",
+        "latitude": "43.645150,43.643198",
+        "longitude": "78.535604,78.538828",
+        "models": "ecmwf_ifs",
+        "run": "2026-01-01T00:00",
+        "temperature_unit": "celsius",
+        "timeformat": "iso8601",
+        "timezone": "GMT",
+        "wind_speed_unit": "ms"
+      },
+      "request_url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.645150%2C43.643198&longitude=78.535604%2C78.538828&models=ecmwf_ifs&run=2026-01-01T00%3A00&hourly=temperature_2m%2Cwind_speed_10m%2Cwind_speed_100m%2Cwind_speed_200m%2Cwind_direction_100m&wind_speed_unit=ms&temperature_unit=celsius&timezone=GMT&timeformat=iso8601&forecast_hours=61&cell_selection=nearest&elevation=nan%2Cnan",
+      "requested_at_utc": "2026-09-23T11:48Z",
+      "response_sha256": "c6501e4acf4937ee853de631a10b43062d62cc4550c27f2794983d14d3323596",
+      "retrieved_at_utc": "2026-09-23T11:48Z"
+    },
+    "run_id": "122b72699e79b22eed69f0351d80e5f77def2f7fb4427bf763ec74e12f8ba596",
+    "weather_run_time_utc": "2026-01-01T00:00:00Z",
+    "weather_validation": {
+      "assumed_availability_lag_hours": 12,
+      "availability_verified": false,
+      "calculation_utc": "2026-01-01T12:00Z",
+      "date": "2026-01-01",
+      "identical_hourly_values": true,
+      "initialization_utc": "2026-01-01T00:00Z",
+      "locations": [
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 5.0,
+              "minimum": -3.0,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 328,
+              "minimum": 34,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 7.08,
+              "minimum": 0.1,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 4.16,
+              "minimum": 0.05,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 9.47,
+              "minimum": 0.15,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.64515,
+          "requested_longitude": 78.535604,
+          "target_hours": 48,
+          "turbine": 1
+        },
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 5.0,
+              "minimum": -3.0,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 328,
+              "minimum": 34,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 7.08,
+              "minimum": 0.1,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 4.16,
+              "minimum": 0.05,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 9.47,
+              "minimum": 0.15,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.643198,
+          "requested_longitude": 78.538828,
+          "target_hours": 48,
+          "turbine": 2
+        }
+      ],
+      "model_lead_hours": [
+        13.0,
+        60.0
+      ],
+      "model_requested": "ecmwf_ifs",
+      "publication_utc": null,
+      "same_grid_cell": true,
+      "target_end_utc": "2026-01-03T12:00Z",
+      "target_start_utc": "2026-01-01T13:00Z"
+    }
+  },
+  {
+    "forecast_sha256": "ab6ced20e809ac889d6c5d7bfec0e48b360b913ba0d3ef3e55f7de585fe98fe8",
+    "issue_time_utc": "2026-01-02T12:00:00Z",
+    "model_time_check": {
+      "eligible_from_utc": "2025-12-31T19:00:00Z",
+      "interval_hours": 1,
+      "observation_delay_hours": 0.0,
+      "source_timezone": "Etc/GMT-5",
+      "timestamp_label": "interval_start_assumed",
+      "timezone_status": "assumed",
+      "training_publication_availability_verified": false
+    },
+    "request": {
+      "content_type": "application/json; charset=utf-8",
+      "download_attempts": 1,
+      "historical_publication_time_utc": null,
+      "http_date": "Wed, 23 Sep 2026 11:54:06 GMT",
+      "http_status": 200,
+      "raw_file": "response.json",
+      "request_parameters": {
+        "cell_selection": "nearest",
+        "elevation": "nan,nan",
+        "forecast_hours": 61,
+        "hourly": "temperature_2m,wind_speed_10m,wind_speed_100m,wind_speed_200m,wind_direction_100m",
+        "latitude": "43.645150,43.643198",
+        "longitude": "78.535604,78.538828",
+        "models": "ecmwf_ifs",
+        "run": "2026-01-02T00:00",
+        "temperature_unit": "celsius",
+        "timeformat": "iso8601",
+        "timezone": "GMT",
+        "wind_speed_unit": "ms"
+      },
+      "request_url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.645150%2C43.643198&longitude=78.535604%2C78.538828&models=ecmwf_ifs&run=2026-01-02T00%3A00&hourly=temperature_2m%2Cwind_speed_10m%2Cwind_speed_100m%2Cwind_speed_200m%2Cwind_direction_100m&wind_speed_unit=ms&temperature_unit=celsius&timezone=GMT&timeformat=iso8601&forecast_hours=61&cell_selection=nearest&elevation=nan%2Cnan",
+      "requested_at_utc": "2026-09-23T11:54Z",
+      "response_sha256": "9148dee7d16e0cf3a5a0fb8e4a6efd5e6b244b31e17647800b797c45b5224373",
+      "retrieved_at_utc": "2026-09-23T11:54Z"
+    },
+    "run_id": "02104f67d95b1b0e180cb9017d88daa73a8fcacd86aff2e0b1949c4bea98dc60",
+    "weather_run_time_utc": "2026-01-02T00:00:00Z",
+    "weather_validation": {
+      "assumed_availability_lag_hours": 12,
+      "availability_verified": false,
+      "calculation_utc": "2026-01-02T12:00Z",
+      "date": "2026-01-02",
+      "identical_hourly_values": true,
+      "initialization_utc": "2026-01-02T00:00Z",
+      "locations": [
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 5.4,
+              "minimum": -2.7,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 288,
+              "minimum": 57,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 7.07,
+              "minimum": 2.06,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 4.06,
+              "minimum": 1.45,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 9.55,
+              "minimum": 1.58,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.64515,
+          "requested_longitude": 78.535604,
+          "target_hours": 48,
+          "turbine": 1
+        },
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 5.4,
+              "minimum": -2.7,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 288,
+              "minimum": 57,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 7.07,
+              "minimum": 2.06,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 4.06,
+              "minimum": 1.45,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 9.55,
+              "minimum": 1.58,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.643198,
+          "requested_longitude": 78.538828,
+          "target_hours": 48,
+          "turbine": 2
+        }
+      ],
+      "model_lead_hours": [
+        13.0,
+        60.0
+      ],
+      "model_requested": "ecmwf_ifs",
+      "publication_utc": null,
+      "same_grid_cell": true,
+      "target_end_utc": "2026-01-04T12:00Z",
+      "target_start_utc": "2026-01-02T13:00Z"
+    }
+  },
+  {
+    "forecast_sha256": "521d20f0c3b30cf326da255c4ffc7ea5849b763d5bd1a5ec482efc3ddf2a6b13",
+    "issue_time_utc": "2026-01-03T12:00:00Z",
+    "model_time_check": {
+      "eligible_from_utc": "2025-12-31T19:00:00Z",
+      "interval_hours": 1,
+      "observation_delay_hours": 0.0,
+      "source_timezone": "Etc/GMT-5",
+      "timestamp_label": "interval_start_assumed",
+      "timezone_status": "assumed",
+      "training_publication_availability_verified": false
+    },
+    "request": {
+      "content_type": "application/json; charset=utf-8",
+      "download_attempts": 1,
+      "historical_publication_time_utc": null,
+      "http_date": "Wed, 23 Sep 2026 11:54:08 GMT",
+      "http_status": 200,
+      "raw_file": "response.json",
+      "request_parameters": {
+        "cell_selection": "nearest",
+        "elevation": "nan,nan",
+        "forecast_hours": 61,
+        "hourly": "temperature_2m,wind_speed_10m,wind_speed_100m,wind_speed_200m,wind_direction_100m",
+        "latitude": "43.645150,43.643198",
+        "longitude": "78.535604,78.538828",
+        "models": "ecmwf_ifs",
+        "run": "2026-01-03T00:00",
+        "temperature_unit": "celsius",
+        "timeformat": "iso8601",
+        "timezone": "GMT",
+        "wind_speed_unit": "ms"
+      },
+      "request_url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.645150%2C43.643198&longitude=78.535604%2C78.538828&models=ecmwf_ifs&run=2026-01-03T00%3A00&hourly=temperature_2m%2Cwind_speed_10m%2Cwind_speed_100m%2Cwind_speed_200m%2Cwind_direction_100m&wind_speed_unit=ms&temperature_unit=celsius&timezone=GMT&timeformat=iso8601&forecast_hours=61&cell_selection=nearest&elevation=nan%2Cnan",
+      "requested_at_utc": "2026-09-23T11:54Z",
+      "response_sha256": "dc876f9f155074dc16a76a08d1044de27a1445239dd5057e5d8b04ac521135aa",
+      "retrieved_at_utc": "2026-09-23T11:54Z"
+    },
+    "run_id": "e2c918f3df49164ebd2d0df261f2e4d4c11315d7a9a3b26a767990a9a8e5b8e5",
+    "weather_run_time_utc": "2026-01-03T00:00:00Z",
+    "weather_validation": {
+      "assumed_availability_lag_hours": 12,
+      "availability_verified": false,
+      "calculation_utc": "2026-01-03T12:00Z",
+      "date": "2026-01-03",
+      "identical_hourly_values": true,
+      "initialization_utc": "2026-01-03T00:00Z",
+      "locations": [
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 5.3,
+              "minimum": -0.8,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 349,
+              "minimum": 67,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 7.8,
+              "minimum": 1.76,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 3.8,
+              "minimum": 0.51,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 9.87,
+              "minimum": 1.72,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.64515,
+          "requested_longitude": 78.535604,
+          "target_hours": 48,
+          "turbine": 1
+        },
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 5.3,
+              "minimum": -0.8,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 349,
+              "minimum": 67,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 7.8,
+              "minimum": 1.76,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 3.8,
+              "minimum": 0.51,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 9.87,
+              "minimum": 1.72,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.643198,
+          "requested_longitude": 78.538828,
+          "target_hours": 48,
+          "turbine": 2
+        }
+      ],
+      "model_lead_hours": [
+        13.0,
+        60.0
+      ],
+      "model_requested": "ecmwf_ifs",
+      "publication_utc": null,
+      "same_grid_cell": true,
+      "target_end_utc": "2026-01-05T12:00Z",
+      "target_start_utc": "2026-01-03T13:00Z"
+    }
+  },
+  {
+    "forecast_sha256": "133af1b4785a18b2d705b0a4af34b9a6a04a7a5d8cd6d65cd7394dcd40e37249",
+    "issue_time_utc": "2026-01-04T12:00:00Z",
+    "model_time_check": {
+      "eligible_from_utc": "2025-12-31T19:00:00Z",
+      "interval_hours": 1,
+      "observation_delay_hours": 0.0,
+      "source_timezone": "Etc/GMT-5",
+      "timestamp_label": "interval_start_assumed",
+      "timezone_status": "assumed",
+      "training_publication_availability_verified": false
+    },
+    "request": {
+      "content_type": "application/json; charset=utf-8",
+      "download_attempts": 1,
+      "historical_publication_time_utc": null,
+      "http_date": "Wed, 23 Sep 2026 11:54:10 GMT",
+      "http_status": 200,
+      "raw_file": "response.json",
+      "request_parameters": {
+        "cell_selection": "nearest",
+        "elevation": "nan,nan",
+        "forecast_hours": 61,
+        "hourly": "temperature_2m,wind_speed_10m,wind_speed_100m,wind_speed_200m,wind_direction_100m",
+        "latitude": "43.645150,43.643198",
+        "longitude": "78.535604,78.538828",
+        "models": "ecmwf_ifs",
+        "run": "2026-01-04T00:00",
+        "temperature_unit": "celsius",
+        "timeformat": "iso8601",
+        "timezone": "GMT",
+        "wind_speed_unit": "ms"
+      },
+      "request_url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.645150%2C43.643198&longitude=78.535604%2C78.538828&models=ecmwf_ifs&run=2026-01-04T00%3A00&hourly=temperature_2m%2Cwind_speed_10m%2Cwind_speed_100m%2Cwind_speed_200m%2Cwind_direction_100m&wind_speed_unit=ms&temperature_unit=celsius&timezone=GMT&timeformat=iso8601&forecast_hours=61&cell_selection=nearest&elevation=nan%2Cnan",
+      "requested_at_utc": "2026-09-23T11:54Z",
+      "response_sha256": "a3d47503c3f488ad3ef71c0b6f51d7e4cf5a133da86002cc261450a57187501a",
+      "retrieved_at_utc": "2026-09-23T11:54Z"
+    },
+    "run_id": "00cbdbebba1e63e0de82f85f4964ad51491b07676b316f5edb0ecf5eaf173292",
+    "weather_run_time_utc": "2026-01-04T00:00:00Z",
+    "weather_validation": {
+      "assumed_availability_lag_hours": 12,
+      "availability_verified": false,
+      "calculation_utc": "2026-01-04T12:00Z",
+      "date": "2026-01-04",
+      "identical_hourly_values": true,
+      "initialization_utc": "2026-01-04T00:00Z",
+      "locations": [
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 5.6,
+              "minimum": -3.3,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 346,
+              "minimum": 48,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 11.76,
+              "minimum": 0.53,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 8.45,
+              "minimum": 0.28,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 12.45,
+              "minimum": 0.14,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.64515,
+          "requested_longitude": 78.535604,
+          "target_hours": 48,
+          "turbine": 1
+        },
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 5.6,
+              "minimum": -3.3,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 346,
+              "minimum": 48,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 11.76,
+              "minimum": 0.53,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 8.45,
+              "minimum": 0.28,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 12.45,
+              "minimum": 0.14,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.643198,
+          "requested_longitude": 78.538828,
+          "target_hours": 48,
+          "turbine": 2
+        }
+      ],
+      "model_lead_hours": [
+        13.0,
+        60.0
+      ],
+      "model_requested": "ecmwf_ifs",
+      "publication_utc": null,
+      "same_grid_cell": true,
+      "target_end_utc": "2026-01-06T12:00Z",
+      "target_start_utc": "2026-01-04T13:00Z"
+    }
+  },
+  {
+    "forecast_sha256": "7aff7bd406bbbab248e940cb7d7a2b1496e08a26902b45c895ba0e3e1b2d12fa",
+    "issue_time_utc": "2026-01-05T12:00:00Z",
+    "model_time_check": {
+      "eligible_from_utc": "2025-12-31T19:00:00Z",
+      "interval_hours": 1,
+      "observation_delay_hours": 0.0,
+      "source_timezone": "Etc/GMT-5",
+      "timestamp_label": "interval_start_assumed",
+      "timezone_status": "assumed",
+      "training_publication_availability_verified": false
+    },
+    "request": {
+      "content_type": "application/json; charset=utf-8",
+      "download_attempts": 1,
+      "historical_publication_time_utc": null,
+      "http_date": "Wed, 23 Sep 2026 11:54:12 GMT",
+      "http_status": 200,
+      "raw_file": "response.json",
+      "request_parameters": {
+        "cell_selection": "nearest",
+        "elevation": "nan,nan",
+        "forecast_hours": 61,
+        "hourly": "temperature_2m,wind_speed_10m,wind_speed_100m,wind_speed_200m,wind_direction_100m",
+        "latitude": "43.645150,43.643198",
+        "longitude": "78.535604,78.538828",
+        "models": "ecmwf_ifs",
+        "run": "2026-01-05T00:00",
+        "temperature_unit": "celsius",
+        "timeformat": "iso8601",
+        "timezone": "GMT",
+        "wind_speed_unit": "ms"
+      },
+      "request_url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.645150%2C43.643198&longitude=78.535604%2C78.538828&models=ecmwf_ifs&run=2026-01-05T00%3A00&hourly=temperature_2m%2Cwind_speed_10m%2Cwind_speed_100m%2Cwind_speed_200m%2Cwind_direction_100m&wind_speed_unit=ms&temperature_unit=celsius&timezone=GMT&timeformat=iso8601&forecast_hours=61&cell_selection=nearest&elevation=nan%2Cnan",
+      "requested_at_utc": "2026-09-23T11:54Z",
+      "response_sha256": "c1df0d59a2190e300e35963f6f7e2663f799ef65f04e48ea2d7df22be6030fc1",
+      "retrieved_at_utc": "2026-09-23T11:54Z"
+    },
+    "run_id": "c49e8706aae1423879705df649d764fb4f56c800cfd228c9f3bf3b7a196155fb",
+    "weather_run_time_utc": "2026-01-05T00:00:00Z",
+    "weather_validation": {
+      "assumed_availability_lag_hours": 12,
+      "availability_verified": false,
+      "calculation_utc": "2026-01-05T12:00Z",
+      "date": "2026-01-05",
+      "identical_hourly_values": true,
+      "initialization_utc": "2026-01-05T00:00Z",
+      "locations": [
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 5.4,
+              "minimum": -4.0,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 346,
+              "minimum": 39,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 12.16,
+              "minimum": 0.21,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 8.75,
+              "minimum": 0.15,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 13.41,
+              "minimum": 0.11,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.64515,
+          "requested_longitude": 78.535604,
+          "target_hours": 48,
+          "turbine": 1
+        },
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 5.4,
+              "minimum": -4.0,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 346,
+              "minimum": 39,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 12.16,
+              "minimum": 0.21,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 8.75,
+              "minimum": 0.15,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 13.41,
+              "minimum": 0.11,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.643198,
+          "requested_longitude": 78.538828,
+          "target_hours": 48,
+          "turbine": 2
+        }
+      ],
+      "model_lead_hours": [
+        13.0,
+        60.0
+      ],
+      "model_requested": "ecmwf_ifs",
+      "publication_utc": null,
+      "same_grid_cell": true,
+      "target_end_utc": "2026-01-07T12:00Z",
+      "target_start_utc": "2026-01-05T13:00Z"
+    }
+  },
+  {
+    "forecast_sha256": "f6e581f8af5b6ce4ad58ec110ae8a1103b85e7355b459e6a258a379d25fa9625",
+    "issue_time_utc": "2026-01-06T12:00:00Z",
+    "model_time_check": {
+      "eligible_from_utc": "2025-12-31T19:00:00Z",
+      "interval_hours": 1,
+      "observation_delay_hours": 0.0,
+      "source_timezone": "Etc/GMT-5",
+      "timestamp_label": "interval_start_assumed",
+      "timezone_status": "assumed",
+      "training_publication_availability_verified": false
+    },
+    "request": {
+      "content_type": "application/json; charset=utf-8",
+      "download_attempts": 1,
+      "historical_publication_time_utc": null,
+      "http_date": "Wed, 23 Sep 2026 11:54:13 GMT",
+      "http_status": 200,
+      "raw_file": "response.json",
+      "request_parameters": {
+        "cell_selection": "nearest",
+        "elevation": "nan,nan",
+        "forecast_hours": 61,
+        "hourly": "temperature_2m,wind_speed_10m,wind_speed_100m,wind_speed_200m,wind_direction_100m",
+        "latitude": "43.645150,43.643198",
+        "longitude": "78.535604,78.538828",
+        "models": "ecmwf_ifs",
+        "run": "2026-01-06T00:00",
+        "temperature_unit": "celsius",
+        "timeformat": "iso8601",
+        "timezone": "GMT",
+        "wind_speed_unit": "ms"
+      },
+      "request_url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.645150%2C43.643198&longitude=78.535604%2C78.538828&models=ecmwf_ifs&run=2026-01-06T00%3A00&hourly=temperature_2m%2Cwind_speed_10m%2Cwind_speed_100m%2Cwind_speed_200m%2Cwind_direction_100m&wind_speed_unit=ms&temperature_unit=celsius&timezone=GMT&timeformat=iso8601&forecast_hours=61&cell_selection=nearest&elevation=nan%2Cnan",
+      "requested_at_utc": "2026-09-23T11:54Z",
+      "response_sha256": "9e67edbcb1003595835c91fff84106443e8e9aaa5028986bf0de6fcc0793b70c",
+      "retrieved_at_utc": "2026-09-23T11:54Z"
+    },
+    "run_id": "a1ba4e7291ef77fc8b58f69226e9b6d37ce4c249275d6d0e12d629e472c08b8d",
+    "weather_run_time_utc": "2026-01-06T00:00:00Z",
+    "weather_validation": {
+      "assumed_availability_lag_hours": 12,
+      "availability_verified": false,
+      "calculation_utc": "2026-01-06T12:00Z",
+      "date": "2026-01-06",
+      "identical_hourly_values": true,
+      "initialization_utc": "2026-01-06T00:00Z",
+      "locations": [
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 3.8,
+              "minimum": -4.9,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 360,
+              "minimum": 25,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 8.24,
+              "minimum": 0.29,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 4.07,
+              "minimum": 0.4,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 10.52,
+              "minimum": 0.16,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.64515,
+          "requested_longitude": 78.535604,
+          "target_hours": 48,
+          "turbine": 1
+        },
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 3.8,
+              "minimum": -4.9,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 360,
+              "minimum": 25,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 8.24,
+              "minimum": 0.29,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 4.07,
+              "minimum": 0.4,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 10.52,
+              "minimum": 0.16,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.643198,
+          "requested_longitude": 78.538828,
+          "target_hours": 48,
+          "turbine": 2
+        }
+      ],
+      "model_lead_hours": [
+        13.0,
+        60.0
+      ],
+      "model_requested": "ecmwf_ifs",
+      "publication_utc": null,
+      "same_grid_cell": true,
+      "target_end_utc": "2026-01-08T12:00Z",
+      "target_start_utc": "2026-01-06T13:00Z"
+    }
+  },
+  {
+    "forecast_sha256": "e5e5331c6ae6862b962091f7470f007a5b4a27c293b4e24b2d3d74ec074ef567",
+    "issue_time_utc": "2026-01-07T12:00:00Z",
+    "model_time_check": {
+      "eligible_from_utc": "2025-12-31T19:00:00Z",
+      "interval_hours": 1,
+      "observation_delay_hours": 0.0,
+      "source_timezone": "Etc/GMT-5",
+      "timestamp_label": "interval_start_assumed",
+      "timezone_status": "assumed",
+      "training_publication_availability_verified": false
+    },
+    "request": {
+      "content_type": "application/json; charset=utf-8",
+      "download_attempts": 1,
+      "historical_publication_time_utc": null,
+      "http_date": "Wed, 23 Sep 2026 11:54:15 GMT",
+      "http_status": 200,
+      "raw_file": "response.json",
+      "request_parameters": {
+        "cell_selection": "nearest",
+        "elevation": "nan,nan",
+        "forecast_hours": 61,
+        "hourly": "temperature_2m,wind_speed_10m,wind_speed_100m,wind_speed_200m,wind_direction_100m",
+        "latitude": "43.645150,43.643198",
+        "longitude": "78.535604,78.538828",
+        "models": "ecmwf_ifs",
+        "run": "2026-01-07T00:00",
+        "temperature_unit": "celsius",
+        "timeformat": "iso8601",
+        "timezone": "GMT",
+        "wind_speed_unit": "ms"
+      },
+      "request_url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.645150%2C43.643198&longitude=78.535604%2C78.538828&models=ecmwf_ifs&run=2026-01-07T00%3A00&hourly=temperature_2m%2Cwind_speed_10m%2Cwind_speed_100m%2Cwind_speed_200m%2Cwind_direction_100m&wind_speed_unit=ms&temperature_unit=celsius&timezone=GMT&timeformat=iso8601&forecast_hours=61&cell_selection=nearest&elevation=nan%2Cnan",
+      "requested_at_utc": "2026-09-23T11:54Z",
+      "response_sha256": "14bf6f06c63b1a56f84ad9f0fb2ddb786bc5a6f6ef2fcc3d413621c13efb9d7e",
+      "retrieved_at_utc": "2026-09-23T11:54Z"
+    },
+    "run_id": "d616e71b91850fc7bc2a83194c8d626e5fd467c3460d90fb994ea40892978dfa",
+    "weather_run_time_utc": "2026-01-07T00:00:00Z",
+    "weather_validation": {
+      "assumed_availability_lag_hours": 12,
+      "availability_verified": false,
+      "calculation_utc": "2026-01-07T12:00Z",
+      "date": "2026-01-07",
+      "identical_hourly_values": true,
+      "initialization_utc": "2026-01-07T00:00Z",
+      "locations": [
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 5.6,
+              "minimum": -4.4,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 147,
+              "minimum": 32,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 7.1,
+              "minimum": 0.47,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 4.55,
+              "minimum": 0.18,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 9.46,
+              "minimum": 0.85,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.64515,
+          "requested_longitude": 78.535604,
+          "target_hours": 48,
+          "turbine": 1
+        },
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 5.6,
+              "minimum": -4.4,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 147,
+              "minimum": 32,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 7.1,
+              "minimum": 0.47,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 4.55,
+              "minimum": 0.18,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 9.46,
+              "minimum": 0.85,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.643198,
+          "requested_longitude": 78.538828,
+          "target_hours": 48,
+          "turbine": 2
+        }
+      ],
+      "model_lead_hours": [
+        13.0,
+        60.0
+      ],
+      "model_requested": "ecmwf_ifs",
+      "publication_utc": null,
+      "same_grid_cell": true,
+      "target_end_utc": "2026-01-09T12:00Z",
+      "target_start_utc": "2026-01-07T13:00Z"
+    }
+  },
+  {
+    "forecast_sha256": "c55ec49ec9f27d4d970372d4cb344b5d7c9b4601609bc1b913686e8539af6bef",
+    "issue_time_utc": "2026-01-08T12:00:00Z",
+    "model_time_check": {
+      "eligible_from_utc": "2025-12-31T19:00:00Z",
+      "interval_hours": 1,
+      "observation_delay_hours": 0.0,
+      "source_timezone": "Etc/GMT-5",
+      "timestamp_label": "interval_start_assumed",
+      "timezone_status": "assumed",
+      "training_publication_availability_verified": false
+    },
+    "request": {
+      "content_type": "application/json; charset=utf-8",
+      "download_attempts": 1,
+      "historical_publication_time_utc": null,
+      "http_date": "Wed, 23 Sep 2026 11:54:16 GMT",
+      "http_status": 200,
+      "raw_file": "response.json",
+      "request_parameters": {
+        "cell_selection": "nearest",
+        "elevation": "nan,nan",
+        "forecast_hours": 61,
+        "hourly": "temperature_2m,wind_speed_10m,wind_speed_100m,wind_speed_200m,wind_direction_100m",
+        "latitude": "43.645150,43.643198",
+        "longitude": "78.535604,78.538828",
+        "models": "ecmwf_ifs",
+        "run": "2026-01-08T00:00",
+        "temperature_unit": "celsius",
+        "timeformat": "iso8601",
+        "timezone": "GMT",
+        "wind_speed_unit": "ms"
+      },
+      "request_url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.645150%2C43.643198&longitude=78.535604%2C78.538828&models=ecmwf_ifs&run=2026-01-08T00%3A00&hourly=temperature_2m%2Cwind_speed_10m%2Cwind_speed_100m%2Cwind_speed_200m%2Cwind_direction_100m&wind_speed_unit=ms&temperature_unit=celsius&timezone=GMT&timeformat=iso8601&forecast_hours=61&cell_selection=nearest&elevation=nan%2Cnan",
+      "requested_at_utc": "2026-09-23T11:54Z",
+      "response_sha256": "3e766ee4e77a28f96cb3d6b2dd3196c5ed06950a953d83286206481a78738f27",
+      "retrieved_at_utc": "2026-09-23T11:54Z"
+    },
+    "run_id": "4e01b9dcd3abaf6b185dae014caad5ec4cb16c7fe981ee20f57a12621fd6056e",
+    "weather_run_time_utc": "2026-01-08T00:00:00Z",
+    "weather_validation": {
+      "assumed_availability_lag_hours": 12,
+      "availability_verified": false,
+      "calculation_utc": "2026-01-08T12:00Z",
+      "date": "2026-01-08",
+      "identical_hourly_values": true,
+      "initialization_utc": "2026-01-08T00:00Z",
+      "locations": [
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 6.0,
+              "minimum": -4.5,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 65,
+              "minimum": 39,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 6.38,
+              "minimum": 2.18,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 4.18,
+              "minimum": 0.35,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 8.78,
+              "minimum": 3.52,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.64515,
+          "requested_longitude": 78.535604,
+          "target_hours": 48,
+          "turbine": 1
+        },
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 6.0,
+              "minimum": -4.5,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 65,
+              "minimum": 39,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 6.38,
+              "minimum": 2.18,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 4.18,
+              "minimum": 0.35,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 8.78,
+              "minimum": 3.52,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.643198,
+          "requested_longitude": 78.538828,
+          "target_hours": 48,
+          "turbine": 2
+        }
+      ],
+      "model_lead_hours": [
+        13.0,
+        60.0
+      ],
+      "model_requested": "ecmwf_ifs",
+      "publication_utc": null,
+      "same_grid_cell": true,
+      "target_end_utc": "2026-01-10T12:00Z",
+      "target_start_utc": "2026-01-08T13:00Z"
+    }
+  },
+  {
+    "forecast_sha256": "fa8669f4d2c6d932615457a8ce00f2fc045a76503686d3e6c442b713df8dcc85",
+    "issue_time_utc": "2026-01-09T12:00:00Z",
+    "model_time_check": {
+      "eligible_from_utc": "2025-12-31T19:00:00Z",
+      "interval_hours": 1,
+      "observation_delay_hours": 0.0,
+      "source_timezone": "Etc/GMT-5",
+      "timestamp_label": "interval_start_assumed",
+      "timezone_status": "assumed",
+      "training_publication_availability_verified": false
+    },
+    "request": {
+      "content_type": "application/json; charset=utf-8",
+      "download_attempts": 1,
+      "historical_publication_time_utc": null,
+      "http_date": "Wed, 23 Sep 2026 11:54:17 GMT",
+      "http_status": 200,
+      "raw_file": "response.json",
+      "request_parameters": {
+        "cell_selection": "nearest",
+        "elevation": "nan,nan",
+        "forecast_hours": 61,
+        "hourly": "temperature_2m,wind_speed_10m,wind_speed_100m,wind_speed_200m,wind_direction_100m",
+        "latitude": "43.645150,43.643198",
+        "longitude": "78.535604,78.538828",
+        "models": "ecmwf_ifs",
+        "run": "2026-01-09T00:00",
+        "temperature_unit": "celsius",
+        "timeformat": "iso8601",
+        "timezone": "GMT",
+        "wind_speed_unit": "ms"
+      },
+      "request_url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.645150%2C43.643198&longitude=78.535604%2C78.538828&models=ecmwf_ifs&run=2026-01-09T00%3A00&hourly=temperature_2m%2Cwind_speed_10m%2Cwind_speed_100m%2Cwind_speed_200m%2Cwind_direction_100m&wind_speed_unit=ms&temperature_unit=celsius&timezone=GMT&timeformat=iso8601&forecast_hours=61&cell_selection=nearest&elevation=nan%2Cnan",
+      "requested_at_utc": "2026-09-23T11:54Z",
+      "response_sha256": "719c928f383eb599fcd65e81cc79534bd41817f235d437511112f5abc34fdece",
+      "retrieved_at_utc": "2026-09-23T11:54Z"
+    },
+    "run_id": "6a285c6db55381195f1fdaff701641076d1818f4dfc7bf06ffde9aef9688f8ac",
+    "weather_run_time_utc": "2026-01-09T00:00:00Z",
+    "weather_validation": {
+      "assumed_availability_lag_hours": 12,
+      "availability_verified": false,
+      "calculation_utc": "2026-01-09T12:00Z",
+      "date": "2026-01-09",
+      "identical_hourly_values": true,
+      "initialization_utc": "2026-01-09T00:00Z",
+      "locations": [
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 7.9,
+              "minimum": -4.6,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 68,
+              "minimum": 52,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 9.1,
+              "minimum": 2.78,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 5.3,
+              "minimum": 0.61,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 10.3,
+              "minimum": 4.15,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.64515,
+          "requested_longitude": 78.535604,
+          "target_hours": 48,
+          "turbine": 1
+        },
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 7.9,
+              "minimum": -4.6,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 68,
+              "minimum": 52,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 9.1,
+              "minimum": 2.78,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 5.3,
+              "minimum": 0.61,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 10.3,
+              "minimum": 4.15,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.643198,
+          "requested_longitude": 78.538828,
+          "target_hours": 48,
+          "turbine": 2
+        }
+      ],
+      "model_lead_hours": [
+        13.0,
+        60.0
+      ],
+      "model_requested": "ecmwf_ifs",
+      "publication_utc": null,
+      "same_grid_cell": true,
+      "target_end_utc": "2026-01-11T12:00Z",
+      "target_start_utc": "2026-01-09T13:00Z"
+    }
+  },
+  {
+    "forecast_sha256": "eef9081a0372b9543ade4d661ef2c2fa753907a3365588e772a734e50c70e92a",
+    "issue_time_utc": "2026-01-10T12:00:00Z",
+    "model_time_check": {
+      "eligible_from_utc": "2025-12-31T19:00:00Z",
+      "interval_hours": 1,
+      "observation_delay_hours": 0.0,
+      "source_timezone": "Etc/GMT-5",
+      "timestamp_label": "interval_start_assumed",
+      "timezone_status": "assumed",
+      "training_publication_availability_verified": false
+    },
+    "request": {
+      "content_type": "application/json; charset=utf-8",
+      "download_attempts": 1,
+      "historical_publication_time_utc": null,
+      "http_date": "Wed, 23 Sep 2026 11:54:19 GMT",
+      "http_status": 200,
+      "raw_file": "response.json",
+      "request_parameters": {
+        "cell_selection": "nearest",
+        "elevation": "nan,nan",
+        "forecast_hours": 61,
+        "hourly": "temperature_2m,wind_speed_10m,wind_speed_100m,wind_speed_200m,wind_direction_100m",
+        "latitude": "43.645150,43.643198",
+        "longitude": "78.535604,78.538828",
+        "models": "ecmwf_ifs",
+        "run": "2026-01-10T00:00",
+        "temperature_unit": "celsius",
+        "timeformat": "iso8601",
+        "timezone": "GMT",
+        "wind_speed_unit": "ms"
+      },
+      "request_url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.645150%2C43.643198&longitude=78.535604%2C78.538828&models=ecmwf_ifs&run=2026-01-10T00%3A00&hourly=temperature_2m%2Cwind_speed_10m%2Cwind_speed_100m%2Cwind_speed_200m%2Cwind_direction_100m&wind_speed_unit=ms&temperature_unit=celsius&timezone=GMT&timeformat=iso8601&forecast_hours=61&cell_selection=nearest&elevation=nan%2Cnan",
+      "requested_at_utc": "2026-09-23T11:54Z",
+      "response_sha256": "88673252f92e23270d4e57eadf4ad64c5452aca8c2e89cd2fdd7a260d50ec8a0",
+      "retrieved_at_utc": "2026-09-23T11:54Z"
+    },
+    "run_id": "fca9932eb45ed01759a70ac301905cb7913b2c9ee159c7ae42089be498a3ccd7",
+    "weather_run_time_utc": "2026-01-10T00:00:00Z",
+    "weather_validation": {
+      "assumed_availability_lag_hours": 12,
+      "availability_verified": false,
+      "calculation_utc": "2026-01-10T12:00Z",
+      "date": "2026-01-10",
+      "identical_hourly_values": true,
+      "initialization_utc": "2026-01-10T00:00Z",
+      "locations": [
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 9.0,
+              "minimum": -2.1,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 274,
+              "minimum": 57,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 9.74,
+              "minimum": 2.05,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 5.87,
+              "minimum": 0.4,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 12.97,
+              "minimum": 2.3,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.64515,
+          "requested_longitude": 78.535604,
+          "target_hours": 48,
+          "turbine": 1
+        },
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 9.0,
+              "minimum": -2.1,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 274,
+              "minimum": 57,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 9.74,
+              "minimum": 2.05,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 5.87,
+              "minimum": 0.4,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 12.97,
+              "minimum": 2.3,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.643198,
+          "requested_longitude": 78.538828,
+          "target_hours": 48,
+          "turbine": 2
+        }
+      ],
+      "model_lead_hours": [
+        13.0,
+        60.0
+      ],
+      "model_requested": "ecmwf_ifs",
+      "publication_utc": null,
+      "same_grid_cell": true,
+      "target_end_utc": "2026-01-12T12:00Z",
+      "target_start_utc": "2026-01-10T13:00Z"
+    }
+  },
+  {
+    "forecast_sha256": "97f8e83c2df2d0b89b1601fef575eec8526a3dc8a33bf577dc6aba03f9cc44d5",
+    "issue_time_utc": "2026-01-11T12:00:00Z",
+    "model_time_check": {
+      "eligible_from_utc": "2025-12-31T19:00:00Z",
+      "interval_hours": 1,
+      "observation_delay_hours": 0.0,
+      "source_timezone": "Etc/GMT-5",
+      "timestamp_label": "interval_start_assumed",
+      "timezone_status": "assumed",
+      "training_publication_availability_verified": false
+    },
+    "request": {
+      "content_type": "application/json; charset=utf-8",
+      "download_attempts": 1,
+      "historical_publication_time_utc": null,
+      "http_date": "Wed, 23 Sep 2026 11:54:21 GMT",
+      "http_status": 200,
+      "raw_file": "response.json",
+      "request_parameters": {
+        "cell_selection": "nearest",
+        "elevation": "nan,nan",
+        "forecast_hours": 61,
+        "hourly": "temperature_2m,wind_speed_10m,wind_speed_100m,wind_speed_200m,wind_direction_100m",
+        "latitude": "43.645150,43.643198",
+        "longitude": "78.535604,78.538828",
+        "models": "ecmwf_ifs",
+        "run": "2026-01-11T00:00",
+        "temperature_unit": "celsius",
+        "timeformat": "iso8601",
+        "timezone": "GMT",
+        "wind_speed_unit": "ms"
+      },
+      "request_url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.645150%2C43.643198&longitude=78.535604%2C78.538828&models=ecmwf_ifs&run=2026-01-11T00%3A00&hourly=temperature_2m%2Cwind_speed_10m%2Cwind_speed_100m%2Cwind_speed_200m%2Cwind_direction_100m&wind_speed_unit=ms&temperature_unit=celsius&timezone=GMT&timeformat=iso8601&forecast_hours=61&cell_selection=nearest&elevation=nan%2Cnan",
+      "requested_at_utc": "2026-09-23T11:54Z",
+      "response_sha256": "d9048fc49173e8970abafad0dc2e5f80cef288687b916e2bae429a277dacc6f1",
+      "retrieved_at_utc": "2026-09-23T11:54Z"
+    },
+    "run_id": "6a1befc9793a3d56863f829926594b2151ba6f91d2ced9305abdc04b49ace9b8",
+    "weather_run_time_utc": "2026-01-11T00:00:00Z",
+    "weather_validation": {
+      "assumed_availability_lag_hours": 12,
+      "availability_verified": false,
+      "calculation_utc": "2026-01-11T12:00Z",
+      "date": "2026-01-11",
+      "identical_hourly_values": true,
+      "initialization_utc": "2026-01-11T00:00Z",
+      "locations": [
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 9.7,
+              "minimum": -0.9,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 269,
+              "minimum": 41,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 8.86,
+              "minimum": 0.29,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 5.06,
+              "minimum": 0.5,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 10.54,
+              "minimum": 0.78,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.64515,
+          "requested_longitude": 78.535604,
+          "target_hours": 48,
+          "turbine": 1
+        },
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 9.7,
+              "minimum": -0.9,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 269,
+              "minimum": 41,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 8.86,
+              "minimum": 0.29,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 5.06,
+              "minimum": 0.5,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 10.54,
+              "minimum": 0.78,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.643198,
+          "requested_longitude": 78.538828,
+          "target_hours": 48,
+          "turbine": 2
+        }
+      ],
+      "model_lead_hours": [
+        13.0,
+        60.0
+      ],
+      "model_requested": "ecmwf_ifs",
+      "publication_utc": null,
+      "same_grid_cell": true,
+      "target_end_utc": "2026-01-13T12:00Z",
+      "target_start_utc": "2026-01-11T13:00Z"
+    }
+  },
+  {
+    "forecast_sha256": "b94e0ef9ee6c9a9ca259629257c40b8fe2b0166acdb19f23f09affa663d5119c",
+    "issue_time_utc": "2026-01-12T12:00:00Z",
+    "model_time_check": {
+      "eligible_from_utc": "2025-12-31T19:00:00Z",
+      "interval_hours": 1,
+      "observation_delay_hours": 0.0,
+      "source_timezone": "Etc/GMT-5",
+      "timestamp_label": "interval_start_assumed",
+      "timezone_status": "assumed",
+      "training_publication_availability_verified": false
+    },
+    "request": {
+      "content_type": "application/json; charset=utf-8",
+      "download_attempts": 1,
+      "historical_publication_time_utc": null,
+      "http_date": "Wed, 23 Sep 2026 11:54:23 GMT",
+      "http_status": 200,
+      "raw_file": "response.json",
+      "request_parameters": {
+        "cell_selection": "nearest",
+        "elevation": "nan,nan",
+        "forecast_hours": 61,
+        "hourly": "temperature_2m,wind_speed_10m,wind_speed_100m,wind_speed_200m,wind_direction_100m",
+        "latitude": "43.645150,43.643198",
+        "longitude": "78.535604,78.538828",
+        "models": "ecmwf_ifs",
+        "run": "2026-01-12T00:00",
+        "temperature_unit": "celsius",
+        "timeformat": "iso8601",
+        "timezone": "GMT",
+        "wind_speed_unit": "ms"
+      },
+      "request_url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.645150%2C43.643198&longitude=78.535604%2C78.538828&models=ecmwf_ifs&run=2026-01-12T00%3A00&hourly=temperature_2m%2Cwind_speed_10m%2Cwind_speed_100m%2Cwind_speed_200m%2Cwind_direction_100m&wind_speed_unit=ms&temperature_unit=celsius&timezone=GMT&timeformat=iso8601&forecast_hours=61&cell_selection=nearest&elevation=nan%2Cnan",
+      "requested_at_utc": "2026-09-23T11:54Z",
+      "response_sha256": "9fb356f83d8de1e8af9be15d6e575555770f5ccb430c1a0ff452972002a60d75",
+      "retrieved_at_utc": "2026-09-23T11:54Z"
+    },
+    "run_id": "07bb39ad33f70af3b9915314dfa18eed46318b2d0854f4e1b9f09bc227bfb84d",
+    "weather_run_time_utc": "2026-01-12T00:00:00Z",
+    "weather_validation": {
+      "assumed_availability_lag_hours": 12,
+      "availability_verified": false,
+      "calculation_utc": "2026-01-12T12:00Z",
+      "date": "2026-01-12",
+      "identical_hourly_values": true,
+      "initialization_utc": "2026-01-12T00:00Z",
+      "locations": [
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 6.1,
+              "minimum": -2.8,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 273,
+              "minimum": 42,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 8.19,
+              "minimum": 0.6,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 4.49,
+              "minimum": 0.47,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 10.1,
+              "minimum": 0.27,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.64515,
+          "requested_longitude": 78.535604,
+          "target_hours": 48,
+          "turbine": 1
+        },
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 6.1,
+              "minimum": -2.8,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 273,
+              "minimum": 42,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 8.19,
+              "minimum": 0.6,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 4.49,
+              "minimum": 0.47,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 10.1,
+              "minimum": 0.27,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.643198,
+          "requested_longitude": 78.538828,
+          "target_hours": 48,
+          "turbine": 2
+        }
+      ],
+      "model_lead_hours": [
+        13.0,
+        60.0
+      ],
+      "model_requested": "ecmwf_ifs",
+      "publication_utc": null,
+      "same_grid_cell": true,
+      "target_end_utc": "2026-01-14T12:00Z",
+      "target_start_utc": "2026-01-12T13:00Z"
+    }
+  },
+  {
+    "forecast_sha256": "7ead24f3ce32ab7efac166f9fc0dedac3254a38e697366d27562261ea4405437",
+    "issue_time_utc": "2026-01-13T12:00:00Z",
+    "model_time_check": {
+      "eligible_from_utc": "2025-12-31T19:00:00Z",
+      "interval_hours": 1,
+      "observation_delay_hours": 0.0,
+      "source_timezone": "Etc/GMT-5",
+      "timestamp_label": "interval_start_assumed",
+      "timezone_status": "assumed",
+      "training_publication_availability_verified": false
+    },
+    "request": {
+      "content_type": "application/json; charset=utf-8",
+      "download_attempts": 1,
+      "historical_publication_time_utc": null,
+      "http_date": "Wed, 23 Sep 2026 11:54:25 GMT",
+      "http_status": 200,
+      "raw_file": "response.json",
+      "request_parameters": {
+        "cell_selection": "nearest",
+        "elevation": "nan,nan",
+        "forecast_hours": 61,
+        "hourly": "temperature_2m,wind_speed_10m,wind_speed_100m,wind_speed_200m,wind_direction_100m",
+        "latitude": "43.645150,43.643198",
+        "longitude": "78.535604,78.538828",
+        "models": "ecmwf_ifs",
+        "run": "2026-01-13T00:00",
+        "temperature_unit": "celsius",
+        "timeformat": "iso8601",
+        "timezone": "GMT",
+        "wind_speed_unit": "ms"
+      },
+      "request_url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.645150%2C43.643198&longitude=78.535604%2C78.538828&models=ecmwf_ifs&run=2026-01-13T00%3A00&hourly=temperature_2m%2Cwind_speed_10m%2Cwind_speed_100m%2Cwind_speed_200m%2Cwind_direction_100m&wind_speed_unit=ms&temperature_unit=celsius&timezone=GMT&timeformat=iso8601&forecast_hours=61&cell_selection=nearest&elevation=nan%2Cnan",
+      "requested_at_utc": "2026-09-23T11:54Z",
+      "response_sha256": "bdb6592360d5674a2801924445cfbe07c7314bb8081f35ee0c509973c6aa0620",
+      "retrieved_at_utc": "2026-09-23T11:54Z"
+    },
+    "run_id": "396b718793ec4ed9ffaa27a816d515d71fbf9ffbf31b860baf090763d041679e",
+    "weather_run_time_utc": "2026-01-13T00:00:00Z",
+    "weather_validation": {
+      "assumed_availability_lag_hours": 12,
+      "availability_verified": false,
+      "calculation_utc": "2026-01-13T12:00Z",
+      "date": "2026-01-13",
+      "identical_hourly_values": true,
+      "initialization_utc": "2026-01-13T00:00Z",
+      "locations": [
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 4.5,
+              "minimum": -7.7,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 284,
+              "minimum": 16,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 8.72,
+              "minimum": 0.45,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 4.45,
+              "minimum": 0.56,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 10.52,
+              "minimum": 0.29,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.64515,
+          "requested_longitude": 78.535604,
+          "target_hours": 48,
+          "turbine": 1
+        },
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 4.5,
+              "minimum": -7.7,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 284,
+              "minimum": 16,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 8.72,
+              "minimum": 0.45,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 4.45,
+              "minimum": 0.56,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 10.52,
+              "minimum": 0.29,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.643198,
+          "requested_longitude": 78.538828,
+          "target_hours": 48,
+          "turbine": 2
+        }
+      ],
+      "model_lead_hours": [
+        13.0,
+        60.0
+      ],
+      "model_requested": "ecmwf_ifs",
+      "publication_utc": null,
+      "same_grid_cell": true,
+      "target_end_utc": "2026-01-15T12:00Z",
+      "target_start_utc": "2026-01-13T13:00Z"
+    }
+  },
+  {
+    "forecast_sha256": "4fb5a474e01b6f667ba7e24e6fc946dab71cf06831ccbacb8028878990332fb9",
+    "issue_time_utc": "2026-01-14T12:00:00Z",
+    "model_time_check": {
+      "eligible_from_utc": "2025-12-31T19:00:00Z",
+      "interval_hours": 1,
+      "observation_delay_hours": 0.0,
+      "source_timezone": "Etc/GMT-5",
+      "timestamp_label": "interval_start_assumed",
+      "timezone_status": "assumed",
+      "training_publication_availability_verified": false
+    },
+    "request": {
+      "content_type": "application/json; charset=utf-8",
+      "download_attempts": 1,
+      "historical_publication_time_utc": null,
+      "http_date": "Wed, 23 Sep 2026 11:54:27 GMT",
+      "http_status": 200,
+      "raw_file": "response.json",
+      "request_parameters": {
+        "cell_selection": "nearest",
+        "elevation": "nan,nan",
+        "forecast_hours": 61,
+        "hourly": "temperature_2m,wind_speed_10m,wind_speed_100m,wind_speed_200m,wind_direction_100m",
+        "latitude": "43.645150,43.643198",
+        "longitude": "78.535604,78.538828",
+        "models": "ecmwf_ifs",
+        "run": "2026-01-14T00:00",
+        "temperature_unit": "celsius",
+        "timeformat": "iso8601",
+        "timezone": "GMT",
+        "wind_speed_unit": "ms"
+      },
+      "request_url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.645150%2C43.643198&longitude=78.535604%2C78.538828&models=ecmwf_ifs&run=2026-01-14T00%3A00&hourly=temperature_2m%2Cwind_speed_10m%2Cwind_speed_100m%2Cwind_speed_200m%2Cwind_direction_100m&wind_speed_unit=ms&temperature_unit=celsius&timezone=GMT&timeformat=iso8601&forecast_hours=61&cell_selection=nearest&elevation=nan%2Cnan",
+      "requested_at_utc": "2026-09-23T11:54Z",
+      "response_sha256": "4b7469620d6e166a56d968b2a59b74a8872c38ee853bcd91184ce55eb5f2cfc7",
+      "retrieved_at_utc": "2026-09-23T11:54Z"
+    },
+    "run_id": "06203d3b26635d5dc4b7099f5e840d680cafbd49507c23e4015704f49b00059a",
+    "weather_run_time_utc": "2026-01-14T00:00:00Z",
+    "weather_validation": {
+      "assumed_availability_lag_hours": 12,
+      "availability_verified": false,
+      "calculation_utc": "2026-01-14T12:00Z",
+      "date": "2026-01-14",
+      "identical_hourly_values": true,
+      "initialization_utc": "2026-01-14T00:00Z",
+      "locations": [
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": -0.8,
+              "minimum": -6.0,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 343,
+              "minimum": 23,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 7.02,
+              "minimum": 0.29,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 4.77,
+              "minimum": 0.54,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 9.0,
+              "minimum": 0.28,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.64515,
+          "requested_longitude": 78.535604,
+          "target_hours": 48,
+          "turbine": 1
+        },
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": -0.8,
+              "minimum": -6.0,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 343,
+              "minimum": 23,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 7.02,
+              "minimum": 0.29,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 4.77,
+              "minimum": 0.54,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 9.0,
+              "minimum": 0.28,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.643198,
+          "requested_longitude": 78.538828,
+          "target_hours": 48,
+          "turbine": 2
+        }
+      ],
+      "model_lead_hours": [
+        13.0,
+        60.0
+      ],
+      "model_requested": "ecmwf_ifs",
+      "publication_utc": null,
+      "same_grid_cell": true,
+      "target_end_utc": "2026-01-16T12:00Z",
+      "target_start_utc": "2026-01-14T13:00Z"
+    }
+  },
+  {
+    "forecast_sha256": "0aa582a71b3dc13c82d6cda062046910ee710256f889d0ab418b971c1ca54d0f",
+    "issue_time_utc": "2026-01-15T12:00:00Z",
+    "model_time_check": {
+      "eligible_from_utc": "2025-12-31T19:00:00Z",
+      "interval_hours": 1,
+      "observation_delay_hours": 0.0,
+      "source_timezone": "Etc/GMT-5",
+      "timestamp_label": "interval_start_assumed",
+      "timezone_status": "assumed",
+      "training_publication_availability_verified": false
+    },
+    "request": {
+      "content_type": "application/json; charset=utf-8",
+      "download_attempts": 1,
+      "historical_publication_time_utc": null,
+      "http_date": "Wed, 23 Sep 2026 11:54:29 GMT",
+      "http_status": 200,
+      "raw_file": "response.json",
+      "request_parameters": {
+        "cell_selection": "nearest",
+        "elevation": "nan,nan",
+        "forecast_hours": 61,
+        "hourly": "temperature_2m,wind_speed_10m,wind_speed_100m,wind_speed_200m,wind_direction_100m",
+        "latitude": "43.645150,43.643198",
+        "longitude": "78.535604,78.538828",
+        "models": "ecmwf_ifs",
+        "run": "2026-01-15T00:00",
+        "temperature_unit": "celsius",
+        "timeformat": "iso8601",
+        "timezone": "GMT",
+        "wind_speed_unit": "ms"
+      },
+      "request_url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.645150%2C43.643198&longitude=78.535604%2C78.538828&models=ecmwf_ifs&run=2026-01-15T00%3A00&hourly=temperature_2m%2Cwind_speed_10m%2Cwind_speed_100m%2Cwind_speed_200m%2Cwind_direction_100m&wind_speed_unit=ms&temperature_unit=celsius&timezone=GMT&timeformat=iso8601&forecast_hours=61&cell_selection=nearest&elevation=nan%2Cnan",
+      "requested_at_utc": "2026-09-23T11:54Z",
+      "response_sha256": "57d72830546105b8332c21add408112724839b8317e293d58e382973f21df37e",
+      "retrieved_at_utc": "2026-09-23T11:54Z"
+    },
+    "run_id": "5b29bcd77a60a972eadf4d192625182ee119a88fd3c49010b980779fa4e21111",
+    "weather_run_time_utc": "2026-01-15T00:00:00Z",
+    "weather_validation": {
+      "assumed_availability_lag_hours": 12,
+      "availability_verified": false,
+      "calculation_utc": "2026-01-15T12:00Z",
+      "date": "2026-01-15",
+      "identical_hourly_values": true,
+      "initialization_utc": "2026-01-15T00:00Z",
+      "locations": [
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": -2.0,
+              "minimum": -16.2,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 281,
+              "minimum": 43,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 11.93,
+              "minimum": 2.27,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 7.72,
+              "minimum": 0.5,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 15.22,
+              "minimum": 2.28,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.64515,
+          "requested_longitude": 78.535604,
+          "target_hours": 48,
+          "turbine": 1
+        },
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": -2.0,
+              "minimum": -16.2,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 281,
+              "minimum": 43,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 11.93,
+              "minimum": 2.27,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 7.72,
+              "minimum": 0.5,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 15.22,
+              "minimum": 2.28,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.643198,
+          "requested_longitude": 78.538828,
+          "target_hours": 48,
+          "turbine": 2
+        }
+      ],
+      "model_lead_hours": [
+        13.0,
+        60.0
+      ],
+      "model_requested": "ecmwf_ifs",
+      "publication_utc": null,
+      "same_grid_cell": true,
+      "target_end_utc": "2026-01-17T12:00Z",
+      "target_start_utc": "2026-01-15T13:00Z"
+    }
+  },
+  {
+    "forecast_sha256": "0663bdb8890a6c8c811315afeddbca898653b80be06a79eaf42a1c681a0c1499",
+    "issue_time_utc": "2026-01-16T12:00:00Z",
+    "model_time_check": {
+      "eligible_from_utc": "2025-12-31T19:00:00Z",
+      "interval_hours": 1,
+      "observation_delay_hours": 0.0,
+      "source_timezone": "Etc/GMT-5",
+      "timestamp_label": "interval_start_assumed",
+      "timezone_status": "assumed",
+      "training_publication_availability_verified": false
+    },
+    "request": {
+      "content_type": "application/json; charset=utf-8",
+      "download_attempts": 1,
+      "historical_publication_time_utc": null,
+      "http_date": "Wed, 23 Sep 2026 11:54:30 GMT",
+      "http_status": 200,
+      "raw_file": "response.json",
+      "request_parameters": {
+        "cell_selection": "nearest",
+        "elevation": "nan,nan",
+        "forecast_hours": 61,
+        "hourly": "temperature_2m,wind_speed_10m,wind_speed_100m,wind_speed_200m,wind_direction_100m",
+        "latitude": "43.645150,43.643198",
+        "longitude": "78.535604,78.538828",
+        "models": "ecmwf_ifs",
+        "run": "2026-01-16T00:00",
+        "temperature_unit": "celsius",
+        "timeformat": "iso8601",
+        "timezone": "GMT",
+        "wind_speed_unit": "ms"
+      },
+      "request_url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.645150%2C43.643198&longitude=78.535604%2C78.538828&models=ecmwf_ifs&run=2026-01-16T00%3A00&hourly=temperature_2m%2Cwind_speed_10m%2Cwind_speed_100m%2Cwind_speed_200m%2Cwind_direction_100m&wind_speed_unit=ms&temperature_unit=celsius&timezone=GMT&timeformat=iso8601&forecast_hours=61&cell_selection=nearest&elevation=nan%2Cnan",
+      "requested_at_utc": "2026-09-23T11:54Z",
+      "response_sha256": "a5758f3a5dbe76a5d1a514076b1d03c81aee0d492c045dc5e78f29bf4f48d01d",
+      "retrieved_at_utc": "2026-09-23T11:54Z"
+    },
+    "run_id": "872640f6bd23c1db1c7cf9bc95f37d704794e201c80578766c63ab5365083b3e",
+    "weather_run_time_utc": "2026-01-16T00:00:00Z",
+    "weather_validation": {
+      "assumed_availability_lag_hours": 12,
+      "availability_verified": false,
+      "calculation_utc": "2026-01-16T12:00Z",
+      "date": "2026-01-16",
+      "identical_hourly_values": true,
+      "initialization_utc": "2026-01-16T00:00Z",
+      "locations": [
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": -6.7,
+              "minimum": -16.3,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 339,
+              "minimum": 3,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 10.85,
+              "minimum": 0.83,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 7.2,
+              "minimum": 0.14,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 15.35,
+              "minimum": 0.72,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.64515,
+          "requested_longitude": 78.535604,
+          "target_hours": 48,
+          "turbine": 1
+        },
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": -6.7,
+              "minimum": -16.3,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 339,
+              "minimum": 3,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 10.85,
+              "minimum": 0.83,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 7.2,
+              "minimum": 0.14,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 15.35,
+              "minimum": 0.72,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.643198,
+          "requested_longitude": 78.538828,
+          "target_hours": 48,
+          "turbine": 2
+        }
+      ],
+      "model_lead_hours": [
+        13.0,
+        60.0
+      ],
+      "model_requested": "ecmwf_ifs",
+      "publication_utc": null,
+      "same_grid_cell": true,
+      "target_end_utc": "2026-01-18T12:00Z",
+      "target_start_utc": "2026-01-16T13:00Z"
+    }
+  },
+  {
+    "forecast_sha256": "52ed8df8e6bf7ef79edfa68f94bf92cba0385c0d8428a0f7252b9b1408234fdc",
+    "issue_time_utc": "2026-01-17T12:00:00Z",
+    "model_time_check": {
+      "eligible_from_utc": "2025-12-31T19:00:00Z",
+      "interval_hours": 1,
+      "observation_delay_hours": 0.0,
+      "source_timezone": "Etc/GMT-5",
+      "timestamp_label": "interval_start_assumed",
+      "timezone_status": "assumed",
+      "training_publication_availability_verified": false
+    },
+    "request": {
+      "content_type": "application/json; charset=utf-8",
+      "download_attempts": 1,
+      "historical_publication_time_utc": null,
+      "http_date": "Wed, 23 Sep 2026 11:54:32 GMT",
+      "http_status": 200,
+      "raw_file": "response.json",
+      "request_parameters": {
+        "cell_selection": "nearest",
+        "elevation": "nan,nan",
+        "forecast_hours": 61,
+        "hourly": "temperature_2m,wind_speed_10m,wind_speed_100m,wind_speed_200m,wind_direction_100m",
+        "latitude": "43.645150,43.643198",
+        "longitude": "78.535604,78.538828",
+        "models": "ecmwf_ifs",
+        "run": "2026-01-17T00:00",
+        "temperature_unit": "celsius",
+        "timeformat": "iso8601",
+        "timezone": "GMT",
+        "wind_speed_unit": "ms"
+      },
+      "request_url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.645150%2C43.643198&longitude=78.535604%2C78.538828&models=ecmwf_ifs&run=2026-01-17T00%3A00&hourly=temperature_2m%2Cwind_speed_10m%2Cwind_speed_100m%2Cwind_speed_200m%2Cwind_direction_100m&wind_speed_unit=ms&temperature_unit=celsius&timezone=GMT&timeformat=iso8601&forecast_hours=61&cell_selection=nearest&elevation=nan%2Cnan",
+      "requested_at_utc": "2026-09-23T11:54Z",
+      "response_sha256": "70b9595184344a6a182a98b4329d93cd443a777a6006d7b2977abe8f439e9105",
+      "retrieved_at_utc": "2026-09-23T11:54Z"
+    },
+    "run_id": "9c06a477a1900a599dbbc82e5bba326311dfcfb5cc432d4ff54844496b4a173d",
+    "weather_run_time_utc": "2026-01-17T00:00:00Z",
+    "weather_validation": {
+      "assumed_availability_lag_hours": 12,
+      "availability_verified": false,
+      "calculation_utc": "2026-01-17T12:00Z",
+      "date": "2026-01-17",
+      "identical_hourly_values": true,
+      "initialization_utc": "2026-01-17T00:00Z",
+      "locations": [
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": -0.8,
+              "minimum": -16.5,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 349,
+              "minimum": 14,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 8.67,
+              "minimum": 0.62,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 6.45,
+              "minimum": 0.07,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 9.42,
+              "minimum": 1.3,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.64515,
+          "requested_longitude": 78.535604,
+          "target_hours": 48,
+          "turbine": 1
+        },
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": -0.8,
+              "minimum": -16.5,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 349,
+              "minimum": 14,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 8.67,
+              "minimum": 0.62,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 6.45,
+              "minimum": 0.07,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 9.42,
+              "minimum": 1.3,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.643198,
+          "requested_longitude": 78.538828,
+          "target_hours": 48,
+          "turbine": 2
+        }
+      ],
+      "model_lead_hours": [
+        13.0,
+        60.0
+      ],
+      "model_requested": "ecmwf_ifs",
+      "publication_utc": null,
+      "same_grid_cell": true,
+      "target_end_utc": "2026-01-19T12:00Z",
+      "target_start_utc": "2026-01-17T13:00Z"
+    }
+  },
+  {
+    "forecast_sha256": "139a72e8bbc4ac69fe6a3589bcab9bd4fc6cee3350932db233f93e427f40f535",
+    "issue_time_utc": "2026-01-18T12:00:00Z",
+    "model_time_check": {
+      "eligible_from_utc": "2025-12-31T19:00:00Z",
+      "interval_hours": 1,
+      "observation_delay_hours": 0.0,
+      "source_timezone": "Etc/GMT-5",
+      "timestamp_label": "interval_start_assumed",
+      "timezone_status": "assumed",
+      "training_publication_availability_verified": false
+    },
+    "request": {
+      "content_type": "application/json; charset=utf-8",
+      "download_attempts": 1,
+      "historical_publication_time_utc": null,
+      "http_date": "Wed, 23 Sep 2026 11:54:34 GMT",
+      "http_status": 200,
+      "raw_file": "response.json",
+      "request_parameters": {
+        "cell_selection": "nearest",
+        "elevation": "nan,nan",
+        "forecast_hours": 61,
+        "hourly": "temperature_2m,wind_speed_10m,wind_speed_100m,wind_speed_200m,wind_direction_100m",
+        "latitude": "43.645150,43.643198",
+        "longitude": "78.535604,78.538828",
+        "models": "ecmwf_ifs",
+        "run": "2026-01-18T00:00",
+        "temperature_unit": "celsius",
+        "timeformat": "iso8601",
+        "timezone": "GMT",
+        "wind_speed_unit": "ms"
+      },
+      "request_url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.645150%2C43.643198&longitude=78.535604%2C78.538828&models=ecmwf_ifs&run=2026-01-18T00%3A00&hourly=temperature_2m%2Cwind_speed_10m%2Cwind_speed_100m%2Cwind_speed_200m%2Cwind_direction_100m&wind_speed_unit=ms&temperature_unit=celsius&timezone=GMT&timeformat=iso8601&forecast_hours=61&cell_selection=nearest&elevation=nan%2Cnan",
+      "requested_at_utc": "2026-09-23T11:54Z",
+      "response_sha256": "152129d29b383b9fded9e6747e6cd1cb1a31455c1aa019b5a112e0310bcdcaa8",
+      "retrieved_at_utc": "2026-09-23T11:54Z"
+    },
+    "run_id": "86004bf165dab2a134ff4728754681ddc0c449b0d0c6429f1c9ca978fa10cd24",
+    "weather_run_time_utc": "2026-01-18T00:00:00Z",
+    "weather_validation": {
+      "assumed_availability_lag_hours": 12,
+      "availability_verified": false,
+      "calculation_utc": "2026-01-18T12:00Z",
+      "date": "2026-01-18",
+      "identical_hourly_values": true,
+      "initialization_utc": "2026-01-18T00:00Z",
+      "locations": [
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": -2.2,
+              "minimum": -11.6,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 285,
+              "minimum": 46,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 8.24,
+              "minimum": 0.36,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 5.1,
+              "minimum": 0.15,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 10.51,
+              "minimum": 1.19,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.64515,
+          "requested_longitude": 78.535604,
+          "target_hours": 48,
+          "turbine": 1
+        },
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": -2.2,
+              "minimum": -11.6,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 285,
+              "minimum": 46,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 8.24,
+              "minimum": 0.36,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 5.1,
+              "minimum": 0.15,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 10.51,
+              "minimum": 1.19,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.643198,
+          "requested_longitude": 78.538828,
+          "target_hours": 48,
+          "turbine": 2
+        }
+      ],
+      "model_lead_hours": [
+        13.0,
+        60.0
+      ],
+      "model_requested": "ecmwf_ifs",
+      "publication_utc": null,
+      "same_grid_cell": true,
+      "target_end_utc": "2026-01-20T12:00Z",
+      "target_start_utc": "2026-01-18T13:00Z"
+    }
+  },
+  {
+    "forecast_sha256": "116c227009758fb93b146f27df8821be85c85e4d88cf998dabf9c3f137518728",
+    "issue_time_utc": "2026-01-19T12:00:00Z",
+    "model_time_check": {
+      "eligible_from_utc": "2025-12-31T19:00:00Z",
+      "interval_hours": 1,
+      "observation_delay_hours": 0.0,
+      "source_timezone": "Etc/GMT-5",
+      "timestamp_label": "interval_start_assumed",
+      "timezone_status": "assumed",
+      "training_publication_availability_verified": false
+    },
+    "request": {
+      "content_type": "application/json; charset=utf-8",
+      "download_attempts": 1,
+      "historical_publication_time_utc": null,
+      "http_date": "Wed, 23 Sep 2026 11:54:36 GMT",
+      "http_status": 200,
+      "raw_file": "response.json",
+      "request_parameters": {
+        "cell_selection": "nearest",
+        "elevation": "nan,nan",
+        "forecast_hours": 61,
+        "hourly": "temperature_2m,wind_speed_10m,wind_speed_100m,wind_speed_200m,wind_direction_100m",
+        "latitude": "43.645150,43.643198",
+        "longitude": "78.535604,78.538828",
+        "models": "ecmwf_ifs",
+        "run": "2026-01-19T00:00",
+        "temperature_unit": "celsius",
+        "timeformat": "iso8601",
+        "timezone": "GMT",
+        "wind_speed_unit": "ms"
+      },
+      "request_url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.645150%2C43.643198&longitude=78.535604%2C78.538828&models=ecmwf_ifs&run=2026-01-19T00%3A00&hourly=temperature_2m%2Cwind_speed_10m%2Cwind_speed_100m%2Cwind_speed_200m%2Cwind_direction_100m&wind_speed_unit=ms&temperature_unit=celsius&timezone=GMT&timeformat=iso8601&forecast_hours=61&cell_selection=nearest&elevation=nan%2Cnan",
+      "requested_at_utc": "2026-09-23T11:54Z",
+      "response_sha256": "6b3babd6dd9a9818333eacd74530ca2c810e12c15e0680747f82249665c380bc",
+      "retrieved_at_utc": "2026-09-23T11:54Z"
+    },
+    "run_id": "dd9b026e61e91b0406aaccc566571ec75001b0d3ae6121eb9666a9b8b7cdeca9",
+    "weather_run_time_utc": "2026-01-19T00:00:00Z",
+    "weather_validation": {
+      "assumed_availability_lag_hours": 12,
+      "availability_verified": false,
+      "calculation_utc": "2026-01-19T12:00Z",
+      "date": "2026-01-19",
+      "identical_hourly_values": true,
+      "initialization_utc": "2026-01-19T00:00Z",
+      "locations": [
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 0.3,
+              "minimum": -9.6,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 356,
+              "minimum": 43,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 9.4,
+              "minimum": 0.25,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 5.48,
+              "minimum": 0.25,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 11.66,
+              "minimum": 0.27,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.64515,
+          "requested_longitude": 78.535604,
+          "target_hours": 48,
+          "turbine": 1
+        },
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 0.3,
+              "minimum": -9.6,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 356,
+              "minimum": 43,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 9.4,
+              "minimum": 0.25,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 5.48,
+              "minimum": 0.25,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 11.66,
+              "minimum": 0.27,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.643198,
+          "requested_longitude": 78.538828,
+          "target_hours": 48,
+          "turbine": 2
+        }
+      ],
+      "model_lead_hours": [
+        13.0,
+        60.0
+      ],
+      "model_requested": "ecmwf_ifs",
+      "publication_utc": null,
+      "same_grid_cell": true,
+      "target_end_utc": "2026-01-21T12:00Z",
+      "target_start_utc": "2026-01-19T13:00Z"
+    }
+  },
+  {
+    "forecast_sha256": "b904c95f8e55261d36592e5b4393356fa5b6dba6d1d36971a613223a1bbd43d5",
+    "issue_time_utc": "2026-01-20T12:00:00Z",
+    "model_time_check": {
+      "eligible_from_utc": "2025-12-31T19:00:00Z",
+      "interval_hours": 1,
+      "observation_delay_hours": 0.0,
+      "source_timezone": "Etc/GMT-5",
+      "timestamp_label": "interval_start_assumed",
+      "timezone_status": "assumed",
+      "training_publication_availability_verified": false
+    },
+    "request": {
+      "content_type": "application/json; charset=utf-8",
+      "download_attempts": 1,
+      "historical_publication_time_utc": null,
+      "http_date": "Wed, 23 Sep 2026 11:54:38 GMT",
+      "http_status": 200,
+      "raw_file": "response.json",
+      "request_parameters": {
+        "cell_selection": "nearest",
+        "elevation": "nan,nan",
+        "forecast_hours": 61,
+        "hourly": "temperature_2m,wind_speed_10m,wind_speed_100m,wind_speed_200m,wind_direction_100m",
+        "latitude": "43.645150,43.643198",
+        "longitude": "78.535604,78.538828",
+        "models": "ecmwf_ifs",
+        "run": "2026-01-20T00:00",
+        "temperature_unit": "celsius",
+        "timeformat": "iso8601",
+        "timezone": "GMT",
+        "wind_speed_unit": "ms"
+      },
+      "request_url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.645150%2C43.643198&longitude=78.535604%2C78.538828&models=ecmwf_ifs&run=2026-01-20T00%3A00&hourly=temperature_2m%2Cwind_speed_10m%2Cwind_speed_100m%2Cwind_speed_200m%2Cwind_direction_100m&wind_speed_unit=ms&temperature_unit=celsius&timezone=GMT&timeformat=iso8601&forecast_hours=61&cell_selection=nearest&elevation=nan%2Cnan",
+      "requested_at_utc": "2026-09-23T11:54Z",
+      "response_sha256": "f6f36ffde206fd3b10bd8dae854769852ebc2d8c1dd2cb0254830d07e026f1f0",
+      "retrieved_at_utc": "2026-09-23T11:54Z"
+    },
+    "run_id": "d65939d0ddd5da1dcbf3b990f4272c90969e02cb2e4823c89b1b02fb3014b583",
+    "weather_run_time_utc": "2026-01-20T00:00:00Z",
+    "weather_validation": {
+      "assumed_availability_lag_hours": 12,
+      "availability_verified": false,
+      "calculation_utc": "2026-01-20T12:00Z",
+      "date": "2026-01-20",
+      "identical_hourly_values": true,
+      "initialization_utc": "2026-01-20T00:00Z",
+      "locations": [
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 0.8,
+              "minimum": -10.2,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 333,
+              "minimum": 10,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 10.72,
+              "minimum": 0.55,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 5.81,
+              "minimum": 0.11,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 12.17,
+              "minimum": 0.6,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.64515,
+          "requested_longitude": 78.535604,
+          "target_hours": 48,
+          "turbine": 1
+        },
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 0.8,
+              "minimum": -10.2,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 333,
+              "minimum": 10,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 10.72,
+              "minimum": 0.55,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 5.81,
+              "minimum": 0.11,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 12.17,
+              "minimum": 0.6,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.643198,
+          "requested_longitude": 78.538828,
+          "target_hours": 48,
+          "turbine": 2
+        }
+      ],
+      "model_lead_hours": [
+        13.0,
+        60.0
+      ],
+      "model_requested": "ecmwf_ifs",
+      "publication_utc": null,
+      "same_grid_cell": true,
+      "target_end_utc": "2026-01-22T12:00Z",
+      "target_start_utc": "2026-01-20T13:00Z"
+    }
+  },
+  {
+    "forecast_sha256": "9eed6a34d6b41ec78a941db4bfd89725944e1992ec28b41904039d0982311aef",
+    "issue_time_utc": "2026-01-21T12:00:00Z",
+    "model_time_check": {
+      "eligible_from_utc": "2025-12-31T19:00:00Z",
+      "interval_hours": 1,
+      "observation_delay_hours": 0.0,
+      "source_timezone": "Etc/GMT-5",
+      "timestamp_label": "interval_start_assumed",
+      "timezone_status": "assumed",
+      "training_publication_availability_verified": false
+    },
+    "request": {
+      "content_type": "application/json; charset=utf-8",
+      "download_attempts": 1,
+      "historical_publication_time_utc": null,
+      "http_date": "Wed, 23 Sep 2026 11:54:40 GMT",
+      "http_status": 200,
+      "raw_file": "response.json",
+      "request_parameters": {
+        "cell_selection": "nearest",
+        "elevation": "nan,nan",
+        "forecast_hours": 61,
+        "hourly": "temperature_2m,wind_speed_10m,wind_speed_100m,wind_speed_200m,wind_direction_100m",
+        "latitude": "43.645150,43.643198",
+        "longitude": "78.535604,78.538828",
+        "models": "ecmwf_ifs",
+        "run": "2026-01-21T00:00",
+        "temperature_unit": "celsius",
+        "timeformat": "iso8601",
+        "timezone": "GMT",
+        "wind_speed_unit": "ms"
+      },
+      "request_url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.645150%2C43.643198&longitude=78.535604%2C78.538828&models=ecmwf_ifs&run=2026-01-21T00%3A00&hourly=temperature_2m%2Cwind_speed_10m%2Cwind_speed_100m%2Cwind_speed_200m%2Cwind_direction_100m&wind_speed_unit=ms&temperature_unit=celsius&timezone=GMT&timeformat=iso8601&forecast_hours=61&cell_selection=nearest&elevation=nan%2Cnan",
+      "requested_at_utc": "2026-09-23T11:54Z",
+      "response_sha256": "25a0090ba276a23fdb5d0b17aa2d9750f7c3e62a69fc2b74c004c4b8e88abe72",
+      "retrieved_at_utc": "2026-09-23T11:54Z"
+    },
+    "run_id": "dc8a070d5ee14bed4728cf6f6d3dec96d2c425f50b4129f9f3f4a944dc25c8dc",
+    "weather_run_time_utc": "2026-01-21T00:00:00Z",
+    "weather_validation": {
+      "assumed_availability_lag_hours": 12,
+      "availability_verified": false,
+      "calculation_utc": "2026-01-21T12:00Z",
+      "date": "2026-01-21",
+      "identical_hourly_values": true,
+      "initialization_utc": "2026-01-21T00:00Z",
+      "locations": [
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 0.7,
+              "minimum": -8.6,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 336,
+              "minimum": 36,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 9.99,
+              "minimum": 1.11,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 5.72,
+              "minimum": 0.25,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 12.69,
+              "minimum": 1.95,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.64515,
+          "requested_longitude": 78.535604,
+          "target_hours": 48,
+          "turbine": 1
+        },
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 0.7,
+              "minimum": -8.6,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 336,
+              "minimum": 36,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 9.99,
+              "minimum": 1.11,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 5.72,
+              "minimum": 0.25,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 12.69,
+              "minimum": 1.95,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.643198,
+          "requested_longitude": 78.538828,
+          "target_hours": 48,
+          "turbine": 2
+        }
+      ],
+      "model_lead_hours": [
+        13.0,
+        60.0
+      ],
+      "model_requested": "ecmwf_ifs",
+      "publication_utc": null,
+      "same_grid_cell": true,
+      "target_end_utc": "2026-01-23T12:00Z",
+      "target_start_utc": "2026-01-21T13:00Z"
+    }
+  },
+  {
+    "forecast_sha256": "b85f61f89a79264039c37c87282338b8686522f15a570432047bc377db2ff48b",
+    "issue_time_utc": "2026-01-22T12:00:00Z",
+    "model_time_check": {
+      "eligible_from_utc": "2025-12-31T19:00:00Z",
+      "interval_hours": 1,
+      "observation_delay_hours": 0.0,
+      "source_timezone": "Etc/GMT-5",
+      "timestamp_label": "interval_start_assumed",
+      "timezone_status": "assumed",
+      "training_publication_availability_verified": false
+    },
+    "request": {
+      "content_type": "application/json; charset=utf-8",
+      "download_attempts": 1,
+      "historical_publication_time_utc": null,
+      "http_date": "Wed, 23 Sep 2026 11:54:42 GMT",
+      "http_status": 200,
+      "raw_file": "response.json",
+      "request_parameters": {
+        "cell_selection": "nearest",
+        "elevation": "nan,nan",
+        "forecast_hours": 61,
+        "hourly": "temperature_2m,wind_speed_10m,wind_speed_100m,wind_speed_200m,wind_direction_100m",
+        "latitude": "43.645150,43.643198",
+        "longitude": "78.535604,78.538828",
+        "models": "ecmwf_ifs",
+        "run": "2026-01-22T00:00",
+        "temperature_unit": "celsius",
+        "timeformat": "iso8601",
+        "timezone": "GMT",
+        "wind_speed_unit": "ms"
+      },
+      "request_url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.645150%2C43.643198&longitude=78.535604%2C78.538828&models=ecmwf_ifs&run=2026-01-22T00%3A00&hourly=temperature_2m%2Cwind_speed_10m%2Cwind_speed_100m%2Cwind_speed_200m%2Cwind_direction_100m&wind_speed_unit=ms&temperature_unit=celsius&timezone=GMT&timeformat=iso8601&forecast_hours=61&cell_selection=nearest&elevation=nan%2Cnan",
+      "requested_at_utc": "2026-09-23T11:54Z",
+      "response_sha256": "2ba8bf35342d14cb266b9e0e01d5570cb2ed810cb7353841b34b255369638d5a",
+      "retrieved_at_utc": "2026-09-23T11:54Z"
+    },
+    "run_id": "024cf5e31545987d0ac1647b379cb95788828b8f5de802d776f0a9d7f9a17bdd",
+    "weather_run_time_utc": "2026-01-22T00:00:00Z",
+    "weather_validation": {
+      "assumed_availability_lag_hours": 12,
+      "availability_verified": false,
+      "calculation_utc": "2026-01-22T12:00Z",
+      "date": "2026-01-22",
+      "identical_hourly_values": true,
+      "initialization_utc": "2026-01-22T00:00Z",
+      "locations": [
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": -1.0,
+              "minimum": -9.9,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 261,
+              "minimum": 62,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 11.11,
+              "minimum": 2.51,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 7.45,
+              "minimum": 1.74,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 13.67,
+              "minimum": 1.8,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.64515,
+          "requested_longitude": 78.535604,
+          "target_hours": 48,
+          "turbine": 1
+        },
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": -1.0,
+              "minimum": -9.9,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 261,
+              "minimum": 62,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 11.11,
+              "minimum": 2.51,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 7.45,
+              "minimum": 1.74,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 13.67,
+              "minimum": 1.8,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.643198,
+          "requested_longitude": 78.538828,
+          "target_hours": 48,
+          "turbine": 2
+        }
+      ],
+      "model_lead_hours": [
+        13.0,
+        60.0
+      ],
+      "model_requested": "ecmwf_ifs",
+      "publication_utc": null,
+      "same_grid_cell": true,
+      "target_end_utc": "2026-01-24T12:00Z",
+      "target_start_utc": "2026-01-22T13:00Z"
+    }
+  },
+  {
+    "forecast_sha256": "1fa07522e6711cce244faae4aa453912cc11c71924b6982750291528a9d82e64",
+    "issue_time_utc": "2026-01-23T12:00:00Z",
+    "model_time_check": {
+      "eligible_from_utc": "2025-12-31T19:00:00Z",
+      "interval_hours": 1,
+      "observation_delay_hours": 0.0,
+      "source_timezone": "Etc/GMT-5",
+      "timestamp_label": "interval_start_assumed",
+      "timezone_status": "assumed",
+      "training_publication_availability_verified": false
+    },
+    "request": {
+      "content_type": "application/json; charset=utf-8",
+      "download_attempts": 1,
+      "historical_publication_time_utc": null,
+      "http_date": "Wed, 23 Sep 2026 11:54:43 GMT",
+      "http_status": 200,
+      "raw_file": "response.json",
+      "request_parameters": {
+        "cell_selection": "nearest",
+        "elevation": "nan,nan",
+        "forecast_hours": 61,
+        "hourly": "temperature_2m,wind_speed_10m,wind_speed_100m,wind_speed_200m,wind_direction_100m",
+        "latitude": "43.645150,43.643198",
+        "longitude": "78.535604,78.538828",
+        "models": "ecmwf_ifs",
+        "run": "2026-01-23T00:00",
+        "temperature_unit": "celsius",
+        "timeformat": "iso8601",
+        "timezone": "GMT",
+        "wind_speed_unit": "ms"
+      },
+      "request_url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.645150%2C43.643198&longitude=78.535604%2C78.538828&models=ecmwf_ifs&run=2026-01-23T00%3A00&hourly=temperature_2m%2Cwind_speed_10m%2Cwind_speed_100m%2Cwind_speed_200m%2Cwind_direction_100m&wind_speed_unit=ms&temperature_unit=celsius&timezone=GMT&timeformat=iso8601&forecast_hours=61&cell_selection=nearest&elevation=nan%2Cnan",
+      "requested_at_utc": "2026-09-23T11:54Z",
+      "response_sha256": "cc0196238af19e44ee592be5c1f84b450d650fc71c2caafc487f89fd61c9a1b2",
+      "retrieved_at_utc": "2026-09-23T11:54Z"
+    },
+    "run_id": "13d482dab03f6cfb823142ecf38de7483150be14b14df1845a3223c8c09d03e2",
+    "weather_run_time_utc": "2026-01-23T00:00:00Z",
+    "weather_validation": {
+      "assumed_availability_lag_hours": 12,
+      "availability_verified": false,
+      "calculation_utc": "2026-01-23T12:00Z",
+      "date": "2026-01-23",
+      "identical_hourly_values": true,
+      "initialization_utc": "2026-01-23T00:00Z",
+      "locations": [
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 2.4,
+              "minimum": -10.7,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 291,
+              "minimum": 2,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 9.87,
+              "minimum": 0.4,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 6.71,
+              "minimum": 0.16,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 11.04,
+              "minimum": 0.78,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.64515,
+          "requested_longitude": 78.535604,
+          "target_hours": 48,
+          "turbine": 1
+        },
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 2.4,
+              "minimum": -10.7,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 291,
+              "minimum": 2,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 9.87,
+              "minimum": 0.4,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 6.71,
+              "minimum": 0.16,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 11.04,
+              "minimum": 0.78,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.643198,
+          "requested_longitude": 78.538828,
+          "target_hours": 48,
+          "turbine": 2
+        }
+      ],
+      "model_lead_hours": [
+        13.0,
+        60.0
+      ],
+      "model_requested": "ecmwf_ifs",
+      "publication_utc": null,
+      "same_grid_cell": true,
+      "target_end_utc": "2026-01-25T12:00Z",
+      "target_start_utc": "2026-01-23T13:00Z"
+    }
+  },
+  {
+    "forecast_sha256": "fae0355e0287746de864b71a8b3d4c9ef90638837c2f14c8d5d8d69ec3dbdc6e",
+    "issue_time_utc": "2026-01-24T12:00:00Z",
+    "model_time_check": {
+      "eligible_from_utc": "2025-12-31T19:00:00Z",
+      "interval_hours": 1,
+      "observation_delay_hours": 0.0,
+      "source_timezone": "Etc/GMT-5",
+      "timestamp_label": "interval_start_assumed",
+      "timezone_status": "assumed",
+      "training_publication_availability_verified": false
+    },
+    "request": {
+      "content_type": "application/json; charset=utf-8",
+      "download_attempts": 1,
+      "historical_publication_time_utc": null,
+      "http_date": "Wed, 23 Sep 2026 11:54:45 GMT",
+      "http_status": 200,
+      "raw_file": "response.json",
+      "request_parameters": {
+        "cell_selection": "nearest",
+        "elevation": "nan,nan",
+        "forecast_hours": 61,
+        "hourly": "temperature_2m,wind_speed_10m,wind_speed_100m,wind_speed_200m,wind_direction_100m",
+        "latitude": "43.645150,43.643198",
+        "longitude": "78.535604,78.538828",
+        "models": "ecmwf_ifs",
+        "run": "2026-01-24T00:00",
+        "temperature_unit": "celsius",
+        "timeformat": "iso8601",
+        "timezone": "GMT",
+        "wind_speed_unit": "ms"
+      },
+      "request_url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.645150%2C43.643198&longitude=78.535604%2C78.538828&models=ecmwf_ifs&run=2026-01-24T00%3A00&hourly=temperature_2m%2Cwind_speed_10m%2Cwind_speed_100m%2Cwind_speed_200m%2Cwind_direction_100m&wind_speed_unit=ms&temperature_unit=celsius&timezone=GMT&timeformat=iso8601&forecast_hours=61&cell_selection=nearest&elevation=nan%2Cnan",
+      "requested_at_utc": "2026-09-23T11:54Z",
+      "response_sha256": "c53b328f2be1031b5f2fbf95ff31f557973c09cb7ad0f0c29467f29790a8af7e",
+      "retrieved_at_utc": "2026-09-23T11:54Z"
+    },
+    "run_id": "43f0e3b4d4f8fb9370ad5345f73dcd5ae2f83cf78aad377bb0d4bd3f488123ed",
+    "weather_run_time_utc": "2026-01-24T00:00:00Z",
+    "weather_validation": {
+      "assumed_availability_lag_hours": 12,
+      "availability_verified": false,
+      "calculation_utc": "2026-01-24T12:00Z",
+      "date": "2026-01-24",
+      "identical_hourly_values": true,
+      "initialization_utc": "2026-01-24T00:00Z",
+      "locations": [
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 2.4,
+              "minimum": -7.4,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 360,
+              "minimum": 24,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 9.35,
+              "minimum": 0.55,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 5.22,
+              "minimum": 0.25,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 11.27,
+              "minimum": 0.7,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.64515,
+          "requested_longitude": 78.535604,
+          "target_hours": 48,
+          "turbine": 1
+        },
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 2.4,
+              "minimum": -7.4,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 360,
+              "minimum": 24,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 9.35,
+              "minimum": 0.55,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 5.22,
+              "minimum": 0.25,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 11.27,
+              "minimum": 0.7,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.643198,
+          "requested_longitude": 78.538828,
+          "target_hours": 48,
+          "turbine": 2
+        }
+      ],
+      "model_lead_hours": [
+        13.0,
+        60.0
+      ],
+      "model_requested": "ecmwf_ifs",
+      "publication_utc": null,
+      "same_grid_cell": true,
+      "target_end_utc": "2026-01-26T12:00Z",
+      "target_start_utc": "2026-01-24T13:00Z"
+    }
+  },
+  {
+    "forecast_sha256": "adf473d7aaf9462a9d808992ca256588d3d1fe999e4603efa3113c01baaec150",
+    "issue_time_utc": "2026-01-25T12:00:00Z",
+    "model_time_check": {
+      "eligible_from_utc": "2025-12-31T19:00:00Z",
+      "interval_hours": 1,
+      "observation_delay_hours": 0.0,
+      "source_timezone": "Etc/GMT-5",
+      "timestamp_label": "interval_start_assumed",
+      "timezone_status": "assumed",
+      "training_publication_availability_verified": false
+    },
+    "request": {
+      "content_type": "application/json; charset=utf-8",
+      "download_attempts": 1,
+      "historical_publication_time_utc": null,
+      "http_date": "Wed, 23 Sep 2026 11:54:46 GMT",
+      "http_status": 200,
+      "raw_file": "response.json",
+      "request_parameters": {
+        "cell_selection": "nearest",
+        "elevation": "nan,nan",
+        "forecast_hours": 61,
+        "hourly": "temperature_2m,wind_speed_10m,wind_speed_100m,wind_speed_200m,wind_direction_100m",
+        "latitude": "43.645150,43.643198",
+        "longitude": "78.535604,78.538828",
+        "models": "ecmwf_ifs",
+        "run": "2026-01-25T00:00",
+        "temperature_unit": "celsius",
+        "timeformat": "iso8601",
+        "timezone": "GMT",
+        "wind_speed_unit": "ms"
+      },
+      "request_url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.645150%2C43.643198&longitude=78.535604%2C78.538828&models=ecmwf_ifs&run=2026-01-25T00%3A00&hourly=temperature_2m%2Cwind_speed_10m%2Cwind_speed_100m%2Cwind_speed_200m%2Cwind_direction_100m&wind_speed_unit=ms&temperature_unit=celsius&timezone=GMT&timeformat=iso8601&forecast_hours=61&cell_selection=nearest&elevation=nan%2Cnan",
+      "requested_at_utc": "2026-09-23T11:54Z",
+      "response_sha256": "d61f5928cf0ee29bc9f791cb83dcd9fe77931dd653eb9f20198999f17ed80676",
+      "retrieved_at_utc": "2026-09-23T11:54Z"
+    },
+    "run_id": "2f0b33f07ffeed90310d9bcbe06d5bdddf55970daeb79ac4971262d719585595",
+    "weather_run_time_utc": "2026-01-25T00:00:00Z",
+    "weather_validation": {
+      "assumed_availability_lag_hours": 12,
+      "availability_verified": false,
+      "calculation_utc": "2026-01-25T12:00Z",
+      "date": "2026-01-25",
+      "identical_hourly_values": true,
+      "initialization_utc": "2026-01-25T00:00Z",
+      "locations": [
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 2.2,
+              "minimum": -6.9,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 347,
+              "minimum": 39,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 9.03,
+              "minimum": 0.29,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 4.9,
+              "minimum": 0.18,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 10.88,
+              "minimum": 0.32,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.64515,
+          "requested_longitude": 78.535604,
+          "target_hours": 48,
+          "turbine": 1
+        },
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 2.2,
+              "minimum": -6.9,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 347,
+              "minimum": 39,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 9.03,
+              "minimum": 0.29,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 4.9,
+              "minimum": 0.18,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 10.88,
+              "minimum": 0.32,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.643198,
+          "requested_longitude": 78.538828,
+          "target_hours": 48,
+          "turbine": 2
+        }
+      ],
+      "model_lead_hours": [
+        13.0,
+        60.0
+      ],
+      "model_requested": "ecmwf_ifs",
+      "publication_utc": null,
+      "same_grid_cell": true,
+      "target_end_utc": "2026-01-27T12:00Z",
+      "target_start_utc": "2026-01-25T13:00Z"
+    }
+  },
+  {
+    "forecast_sha256": "baabaaadec24e66ddf5056c79c508cfd23b1682e9dbe8a101cae47e8e9b6fb9c",
+    "issue_time_utc": "2026-01-26T12:00:00Z",
+    "model_time_check": {
+      "eligible_from_utc": "2025-12-31T19:00:00Z",
+      "interval_hours": 1,
+      "observation_delay_hours": 0.0,
+      "source_timezone": "Etc/GMT-5",
+      "timestamp_label": "interval_start_assumed",
+      "timezone_status": "assumed",
+      "training_publication_availability_verified": false
+    },
+    "request": {
+      "content_type": "application/json; charset=utf-8",
+      "download_attempts": 1,
+      "historical_publication_time_utc": null,
+      "http_date": "Wed, 23 Sep 2026 11:54:48 GMT",
+      "http_status": 200,
+      "raw_file": "response.json",
+      "request_parameters": {
+        "cell_selection": "nearest",
+        "elevation": "nan,nan",
+        "forecast_hours": 61,
+        "hourly": "temperature_2m,wind_speed_10m,wind_speed_100m,wind_speed_200m,wind_direction_100m",
+        "latitude": "43.645150,43.643198",
+        "longitude": "78.535604,78.538828",
+        "models": "ecmwf_ifs",
+        "run": "2026-01-26T00:00",
+        "temperature_unit": "celsius",
+        "timeformat": "iso8601",
+        "timezone": "GMT",
+        "wind_speed_unit": "ms"
+      },
+      "request_url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.645150%2C43.643198&longitude=78.535604%2C78.538828&models=ecmwf_ifs&run=2026-01-26T00%3A00&hourly=temperature_2m%2Cwind_speed_10m%2Cwind_speed_100m%2Cwind_speed_200m%2Cwind_direction_100m&wind_speed_unit=ms&temperature_unit=celsius&timezone=GMT&timeformat=iso8601&forecast_hours=61&cell_selection=nearest&elevation=nan%2Cnan",
+      "requested_at_utc": "2026-09-23T11:54Z",
+      "response_sha256": "ae839f0a193cd95beb904b6bb24258357198b72f715fcbc7feaef216a0e98e4b",
+      "retrieved_at_utc": "2026-09-23T11:54Z"
+    },
+    "run_id": "e044948e6f9c8cad74a283d1226773b8ec7d6e9963ffc6d3dea4f8420c92f1d3",
+    "weather_run_time_utc": "2026-01-26T00:00:00Z",
+    "weather_validation": {
+      "assumed_availability_lag_hours": 12,
+      "availability_verified": false,
+      "calculation_utc": "2026-01-26T12:00Z",
+      "date": "2026-01-26",
+      "identical_hourly_values": true,
+      "initialization_utc": "2026-01-26T00:00Z",
+      "locations": [
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 2.6,
+              "minimum": -6.3,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 360,
+              "minimum": 14,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 7.94,
+              "minimum": 0.22,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 3.65,
+              "minimum": 0.1,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 10.22,
+              "minimum": 0.57,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.64515,
+          "requested_longitude": 78.535604,
+          "target_hours": 48,
+          "turbine": 1
+        },
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 2.6,
+              "minimum": -6.3,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 360,
+              "minimum": 14,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 7.94,
+              "minimum": 0.22,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 3.65,
+              "minimum": 0.1,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 10.22,
+              "minimum": 0.57,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.643198,
+          "requested_longitude": 78.538828,
+          "target_hours": 48,
+          "turbine": 2
+        }
+      ],
+      "model_lead_hours": [
+        13.0,
+        60.0
+      ],
+      "model_requested": "ecmwf_ifs",
+      "publication_utc": null,
+      "same_grid_cell": true,
+      "target_end_utc": "2026-01-28T12:00Z",
+      "target_start_utc": "2026-01-26T13:00Z"
+    }
+  },
+  {
+    "forecast_sha256": "bc4d97c288def293049090e52982b53afa7bb3edf87550a9f6f914f8e9943c6c",
+    "issue_time_utc": "2026-01-27T12:00:00Z",
+    "model_time_check": {
+      "eligible_from_utc": "2025-12-31T19:00:00Z",
+      "interval_hours": 1,
+      "observation_delay_hours": 0.0,
+      "source_timezone": "Etc/GMT-5",
+      "timestamp_label": "interval_start_assumed",
+      "timezone_status": "assumed",
+      "training_publication_availability_verified": false
+    },
+    "request": {
+      "content_type": "application/json; charset=utf-8",
+      "download_attempts": 1,
+      "historical_publication_time_utc": null,
+      "http_date": "Wed, 23 Sep 2026 11:54:49 GMT",
+      "http_status": 200,
+      "raw_file": "response.json",
+      "request_parameters": {
+        "cell_selection": "nearest",
+        "elevation": "nan,nan",
+        "forecast_hours": 61,
+        "hourly": "temperature_2m,wind_speed_10m,wind_speed_100m,wind_speed_200m,wind_direction_100m",
+        "latitude": "43.645150,43.643198",
+        "longitude": "78.535604,78.538828",
+        "models": "ecmwf_ifs",
+        "run": "2026-01-27T00:00",
+        "temperature_unit": "celsius",
+        "timeformat": "iso8601",
+        "timezone": "GMT",
+        "wind_speed_unit": "ms"
+      },
+      "request_url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.645150%2C43.643198&longitude=78.535604%2C78.538828&models=ecmwf_ifs&run=2026-01-27T00%3A00&hourly=temperature_2m%2Cwind_speed_10m%2Cwind_speed_100m%2Cwind_speed_200m%2Cwind_direction_100m&wind_speed_unit=ms&temperature_unit=celsius&timezone=GMT&timeformat=iso8601&forecast_hours=61&cell_selection=nearest&elevation=nan%2Cnan",
+      "requested_at_utc": "2026-09-23T11:54Z",
+      "response_sha256": "b565c015156ffcabcee49c24f1aeaf29aa0f1b01eb60124e14d7cd496f05b1b8",
+      "retrieved_at_utc": "2026-09-23T11:54Z"
+    },
+    "run_id": "094af4ebd0560368da68c495e788d06129e8d9d2996d85c70858656ca34d5f09",
+    "weather_run_time_utc": "2026-01-27T00:00:00Z",
+    "weather_validation": {
+      "assumed_availability_lag_hours": 12,
+      "availability_verified": false,
+      "calculation_utc": "2026-01-27T12:00Z",
+      "date": "2026-01-27",
+      "identical_hourly_values": true,
+      "initialization_utc": "2026-01-27T00:00Z",
+      "locations": [
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 2.9,
+              "minimum": -5.8,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 270,
+              "minimum": 39,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 6.93,
+              "minimum": 0.32,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 5.03,
+              "minimum": 0.22,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 9.2,
+              "minimum": 0.16,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.64515,
+          "requested_longitude": 78.535604,
+          "target_hours": 48,
+          "turbine": 1
+        },
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 2.9,
+              "minimum": -5.8,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 270,
+              "minimum": 39,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 6.93,
+              "minimum": 0.32,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 5.03,
+              "minimum": 0.22,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 9.2,
+              "minimum": 0.16,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.643198,
+          "requested_longitude": 78.538828,
+          "target_hours": 48,
+          "turbine": 2
+        }
+      ],
+      "model_lead_hours": [
+        13.0,
+        60.0
+      ],
+      "model_requested": "ecmwf_ifs",
+      "publication_utc": null,
+      "same_grid_cell": true,
+      "target_end_utc": "2026-01-29T12:00Z",
+      "target_start_utc": "2026-01-27T13:00Z"
+    }
+  },
+  {
+    "forecast_sha256": "2b298369194237e3764fd37502e8a417099fcdc95e431a2a5029e9f7f4fbc658",
+    "issue_time_utc": "2026-01-28T12:00:00Z",
+    "model_time_check": {
+      "eligible_from_utc": "2025-12-31T19:00:00Z",
+      "interval_hours": 1,
+      "observation_delay_hours": 0.0,
+      "source_timezone": "Etc/GMT-5",
+      "timestamp_label": "interval_start_assumed",
+      "timezone_status": "assumed",
+      "training_publication_availability_verified": false
+    },
+    "request": {
+      "content_type": "application/json; charset=utf-8",
+      "download_attempts": 1,
+      "historical_publication_time_utc": null,
+      "http_date": "Wed, 23 Sep 2026 11:54:51 GMT",
+      "http_status": 200,
+      "raw_file": "response.json",
+      "request_parameters": {
+        "cell_selection": "nearest",
+        "elevation": "nan,nan",
+        "forecast_hours": 61,
+        "hourly": "temperature_2m,wind_speed_10m,wind_speed_100m,wind_speed_200m,wind_direction_100m",
+        "latitude": "43.645150,43.643198",
+        "longitude": "78.535604,78.538828",
+        "models": "ecmwf_ifs",
+        "run": "2026-01-28T00:00",
+        "temperature_unit": "celsius",
+        "timeformat": "iso8601",
+        "timezone": "GMT",
+        "wind_speed_unit": "ms"
+      },
+      "request_url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.645150%2C43.643198&longitude=78.535604%2C78.538828&models=ecmwf_ifs&run=2026-01-28T00%3A00&hourly=temperature_2m%2Cwind_speed_10m%2Cwind_speed_100m%2Cwind_speed_200m%2Cwind_direction_100m&wind_speed_unit=ms&temperature_unit=celsius&timezone=GMT&timeformat=iso8601&forecast_hours=61&cell_selection=nearest&elevation=nan%2Cnan",
+      "requested_at_utc": "2026-09-23T11:54Z",
+      "response_sha256": "82ff37ab42813e18bbe10858879ba2596b0481c912a6017673506d86d89cda8a",
+      "retrieved_at_utc": "2026-09-23T11:54Z"
+    },
+    "run_id": "2ee8bc2e749f1b23ea2e526e9692571b0317bdd9161ff69ef1ffaf9ba1ca64df",
+    "weather_run_time_utc": "2026-01-28T00:00:00Z",
+    "weather_validation": {
+      "assumed_availability_lag_hours": 12,
+      "availability_verified": false,
+      "calculation_utc": "2026-01-28T12:00Z",
+      "date": "2026-01-28",
+      "identical_hourly_values": true,
+      "initialization_utc": "2026-01-28T00:00Z",
+      "locations": [
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 3.8,
+              "minimum": -6.9,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 104,
+              "minimum": 43,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 11.07,
+              "minimum": 2.22,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 6.95,
+              "minimum": 0.66,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 12.03,
+              "minimum": 3.61,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.64515,
+          "requested_longitude": 78.535604,
+          "target_hours": 48,
+          "turbine": 1
+        },
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 3.8,
+              "minimum": -6.9,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 104,
+              "minimum": 43,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 11.07,
+              "minimum": 2.22,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 6.95,
+              "minimum": 0.66,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 12.03,
+              "minimum": 3.61,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.643198,
+          "requested_longitude": 78.538828,
+          "target_hours": 48,
+          "turbine": 2
+        }
+      ],
+      "model_lead_hours": [
+        13.0,
+        60.0
+      ],
+      "model_requested": "ecmwf_ifs",
+      "publication_utc": null,
+      "same_grid_cell": true,
+      "target_end_utc": "2026-01-30T12:00Z",
+      "target_start_utc": "2026-01-28T13:00Z"
+    }
+  },
+  {
+    "forecast_sha256": "bd96d25f428b9ff6eb85643548bcdf2d87bd922cd0307aa6f142aba1918ae822",
+    "issue_time_utc": "2026-01-29T12:00:00Z",
+    "model_time_check": {
+      "eligible_from_utc": "2025-12-31T19:00:00Z",
+      "interval_hours": 1,
+      "observation_delay_hours": 0.0,
+      "source_timezone": "Etc/GMT-5",
+      "timestamp_label": "interval_start_assumed",
+      "timezone_status": "assumed",
+      "training_publication_availability_verified": false
+    },
+    "request": {
+      "content_type": "application/json; charset=utf-8",
+      "download_attempts": 1,
+      "historical_publication_time_utc": null,
+      "http_date": "Wed, 23 Sep 2026 11:54:52 GMT",
+      "http_status": 200,
+      "raw_file": "response.json",
+      "request_parameters": {
+        "cell_selection": "nearest",
+        "elevation": "nan,nan",
+        "forecast_hours": 61,
+        "hourly": "temperature_2m,wind_speed_10m,wind_speed_100m,wind_speed_200m,wind_direction_100m",
+        "latitude": "43.645150,43.643198",
+        "longitude": "78.535604,78.538828",
+        "models": "ecmwf_ifs",
+        "run": "2026-01-29T00:00",
+        "temperature_unit": "celsius",
+        "timeformat": "iso8601",
+        "timezone": "GMT",
+        "wind_speed_unit": "ms"
+      },
+      "request_url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.645150%2C43.643198&longitude=78.535604%2C78.538828&models=ecmwf_ifs&run=2026-01-29T00%3A00&hourly=temperature_2m%2Cwind_speed_10m%2Cwind_speed_100m%2Cwind_speed_200m%2Cwind_direction_100m&wind_speed_unit=ms&temperature_unit=celsius&timezone=GMT&timeformat=iso8601&forecast_hours=61&cell_selection=nearest&elevation=nan%2Cnan",
+      "requested_at_utc": "2026-09-23T11:54Z",
+      "response_sha256": "16e7d8d073c7dae0dc80143b49bd7ecc2f4889113bcb7bd569d41b35f43f5de7",
+      "retrieved_at_utc": "2026-09-23T11:54Z"
+    },
+    "run_id": "1a92dd2d590ed0e04826e927e1c38dd6003aba73bb6a986cc32d06d9f4994f93",
+    "weather_run_time_utc": "2026-01-29T00:00:00Z",
+    "weather_validation": {
+      "assumed_availability_lag_hours": 12,
+      "availability_verified": false,
+      "calculation_utc": "2026-01-29T12:00Z",
+      "date": "2026-01-29",
+      "identical_hourly_values": true,
+      "initialization_utc": "2026-01-29T00:00Z",
+      "locations": [
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 4.9,
+              "minimum": -5.6,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 69,
+              "minimum": 50,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 10.58,
+              "minimum": 7.03,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 7.31,
+              "minimum": 3.32,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 12.16,
+              "minimum": 8.53,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.64515,
+          "requested_longitude": 78.535604,
+          "target_hours": 48,
+          "turbine": 1
+        },
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 4.9,
+              "minimum": -5.6,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 69,
+              "minimum": 50,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 10.58,
+              "minimum": 7.03,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 7.31,
+              "minimum": 3.32,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 12.16,
+              "minimum": 8.53,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.643198,
+          "requested_longitude": 78.538828,
+          "target_hours": 48,
+          "turbine": 2
+        }
+      ],
+      "model_lead_hours": [
+        13.0,
+        60.0
+      ],
+      "model_requested": "ecmwf_ifs",
+      "publication_utc": null,
+      "same_grid_cell": true,
+      "target_end_utc": "2026-01-31T12:00Z",
+      "target_start_utc": "2026-01-29T13:00Z"
+    }
+  },
+  {
+    "forecast_sha256": "4bdb90c9c99eb126f0d9ed110d2c9bcc02d981f2100674ef1ce3e66c96445f1d",
+    "issue_time_utc": "2026-01-30T12:00:00Z",
+    "model_time_check": {
+      "eligible_from_utc": "2025-12-31T19:00:00Z",
+      "interval_hours": 1,
+      "observation_delay_hours": 0.0,
+      "source_timezone": "Etc/GMT-5",
+      "timestamp_label": "interval_start_assumed",
+      "timezone_status": "assumed",
+      "training_publication_availability_verified": false
+    },
+    "request": {
+      "content_type": "application/json; charset=utf-8",
+      "download_attempts": 1,
+      "historical_publication_time_utc": null,
+      "http_date": "Wed, 23 Sep 2026 11:54:54 GMT",
+      "http_status": 200,
+      "raw_file": "response.json",
+      "request_parameters": {
+        "cell_selection": "nearest",
+        "elevation": "nan,nan",
+        "forecast_hours": 61,
+        "hourly": "temperature_2m,wind_speed_10m,wind_speed_100m,wind_speed_200m,wind_direction_100m",
+        "latitude": "43.645150,43.643198",
+        "longitude": "78.535604,78.538828",
+        "models": "ecmwf_ifs",
+        "run": "2026-01-30T00:00",
+        "temperature_unit": "celsius",
+        "timeformat": "iso8601",
+        "timezone": "GMT",
+        "wind_speed_unit": "ms"
+      },
+      "request_url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.645150%2C43.643198&longitude=78.535604%2C78.538828&models=ecmwf_ifs&run=2026-01-30T00%3A00&hourly=temperature_2m%2Cwind_speed_10m%2Cwind_speed_100m%2Cwind_speed_200m%2Cwind_direction_100m&wind_speed_unit=ms&temperature_unit=celsius&timezone=GMT&timeformat=iso8601&forecast_hours=61&cell_selection=nearest&elevation=nan%2Cnan",
+      "requested_at_utc": "2026-09-23T11:54Z",
+      "response_sha256": "cd6da2d84e4001ac7db806aa970fe3e30817228c272e9511174f32f35921d83f",
+      "retrieved_at_utc": "2026-09-23T11:54Z"
+    },
+    "run_id": "7cddccfe5db8fff2a8c148ae07a4ddd01e39bd5662eae09344316e4a4114d165",
+    "weather_run_time_utc": "2026-01-30T00:00:00Z",
+    "weather_validation": {
+      "assumed_availability_lag_hours": 12,
+      "availability_verified": false,
+      "calculation_utc": "2026-01-30T12:00Z",
+      "date": "2026-01-30",
+      "identical_hourly_values": true,
+      "initialization_utc": "2026-01-30T00:00Z",
+      "locations": [
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 6.1,
+              "minimum": -4.7,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 330,
+              "minimum": 47,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 8.98,
+              "minimum": 0.32,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 6.56,
+              "minimum": 0.05,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 11.69,
+              "minimum": 0.38,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.64515,
+          "requested_longitude": 78.535604,
+          "target_hours": 48,
+          "turbine": 1
+        },
+        {
+          "fields": {
+            "temperature_2m": {
+              "count": 48,
+              "maximum": 6.1,
+              "minimum": -4.7,
+              "missing": 0,
+              "unit": "°C"
+            },
+            "wind_direction_100m": {
+              "count": 48,
+              "maximum": 330,
+              "minimum": 47,
+              "missing": 0,
+              "unit": "°"
+            },
+            "wind_speed_100m": {
+              "count": 48,
+              "maximum": 8.98,
+              "minimum": 0.32,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_10m": {
+              "count": 48,
+              "maximum": 6.56,
+              "minimum": 0.05,
+              "missing": 0,
+              "unit": "m/s"
+            },
+            "wind_speed_200m": {
+              "count": 48,
+              "maximum": 11.69,
+              "minimum": 0.38,
+              "missing": 0,
+              "unit": "m/s"
+            }
+          },
+          "grid_elevation_m": 638.0,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "raw_hours": 61,
+          "requested_latitude": 43.643198,
+          "requested_longitude": 78.538828,
+          "target_hours": 48,
+          "turbine": 2
+        }
+      ],
+      "model_lead_hours": [
+        13.0,
+        60.0
+      ],
+      "model_requested": "ecmwf_ifs",
+      "publication_utc": null,
+      "same_grid_cell": true,
+      "target_end_utc": "2026-02-01T12:00Z",
+      "target_start_utc": "2026-01-30T13:00Z"
+    }
+  }
+]

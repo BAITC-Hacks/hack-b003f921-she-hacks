@@ -1,0 +1,142 @@
+{
+  "baseline": "Persistence; latest finite completed hour assumed available by issue, maximum age 24h; paired cases",
+  "case_weighting": "Each issue/turbine/target is a case; overlapping issues retained",
+  "command_arguments": [
+    "--source-timezone",
+    "Etc/GMT-5",
+    "--observation-delay-hours",
+    "0"
+  ],
+  "created_at_utc": "2026-09-23T11:54:57.515464+00:00",
+  "environment": {
+    "catboost": "1.2.8",
+    "matplotlib": "3.11.2",
+    "numpy": "2.2.6",
+    "pandas": "2.2.3",
+    "python": "3.11.16",
+    "scikit-learn": "1.6.1"
+  },
+  "file_sha256": {
+    "baseline_availability.csv": "a349055ac2e3728d04bd3d5554ee6d26e000a46e2c891039e8c86fc74d991eb6",
+    "coverage.json": "1ffc9a91e2a378e0b16d5d576b4a50b18c5d520ce0035413f99b4572ec1b2054",
+    "forecast_case_audit.csv.gz": "c2529afcec4c7758bd97e9d85b15b1efb36f26f62ec562d03e7501f04d842ad7",
+    "forecasts.csv": "a2784984d324bf506bff2546d89e34aaa704b116a5d8f94c129abd667c24bc14",
+    "issues.csv": "c237f059932ba8dc24c06b36e2f2d0191c6735c44fbab4ba4af67c1d9794527f",
+    "metrics.csv": "78bf9d8febe45a83a1488dcebaf0b7d9725bdec6107ca0ad253f3d8217aa60a9",
+    "uncovered_hours.csv": "c7610f570e9eeaa8591278642cadf3a38133e022e2c2f206b98d429b8e6caf1b",
+    "weather_evidence.json": "55fa9d2c20b0102419bafef2a73d361c356fe2b16191d442f5548c70a6a0202f"
+  },
+  "identity": {
+    "code_sha256": {
+      "agent/artifact_store.py": "155af831c3a3cde005c3a3d95f896709454324a7264e09c0dc7e36dca7572651",
+      "agent/power_alerts.py": "b9192f559c5afc6ff2364e4e6fa9b1a75fefe4bbc5b04931874fbc203309610b",
+      "agent/weather_adapter.py": "114f0dd6ad17b9a17a4e2a9d904982ce2fac06b5891986067b611d7e460fc49f",
+      "agent/weather_archive.py": "cc6372313a87164d7cf86006c421bb5b4975e33dbb79e71056d1020ac14029bd",
+      "agent/weather_pipeline.py": "8a1df35a29beab6e75cbdf68cc17102f2d634706ffebe58aa315085876d177c8",
+      "backtest/evaluate_january.py": "530106e7a53d160f075a3ad78373d48679e0a74a5f290a1463168bba4e810cd3",
+      "backtest/train_january.py": "cad99bac5ac20711cb958afb4694c2a5577f13066780e2a964735a07a1d85cb8",
+      "prediction/interface.py": "fd5f06fc8d123d779fdb47b65840273abf1511bea2a46ee158857d0659cb35ac",
+      "scripts/build_weather_example.py": "75b94bca702ce861dd84602d24327df52ac180387dc8849f2783743bb16e3473",
+      "scripts/check_weather_archive.py": "892ce95218493ccfdf705ba2c85179fabeaafeaa7f5dec68d817247d0b266cf7",
+      "scripts/prepare_hourly.ps1": "9de8c11a4f6b79cf662ccb028c49a830ec15deea3714e5f5832351bf4dca6ef2",
+      "scripts/run_january_evaluation.py": "193bffb3bcab72d82e59a00adb18c230805df6c0be5d15c0749a9573d8b8685a"
+    },
+    "forecast_sha256": "a2784984d324bf506bff2546d89e34aaa704b116a5d8f94c129abd667c24bc14",
+    "model_metadata_sha256": "c2cc4e11704020138398ab6f5c117fadf8b6e2f456e8d4a0481fbbde6cdbe8be",
+    "settings": {
+      "first_day": 1,
+      "last_day": 30,
+      "observation_delay_hours": 0.0,
+      "scada_availability_status": "assumed",
+      "source_timezone": "Etc/GMT-5",
+      "source_timezone_status": "assumed",
+      "timestamp_label": "interval_start_assumed",
+      "weather_availability_lag_hours": 12,
+      "weather_availability_status": "assumed",
+      "weather_provenance_status": "unverified",
+      "wind_height_m": 100,
+      "wind_height_status": "technical_assumption_not_confirmed_hub_height"
+    },
+    "successful_run_ids": [
+      "122b72699e79b22eed69f0351d80e5f77def2f7fb4427bf763ec74e12f8ba596",
+      "02104f67d95b1b0e180cb9017d88daa73a8fcacd86aff2e0b1949c4bea98dc60",
+      "e2c918f3df49164ebd2d0df261f2e4d4c11315d7a9a3b26a767990a9a8e5b8e5",
+      "00cbdbebba1e63e0de82f85f4964ad51491b07676b316f5edb0ecf5eaf173292",
+      "c49e8706aae1423879705df649d764fb4f56c800cfd228c9f3bf3b7a196155fb",
+      "a1ba4e7291ef77fc8b58f69226e9b6d37ce4c249275d6d0e12d629e472c08b8d",
+      "d616e71b91850fc7bc2a83194c8d626e5fd467c3460d90fb994ea40892978dfa",
+      "4e01b9dcd3abaf6b185dae014caad5ec4cb16c7fe981ee20f57a12621fd6056e",
+      "6a285c6db55381195f1fdaff701641076d1818f4dfc7bf06ffde9aef9688f8ac",
+      "fca9932eb45ed01759a70ac301905cb7913b2c9ee159c7ae42089be498a3ccd7",
+      "6a1befc9793a3d56863f829926594b2151ba6f91d2ced9305abdc04b49ace9b8",
+      "07bb39ad33f70af3b9915314dfa18eed46318b2d0854f4e1b9f09bc227bfb84d",
+      "396b718793ec4ed9ffaa27a816d515d71fbf9ffbf31b860baf090763d041679e",
+      "06203d3b26635d5dc4b7099f5e840d680cafbd49507c23e4015704f49b00059a",
+      "5b29bcd77a60a972eadf4d192625182ee119a88fd3c49010b980779fa4e21111",
+      "872640f6bd23c1db1c7cf9bc95f37d704794e201c80578766c63ab5365083b3e",
+      "9c06a477a1900a599dbbc82e5bba326311dfcfb5cc432d4ff54844496b4a173d",
+      "86004bf165dab2a134ff4728754681ddc0c449b0d0c6429f1c9ca978fa10cd24",
+      "dd9b026e61e91b0406aaccc566571ec75001b0d3ae6121eb9666a9b8b7cdeca9",
+      "d65939d0ddd5da1dcbf3b990f4272c90969e02cb2e4823c89b1b02fb3014b583",
+      "dc8a070d5ee14bed4728cf6f6d3dec96d2c425f50b4129f9f3f4a944dc25c8dc",
+      "024cf5e31545987d0ac1647b379cb95788828b8f5de802d776f0a9d7f9a17bdd",
+      "13d482dab03f6cfb823142ecf38de7483150be14b14df1845a3223c8c09d03e2",
+      "43f0e3b4d4f8fb9370ad5345f73dcd5ae2f83cf78aad377bb0d4bd3f488123ed",
+      "2f0b33f07ffeed90310d9bcbe06d5bdddf55970daeb79ac4971262d719585595",
+      "e044948e6f9c8cad74a283d1226773b8ec7d6e9963ffc6d3dea4f8420c92f1d3",
+      "094af4ebd0560368da68c495e788d06129e8d9d2996d85c70858656ca34d5f09",
+      "2ee8bc2e749f1b23ea2e526e9692571b0317bdd9161ff69ef1ffaf9ba1ca64df",
+      "1a92dd2d590ed0e04826e927e1c38dd6003aba73bb6a986cc32d06d9f4994f93",
+      "7cddccfe5db8fff2a8c148ae07a4ddd01e39bd5662eae09344316e4a4114d165"
+    ],
+    "training_check": {
+      "guard": {
+        "eligible_from_utc": "2025-12-31T19:00:00Z",
+        "interval_hours": 1,
+        "observation_delay_hours": 0.0,
+        "source_timezone": "Etc/GMT-5",
+        "timestamp_label": "interval_start_assumed",
+        "timezone_status": "assumed",
+        "training_publication_availability_verified": false
+      },
+      "publication_availability_verified": false,
+      "turbines": {
+        "turbine_1": {
+          "latest_assumed_training_availability_utc": "2025-12-31 19:00:00+00:00",
+          "latest_training_interval_end_utc": "2025-12-31 19:00:00+00:00",
+          "model_sha256": "d094eb03a52f303931989830f7b4efb0d2e6c3faabb6b6a47793e8f3af157ee1",
+          "source_sha256": "a61619e174a892462674e2277526b863aab994df8ac872285b4d8eefffef766e",
+          "training_rows_checked": 23019
+        },
+        "turbine_2": {
+          "latest_assumed_training_availability_utc": "2025-12-31 19:00:00+00:00",
+          "latest_training_interval_end_utc": "2025-12-31 19:00:00+00:00",
+          "model_sha256": "bc781886f00f59e8ca445d0499e557775f0ddd100dc689290ef2f3ac4fec1e9b",
+          "source_sha256": "fd9d111ed43f7fa0cd6da4c9009e13691c65a2406b35d4ebb1b1d900fc7f9b40",
+          "training_rows_checked": 24260
+        }
+      }
+    }
+  },
+  "limitations": [
+    "Not a confirmed historical backtest",
+    "SCADA revisions and publication times unknown",
+    "Retrospectively trained in September; hyperparameter selection independence unverified",
+    "Weather initialization does not prove historical publication or operational origin",
+    "Wind-height compatibility with measured training weather is unconfirmed"
+  ],
+  "partial_actual_hours": "Finite means accepted by existing evaluator; no filling",
+  "raw_sources": {
+    "turbine 1.csv": "c4c341582fb2dd348b7187f0128cff265fe055f469413871ebb5db50eef58b5b",
+    "turbine 2.csv": "820578cd18bb557cd30c2e102f3ae5a386dfc6c489a5a15743339c2b017305e5"
+  },
+  "real_archival_forecasts_attested": false,
+  "scada_availability_verified": false,
+  "scada_source_timezone_confirmed": false,
+  "schedule_complete": true,
+  "status": "preliminary_january_evaluation_with_time_and_archive_assumptions",
+  "training_availability_status": "assumed_after_hour_end_plus_delay",
+  "training_publication_availability_verified": false,
+  "weather_historical_publication_verified": false,
+  "weather_provenance_status": "unverified"
+}

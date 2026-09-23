@@ -50,7 +50,9 @@ def run(args):
     analyze([], args.drop_threshold)  # Validate threshold before network/model work.
     model_bytes = (args.model_dir / "metadata.json").read_bytes()
     model_metadata = json.loads(model_bytes)
-    validate_model_time(issue, model_metadata)
+    source_timezone = getattr(args, "source_timezone", None)
+    observation_delay = getattr(args, "observation_delay_hours", 0)
+    model_time_check = validate_model_time(issue, model_metadata, source_timezone, observation_delay)
     models = {}
     for turbine in ("turbine_1", "turbine_2"):
         entry = model_metadata["turbines"][turbine]
@@ -61,7 +63,7 @@ def run(args):
     body, request, weather_check, weather_origin, cache_path = obtain(
         issue, weather_run, args.cache_dir, args.seed_dir, args.offline)
     weather_csv = csv_bytes(COLUMNS, forecast_rows(json.loads(body), weather_check))
-    adapted, fields, rows = adapt(weather_csv, issue, args.wind_height_m, model_metadata)
+    adapted, fields, rows = adapt(weather_csv, issue, args.wind_height_m, model_metadata, source_timezone, observation_delay)
     code_paths = ["agent/artifact_store.py", "agent/weather_pipeline.py", "agent/weather_archive.py", "agent/weather_adapter.py",
                   "agent/power_alerts.py", "scripts/check_weather_archive.py", "scripts/build_weather_example.py",
                   "prediction/interface.py", "prediction/__main__.py"]
@@ -72,6 +74,7 @@ def run(args):
         "input_sha256": digest(adapted), "wind_height_m": args.wind_height_m,
         "drop_threshold": args.drop_threshold, "models": models,
         "model_metadata_sha256": digest(model_bytes), "weather_provenance_status": "unverified",
+        "model_time_check": model_time_check,
         "environment": {"python": sys.version.split()[0], **{p: version(p) for p in ("catboost", "numpy", "pandas")}},
         "code_sha256": {p: digest((ROOT / p).read_bytes().replace(b"\r\n", b"\n")) for p in code_paths},
     }
@@ -118,7 +121,9 @@ def run(args):
         "feature_mapping": {"temperature_c": "temperature_2m_c", "wind_speed_ms": f"wind_speed_{args.wind_height_m}m_ms"},
         "wind_height_assumption": "Technical choice; hub and training sensor heights unconfirmed",
         "terrain_settings": {k: request["request_parameters"][k] for k in ("cell_selection", "elevation")},
-        "availability_assumption": {"lag_hours": 12, "verified": False,
+        "model_time_check": model_time_check,
+        "availability_assumption": {"status": "assumed", "lag_hours": 12, "verified": False,
+                                    "weather_available_time_utc": rows[0]["weather_available_time_utc"],
                                     "publication_time_utc": None,
                                     "basis": "Typical 4-6h plus 10min propagation, with 5h50 extra margin"},
         "validation": {"rows": len(rows), "missing_values": 0, "duplicate_keys": 0,
@@ -145,6 +150,9 @@ def main(argv=None):
     parser.add_argument("--weather-run-time", help="Optional eligible UTC initialization; default latest with 12h lag")
     parser.add_argument("--wind-height-m", type=int, choices=(10, 100, 200), required=True)
     parser.add_argument("--model-dir", type=Path, default=ROOT / "models")
+    parser.add_argument("--source-timezone", help="Explicit assumed source clock, e.g. Etc/GMT-5 for UTC+05")
+    parser.add_argument("--observation-delay-hours", type=float, default=0,
+                        help="Assumed delay after hourly interval completion, with --source-timezone")
     parser.add_argument("--drop-threshold", type=float, default=0.20)
     parser.add_argument("--cache-dir", type=Path, default=ROOT / "data/weather_cache")
     parser.add_argument("--seed-dir", type=Path, default=ROOT / "data/weather_source_check")

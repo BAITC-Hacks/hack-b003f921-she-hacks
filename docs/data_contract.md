@@ -1,5 +1,11 @@
 # Weather forecast data contract
 
+## Preliminary January adapter extension
+
+The original v1 weather example below remains unchanged. Runtime model inputs now retain all original weather columns and append `temperature_c`, `wind_speed_ms`, `wind_height_m`, `weather_available_time_utc`, `weather_availability_status`, `weather_provenance_status`, `model_version`, and `model_sha256`. Issue, run, target, turbine, and issue-relative horizon are preserved. `weather_available_time_utc = weather_run_time_utc + 12h` is explicitly **assumed**, never a verified publication timestamp; `weather_availability_status=assumed` and `weather_provenance_status=unverified` accompany it in rows and metadata.
+
+The preliminary January evaluator consumes these fields plus `predicted_normalized_power`. It uses an explicit UTC+05 source-clock assumption and hour-start labels; power represents the following hourly interval. The same mapping applies to training interval ends and measured power. Observation availability at hour end plus a configured delay is also assumed. See [preliminary evaluation](january_preliminary_evaluation.md) for the exact configuration and results. These additions do not retrospectively certify the original weather archive or SCADA timing.
+
 Version: 1.0. Owner: Kamila / User 2. Consumer: User 1. Status: integration example; historical provenance and SCADA time conventions remain unresolved.
 
 ## Files and row meaning

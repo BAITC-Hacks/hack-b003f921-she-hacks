@@ -59,7 +59,33 @@ The February 14 example connects ECMWF weather, the adapter and both actual `.cb
 
 See [integration evidence](docs/ml_weather_integration.md) and output metadata for actual results, hashes and package versions.
 
-## Forecast quality with archived weather — not measured
+## Forecast quality with archived weather — preliminary January evaluation
+
+The [preliminary January evaluation](docs/january_preliminary_evaluation.md) uses the separate `models/backtest_january/` models and 30 daily ECMWF runs, with issues January 1–30 at 12:00 UTC. All 30 issues succeeded. **2,844 paired cases, 726 of 744 local-January hours per turbine** were evaluated; the first 18 hours are uncovered by this schedule. Original full 48-hour predictions remain in ignored `data/processed/january_runs/`; compact, versioned evidence is in [results/january_preliminary/3335d4b8ac8bba15/](results/january_preliminary/3335d4b8ac8bba15/).
+
+| Turbine | Horizon | Cases | ML MAE / RMSE | Persistence MAE / RMSE |
+| --- | --- | ---: | --- | --- |
+| turbine_1 | 1–24 h | 720 | 0.151585 / 0.231329 | 0.302303 / 0.431223 |
+| turbine_1 | 25–48 h | 702 | 0.172892 / 0.256884 | 0.379551 / 0.490082 |
+| turbine_2 | 1–24 h | 720 | 0.155823 / 0.238020 | 0.300620 / 0.432194 |
+| turbine_2 | 25–48 h | 702 | 0.175617 / 0.260669 | 0.379563 / 0.491242 |
+
+These are **preliminary scores under assumptions**, not a confirmed historical backtest. The assumed source clock is fixed UTC+05 (`Etc/GMT-5`), source timestamps label interval starts, observations become available at hour end (zero extra delay), and weather becomes available at initialization +12h. All availability/timezone assumptions are explicitly unconfirmed; weather provenance remains `unverified`. ML and persistence use exactly the same cases. Overlapping issues are preserved. Do not compare these scores directly with User 1's measured-weather metrics above.
+
+```powershell
+# Required once for the existing evaluator's dependencies.
+.\.venv\ml\python.exe -m pip install -r scripts/january_requirements.txt
+# Only if hourly data are absent; raw files remain unchanged and ignored by Git.
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/prepare_hourly.ps1
+# First check one issue; it can seed/reuse the exact weather cache.
+.\.venv\ml\python.exe -B scripts/run_january_evaluation.py --source-timezone Etc/GMT-5 --observation-delay-hours 0 --last-day 1 --output-root data/processed/january_pilot_evaluation
+# Full January schedule, 100 m wind; exact caches and successful runs are reused.
+.\.venv\ml\python.exe -B scripts/run_january_evaluation.py --source-timezone Etc/GMT-5 --observation-delay-hours 0
+# Repeat the same complete calculation without any network access.
+.\.venv\ml\python.exe -B scripts/run_january_evaluation.py --source-timezone Etc/GMT-5 --observation-delay-hours 0 --offline
+```
+
+The wrapper reuses `agent.weather_pipeline.run` and `backtest.evaluate_january.evaluate`; it never asserts the confirmations required by the evaluator's strict CLI. It checks hourly source and model hashes, maps training interval ends with the same timezone as actuals, rejects ineligible models, limits transient weather downloads to three attempts (2s/4s backoff), continues to later issues after failure, and reports incomplete coverage with a nonzero exit code. A repeated complete offline run validated and reused all 30 forecasts and the evaluation. Changing inputs/code/settings creates a new version without deleting earlier results. See the report for unresolved assumptions and model-selection limitations.
 
 No February forecast accuracy score has been calculated. Weather provenance remains **`unverified`**; the specific unresolved operational-versus-retrospective status is preserved in source metadata. Hub/sensor heights, historical publication times, SCADA timezone and interval labels remain unconfirmed. Schema compatibility does not establish that forecast wind at 100 m matches measured-wind training inputs. No February power labels were used.
 
@@ -72,5 +98,6 @@ Final models include data through January 31 23:00 in an unspecified source time
 - [Provenance evidence](docs/weather_archive_provenance.md), [organizer questions](docs/organizer_questions.md).
 - Rebuild weather example offline: `python -B scripts/build_weather_example.py`.
 - Tests: `.\.venv\ml\python.exe -B -m unittest prediction.test_interface scripts.test_weather_integration agent.test_weather_pipeline`.
+- January checks: `.\.venv\ml\python.exe -B -m unittest scripts.test_january_pipeline backtest.test_january` (install `scripts/january_requirements.txt` first).
 
 Local environments and production datasets remain ignored. The deployable models and small examples are retained for reproducibility.

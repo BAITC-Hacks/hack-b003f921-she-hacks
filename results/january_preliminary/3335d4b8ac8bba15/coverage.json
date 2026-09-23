@@ -1,0 +1,44 @@
+{
+  "excluded_outside_january_rows": 36,
+  "failed_issues": 0,
+  "full_forecast_rows_including_outside_january": 2880,
+  "january_end_exclusive_utc": "2026-01-31 19:00:00+00:00",
+  "january_forecast_rows": 2844,
+  "january_start_utc": "2025-12-31 19:00:00+00:00",
+  "requested_issues": 30,
+  "schedule_uncovered_hours_per_turbine": 18,
+  "source_timezone_assumed": "Etc/GMT-5",
+  "successful_issues": 30,
+  "turbines": [
+    {
+      "baseline_stale_rows": 0,
+      "baseline_unavailable_rows": 0,
+      "evaluated_rows": 1422,
+      "evaluated_unique_hours": 726,
+      "first_target_utc": "2026-01-01 13:00:00+00:00",
+      "forecast_rows": 1422,
+      "january_hours": 744,
+      "last_target_utc": "2026-01-31 18:00:00+00:00",
+      "missing_actual_rows": 0,
+      "missing_actual_unique_hours": 0,
+      "turbine_id": "turbine_1",
+      "uncovered_january_hours": 18,
+      "unique_forecast_hours": 726
+    },
+    {
+      "baseline_stale_rows": 0,
+      "baseline_unavailable_rows": 0,
+      "evaluated_rows": 1422,
+      "evaluated_unique_hours": 726,
+      "first_target_utc": "2026-01-01 13:00:00+00:00",
+      "forecast_rows": 1422,
+      "january_hours": 744,
+      "last_target_utc": "2026-01-31 18:00:00+00:00",
+      "missing_actual_rows": 0,
+      "missing_actual_unique_hours": 0,
+      "turbine_id": "turbine_2",
+      "uncovered_january_hours": 18,
+      "unique_forecast_hours": 726
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 # January 2026 backtest: User 1 / Data & ML
 
+Integration update: User 2 has completed a [preliminary January evaluation](../docs/january_preliminary_evaluation.md) through `scripts/run_january_evaluation.py`, reusing the evaluator functions below. It explicitly assumes UTC+05, interval-start labels, SCADA availability at hour end, and weather availability at initialization +12h. Archive provenance stays `unverified`. It does **not** invoke this module's strict CLI or assert confirmed provenance/publication times. The original handoff notes below describe the strict evaluation contract; their "not calculated" statements refer to the original handoff. January model artifacts are now tracked through explicit `.gitignore` exceptions.
+
 No weather fetching, agent execution, or February loop is implemented here.
 No January forecast-weather performance has been calculated. The only forecast
 fixture, `fixtures/synthetic_forecasts.csv`, is **invented SOFTWARE TEST DATA**;
