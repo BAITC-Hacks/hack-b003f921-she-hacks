@@ -19,3 +19,8 @@ models/*
 !models/turbine_1_catboost.cbm
 !models/turbine_2_catboost.cbm
 !models/metadata.json
+!models/backtest_january/
+models/backtest_january/*
+!models/backtest_january/turbine_1_catboost.cbm
+!models/backtest_january/turbine_2_catboost.cbm
+!models/backtest_january/metadata.json

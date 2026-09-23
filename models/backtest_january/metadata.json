@@ -1,0 +1,73 @@
+{
+  "model_type": "CatBoostRegressor",
+  "model_version": "january-backtest-v1",
+  "created_at_utc": "2026-09-23T11:30:57.101220+00:00",
+  "features": [
+    "wind_speed_ms",
+    "temperature_c"
+  ],
+  "feature_units": {
+    "wind_speed_ms": "m/s",
+    "temperature_c": "degrees Celsius"
+  },
+  "target": "Hourly mean normalized active power; dimensionless",
+  "output_range": [
+    0,
+    1
+  ],
+  "hyperparameters": {
+    "iterations": 600,
+    "depth": 6,
+    "learning_rate": 0.05,
+    "loss_function": "RMSE",
+    "random_seed": 42,
+    "thread_count": 2,
+    "verbose": false,
+    "allow_writing_files": false
+  },
+  "turbine_mapping": {
+    "1": "turbine_1",
+    "2": "turbine_2",
+    "turbine_1": "turbine_1",
+    "turbine_2": "turbine_2"
+  },
+  "training_cutoff_exclusive_source": "2026-01-01 00:00:00",
+  "source_timezone": null,
+  "source_timezone_status": "unknown/unconfirmed",
+  "source_timezone_confirmed": false,
+  "timestamp_interpretation": "Original timezone-naive/local source clock, hour starts. No timezone assigned and no conversion or shift during training.",
+  "evaluation_timezone_mapping": "Required separately at evaluation; no default mapping to UTC.",
+  "model_simulation_available_from_source": "2026-01-01 00:00:00",
+  "training_availability_assumption": "Retrospective fit assumes all eligible pre-cutoff hourly records were available by cutoff. Historical publication/revision timing is not established; evaluator verifies publication timestamps against a supplied availability manifest.",
+  "baseline_rule": "Latest finite power with documented available_time <= issue_time, hour end <= issue_time, and age from hour end <=24h. No interpolation or fallback. Same paired cases for ML and baseline.",
+  "evaluation_note": "No January forecast metrics computed; January targets never enter training.",
+  "turbines": {
+    "turbine_1": {
+      "artifact": "turbine_1_catboost.cbm",
+      "sha256": "d094eb03a52f303931989830f7b4efb0d2e6c3faabb6b6a47793e8f3af157ee1",
+      "artifact_bytes": 673472,
+      "training_rows": 23019,
+      "training_first_timestamp_source": "2023-03-11 00:00:00",
+      "training_last_timestamp_source": "2025-12-31 23:00:00",
+      "latest_training_hour_end_source": "2026-01-01 00:00:00",
+      "excluded_pre_cutoff_rows": 1629,
+      "excluded_at_or_after_cutoff_rows": 744,
+      "partial_hours_retained": 96,
+      "source_sha256": "a61619e174a892462674e2277526b863aab994df8ac872285b4d8eefffef766e"
+    },
+    "turbine_2": {
+      "artifact": "turbine_2_catboost.cbm",
+      "sha256": "bc781886f00f59e8ca445d0499e557775f0ddd100dc689290ef2f3ac4fec1e9b",
+      "artifact_bytes": 662024,
+      "training_rows": 24260,
+      "training_first_timestamp_source": "2023-03-11 00:00:00",
+      "training_last_timestamp_source": "2025-12-31 23:00:00",
+      "latest_training_hour_end_source": "2026-01-01 00:00:00",
+      "excluded_pre_cutoff_rows": 388,
+      "excluded_at_or_after_cutoff_rows": 744,
+      "partial_hours_retained": 219,
+      "source_sha256": "fd9d111ed43f7fa0cd6da4c9009e13691c65a2406b35d4ebb1b1d900fc7f9b40"
+    }
+  },
+  "protected_files_verification": "Existing models, reports and data SHA256 unchanged."
+}
