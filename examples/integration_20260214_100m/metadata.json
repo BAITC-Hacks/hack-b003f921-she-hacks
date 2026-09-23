@@ -1,0 +1,226 @@
+{
+  "purpose": "technical_integration_not_forecast_accuracy_evaluation",
+  "weather_provenance_status": "unverified",
+  "issue_time_utc": "2026-02-14T12:00:00Z",
+  "selected_wind_height_m": 100,
+  "wind_height_assumption": "Technical feature choice, not confirmed turbine hub or training sensor height",
+  "feature_mapping": {
+    "temperature_c": "temperature_2m_c",
+    "wind_speed_ms": "wind_speed_100m_ms"
+  },
+  "original_weather_fields": [
+    "temperature_2m_c",
+    "wind_speed_10m_ms",
+    "wind_speed_100m_ms",
+    "wind_speed_200m_ms",
+    "wind_direction_100m_deg"
+  ],
+  "weather_dataset_id": "weather_handoff_example_v1",
+  "weather_csv_sha256": "b88dc12d50ae3ba3792a17885a0cf0f6437fb5e211ce3c12153ab73a588c78b2",
+  "weather_metadata": {
+    "issue_time_utc": "2026-02-14T12:00:00Z",
+    "weather_run_time_utc": "2026-02-14T00:00:00Z",
+    "model": "ecmwf_ifs",
+    "source": "Open-Meteo Single Runs API / ECMWF IFS",
+    "request_url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.645150%2C43.643198&longitude=78.535604%2C78.538828&models=ecmwf_ifs&run=2026-02-14T00%3A00&hourly=temperature_2m%2Cwind_speed_10m%2Cwind_speed_100m%2Cwind_speed_200m%2Cwind_direction_100m&wind_speed_unit=ms&temperature_unit=celsius&timezone=GMT&timeformat=iso8601&forecast_hours=61&cell_selection=nearest&elevation=nan%2Cnan",
+    "request_parameters": {
+      "latitude": "43.645150,43.643198",
+      "longitude": "78.535604,78.538828",
+      "models": "ecmwf_ifs",
+      "run": "2026-02-14T00:00",
+      "hourly": "temperature_2m,wind_speed_10m,wind_speed_100m,wind_speed_200m,wind_direction_100m",
+      "wind_speed_unit": "ms",
+      "temperature_unit": "celsius",
+      "timezone": "GMT",
+      "timeformat": "iso8601",
+      "forecast_hours": 61,
+      "cell_selection": "nearest",
+      "elevation": "nan,nan"
+    },
+    "retrieved_at_utc": "2026-09-23T10:39Z",
+    "raw_response_path": "data/weather_source_check/ecmwf_ifs_2026-02-14_00.json",
+    "raw_response_sha256": "8d63004935ae0a58f65294d2179987933bfe46ad521c5a742e8d8c93f53cb92a",
+    "request_metadata_path": "data/weather_source_check/ecmwf_ifs_2026-02-14_00.request.json",
+    "request_metadata_sha256": "db4fa4e5c4bd3a2417e8cf6d39832892a1f60f80529cb77c7cd5400a71f480c2",
+    "weather_publication_time_utc": null,
+    "historical_api_availability_time_utc": null,
+    "provenance_status": "unresolved_operational_vs_retrospective",
+    "locations": [
+      {
+        "turbine_id": "turbine_1",
+        "requested_latitude": 43.64515,
+        "requested_longitude": 78.535604,
+        "grid_latitude": 43.620384,
+        "grid_longitude": 78.47891,
+        "grid_elevation_m": 638.0
+      },
+      {
+        "turbine_id": "turbine_2",
+        "requested_latitude": 43.643198,
+        "requested_longitude": 78.538828,
+        "grid_latitude": 43.620384,
+        "grid_longitude": 78.47891,
+        "grid_elevation_m": 638.0
+      }
+    ],
+    "same_grid_cell": true,
+    "terrain_settings": {
+      "cell_selection": "nearest",
+      "elevation": [
+        "nan",
+        "nan"
+      ],
+      "elevation_downscaling": false
+    },
+    "availability_assumption": {
+      "lag_hours_from_initialization": 12,
+      "assumed_available_by_utc": "2026-02-14T12:00:00Z",
+      "verified": false,
+      "basis": "Typical 4-6 h processing plus 10 min propagation; 5 h 50 min extra margin.",
+      "limitation": "Does not prove original operational provenance or actual publication time."
+    }
+  },
+  "model_metadata": {
+    "model_type": "CatBoostRegressor",
+    "model_version": "1.0.0",
+    "created_at_utc": "2026-09-23T10:42:09.289332+00:00",
+    "training_end_date": "2026-01-31",
+    "training_cutoff_exclusive": "2026-02-01 00:00:00",
+    "source_timestamp_timezone": "Unspecified in source; no timezone conversion performed",
+    "features": [
+      "wind_speed_ms",
+      "temperature_c"
+    ],
+    "feature_units": {
+      "wind_speed_ms": "m/s",
+      "temperature_c": "degrees Celsius"
+    },
+    "source_feature_mapping": {
+      "wind_speed_ms": "mean_measured_wind_speed",
+      "temperature_c": "mean_measured_temperature"
+    },
+    "target": {
+      "name": "predicted_normalized_power",
+      "source": "mean_normalized_power",
+      "definition": "Hourly mean of source normalized active power; dimensionless, not MW."
+    },
+    "hyperparameters": {
+      "iterations": 600,
+      "depth": 6,
+      "learning_rate": 0.05,
+      "loss_function": "RMSE",
+      "random_seed": 42,
+      "thread_count": 2,
+      "verbose": false,
+      "allow_writing_files": false
+    },
+    "output_range": [
+      0,
+      1
+    ],
+    "postprocessing": "Clip finite model predictions to [0, 1] in the prediction interface.",
+    "turbine_mapping": {
+      "1": "turbine_1",
+      "2": "turbine_2",
+      "turbine_1": "turbine_1",
+      "turbine_2": "turbine_2"
+    },
+    "eligibility": "Finite power/wind/temperature means and valid timestamp before 2026-02-01; empty hours excluded; partial hours retained equally; zero power retained; no filling.",
+    "evaluation_note": "Refitted on all eligible history, including former validation rows. Existing comparison metrics describe earlier fits with measured weather, not these refits or 24-48h forecast accuracy.",
+    "versions": {
+      "python": "3.11.9",
+      "catboost": "1.2.8",
+      "pandas": "2.2.3",
+      "numpy": "2.2.6"
+    },
+    "python_executable": "C:\\Users\\Asus\\Downloads\\SheHaks\\hack-b003f921-she-hacks\\.venv\\Scripts\\python.exe",
+    "turbines": {
+      "turbine_1": {
+        "artifact": "turbine_1_catboost.cbm",
+        "sha256": "b3ad5c95580a49b2260b1ff6ab649242c717638b569451db5f2f6be5bcf54aee",
+        "artifact_bytes": 672960,
+        "source": "data\\processed\\turbine_1_hourly.csv",
+        "source_sha256": "a61619e174a892462674e2277526b863aab994df8ac872285b4d8eefffef766e",
+        "training_rows": 23763,
+        "training_start": "2023-03-11 00:00:00",
+        "training_end": "2026-01-31 23:00:00",
+        "excluded_rows": 1629,
+        "excluded_reasons": {
+          "empty_hour": 1629
+        },
+        "partial_hours_retained": 96,
+        "training_feature_ranges": {
+          "wind_speed_ms": {
+            "min": 0.0,
+            "max": 20.398333333333333
+          },
+          "temperature_c": {
+            "min": -18.426666666666662,
+            "max": 43.068333333333335
+          }
+        }
+      },
+      "turbine_2": {
+        "artifact": "turbine_2_catboost.cbm",
+        "sha256": "8fe049cee2dbb83c819c3ad1ab9e327e982b3408b6617f11599b4115d67eb141",
+        "artifact_bytes": 672360,
+        "source": "data\\processed\\turbine_2_hourly.csv",
+        "source_sha256": "fd9d111ed43f7fa0cd6da4c9009e13691c65a2406b35d4ebb1b1d900fc7f9b40",
+        "training_rows": 25004,
+        "training_start": "2023-03-11 00:00:00",
+        "training_end": "2026-01-31 23:00:00",
+        "excluded_rows": 388,
+        "excluded_reasons": {
+          "empty_hour": 388
+        },
+        "partial_hours_retained": 219,
+        "training_feature_ranges": {
+          "wind_speed_ms": {
+            "min": 0.2266666666666666,
+            "max": 19.406666666666663
+          },
+          "temperature_c": {
+            "min": -18.648333333333337,
+            "max": 43.22333333333333
+          }
+        }
+      }
+    },
+    "verification": "Saved/reloaded predictions match; raw/processed inputs and existing reports unchanged."
+  },
+  "model_metadata_sha256": "93cfbec6cac1aec7c0a04d77d649dacb712da342faf6be747bde64c77fa778da",
+  "model_source_commit": "3d8529691959e1b98964d301510a6bf354deaf9b",
+  "environment": {
+    "python": "3.11.16",
+    "catboost": "1.2.8",
+    "numpy": "2.2.6",
+    "pandas": "2.2.3"
+  },
+  "input_sha256": "7679abce7a2c2db8a7dae539c37b3bea76debc69f831cdec70f720b4ee3bce14",
+  "prediction_sha256": "5ad96816f456f11edc7b548cf5882f38662626cb6c75beda77ab64bd4f899208",
+  "validation": {
+    "rows": 96,
+    "missing_values": 0,
+    "duplicate_keys": 0,
+    "all_input_fields_and_time_strings_preserved": true,
+    "horizons": "1..48 per turbine; target minus issue",
+    "turbines": {
+      "turbine_1": {
+        "rows": 48,
+        "minimum": 0.007703379534718668,
+        "maximum": 0.8047818690382259,
+        "model_sha256": "b3ad5c95580a49b2260b1ff6ab649242c717638b569451db5f2f6be5bcf54aee"
+      },
+      "turbine_2": {
+        "rows": 48,
+        "minimum": 0.0072241105774226155,
+        "maximum": 0.7822535377446289,
+        "model_sha256": "8fe049cee2dbb83c819c3ad1ab9e327e982b3408b6617f11599b4115d67eb141"
+      }
+    }
+  },
+  "output_postprocessing": "User 1 interface clips finite raw model predictions to [0,1]",
+  "training_time_limitation": "No January backtest or Jan 31 12:00 run with final refits; need as-of-trained models and confirmed data arrival/timezone",
+  "reproduction": "python scripts/run_weather_integration.py --issue-time 2026-02-14T12:00:00Z --wind-height-m 100",
+  "batch_syntax": "python -m prediction --model-dir models batch --input INPUT.csv --output OUTPUT.csv"
+}

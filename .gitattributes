@@ -1,0 +1,8 @@
+# Preserve checksummed evidence bytes across Windows/Linux checkouts.
+data/weather_source_check/*.json -text
+data/weather_examples/**/*.csv -text
+data/weather_examples/**/*.json -text
+examples/integration_*/**/*.csv -text
+examples/integration_*/**/*.json -text
+examples/integration_*/*.csv -text whitespace=cr-at-eol
+examples/integration_*/*.json -text

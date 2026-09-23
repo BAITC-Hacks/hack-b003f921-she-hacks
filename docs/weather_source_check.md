@@ -2,6 +2,8 @@
 
 Checked on 2026-09-23 on branch `user2-weather-pipeline`.
 
+Follow-up: [official provenance excerpts](weather_archive_provenance.md) leave the original-operational versus retrospective origin unresolved for both selected runs. The [data contract and daily schedule](data_contract.md) and [organizer questions](organizer_questions.md) describe the provisional CSV handoff and outstanding decisions.
+
 ## Result
 
 Both requested ECMWF runs returned HTTP 200 without an API key or payment. Both turbines have all 48 requested future hourly timestamps and all five requested variables, with no missing values. This verifies archive retrieval and data completeness today; historical publication timestamps remain unverified.
