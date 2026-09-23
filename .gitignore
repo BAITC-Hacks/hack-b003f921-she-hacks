@@ -22,3 +22,8 @@ models/*
 
 # Validated runtime caches; original small evidence remains tracked.
 data/weather_cache/
+!models/backtest_january/
+models/backtest_january/*
+!models/backtest_january/turbine_1_catboost.cbm
+!models/backtest_january/turbine_2_catboost.cbm
+!models/backtest_january/metadata.json
