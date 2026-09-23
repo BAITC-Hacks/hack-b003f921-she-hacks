@@ -1,0 +1,201 @@
+{
+  "model": "Ordinary least squares with intercept; predictions not clipped",
+  "features": [
+    "mean_measured_wind_speed",
+    "mean_measured_temperature"
+  ],
+  "target": "mean_normalized_power",
+  "validation_start": "2025-08-01 00:00:00",
+  "data_end_exclusive": "2026-02-01 00:00:00",
+  "input_sha256": {
+    "data\\raw\\turbine 1.csv": "c4c341582fb2dd348b7187f0128cff265fe055f469413871ebb5db50eef58b5b",
+    "data\\raw\\turbine 2.csv": "820578cd18bb557cd30c2e102f3ae5a386dfc6c489a5a15743339c2b017305e5",
+    "data\\processed\\turbine_1_hourly.csv": "a61619e174a892462674e2277526b863aab994df8ac872285b4d8eefffef766e",
+    "data\\processed\\turbine_2_hourly.csv": "fd9d111ed43f7fa0cd6da4c9009e13691c65a2406b35d4ebb1b1d900fc7f9b40"
+  },
+  "python_environment": {
+    "executable": "C:\\Users\\Asus\\Downloads\\SheHaks\\hack-b003f921-she-hacks\\.venv\\Scripts\\python.exe",
+    "prefix": "C:\\Users\\Asus\\Downloads\\SheHaks\\hack-b003f921-she-hacks\\.venv",
+    "base_prefix": "C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0"
+  },
+  "versions": {
+    "python": "3.11.9",
+    "numpy": "2.2.6",
+    "pandas": "2.2.3",
+    "matplotlib": "3.10.3",
+    "sklearn": "1.6.1"
+  },
+  "verification": "Passed: chronological split, cutoff, row accounting, export readback, independent least squares and metrics, unchanged source hashes",
+  "turbines": {
+    "turbine_1": {
+      "input_rows": 25392,
+      "eligible_rows": 23763,
+      "excluded_rows": 1629,
+      "excluded_reasons": {
+        "empty_hour": 1629
+      },
+      "training_rows": 19403,
+      "validation_rows": 4360,
+      "training_period": [
+        "2023-03-11 00:00:00",
+        "2025-07-31 23:00:00"
+      ],
+      "validation_period": [
+        "2025-08-01 00:00:00",
+        "2026-01-31 23:00:00"
+      ],
+      "training_incomplete_retained": 83,
+      "validation_incomplete_retained": 13,
+      "linear_regression": {
+        "mae": 0.08616552643843449,
+        "rmse": 0.10352000179645221,
+        "r2": 0.9126726150919373
+      },
+      "training_mean_reference": {
+        "mae": 0.311471015766738,
+        "rmse": 0.3514172377383151,
+        "r2": -0.006347645314665806
+      },
+      "complete_validation_hours_only": {
+        "mae": 0.08617006509250247,
+        "rmse": 0.10350743189250805,
+        "r2": 0.9126292976921235
+      },
+      "intercept": -0.22795580028766338,
+      "coefficients": {
+        "mean_measured_wind_speed": 0.09301212310952563,
+        "mean_measured_temperature": -6.104150355713403e-05
+      },
+      "predictions_outside_0_1": 968,
+      "eda": {
+        "training_means": {
+          "mean_normalized_power": 0.37600837499355766,
+          "mean_measured_wind_speed": 6.504077634042845,
+          "mean_measured_temperature": 16.282271444278376
+        },
+        "power_wind_correlation": 0.9470116046460502,
+        "power_temperature_correlation": -0.1764261591091124,
+        "highest_power_hour": 12,
+        "lowest_power_hour": 7,
+        "hourly_mean_range": [
+          0.3414948686371099,
+          0.4099437473860309
+        ],
+        "highest_power_month": 12,
+        "lowest_power_month": 8,
+        "monthly_mean_range": [
+          0.2431185335132703,
+          0.5002925353059852
+        ],
+        "zero_power_training_hours": 0,
+        "wind_bins": {
+          "[-inf, 3.0)": {
+            "mean": 0.014659649122806996,
+            "count": 4275
+          },
+          "[3.0, 5.0)": {
+            "mean": 0.07407443820224716,
+            "count": 3204
+          },
+          "[5.0, 8.0)": {
+            "mean": 0.2932825298568123,
+            "count": 5331
+          },
+          "[8.0, 12.0)": {
+            "mean": 0.7805693945442448,
+            "count": 5010
+          },
+          "[12.0, inf)": {
+            "mean": 0.9611776163402821,
+            "count": 1583
+          }
+        }
+      }
+    },
+    "turbine_2": {
+      "input_rows": 25392,
+      "eligible_rows": 25004,
+      "excluded_rows": 388,
+      "excluded_reasons": {
+        "empty_hour": 388
+      },
+      "training_rows": 20647,
+      "validation_rows": 4357,
+      "training_period": [
+        "2023-03-11 00:00:00",
+        "2025-07-31 23:00:00"
+      ],
+      "validation_period": [
+        "2025-08-01 00:00:00",
+        "2026-01-31 23:00:00"
+      ],
+      "training_incomplete_retained": 203,
+      "validation_incomplete_retained": 16,
+      "linear_regression": {
+        "mae": 0.08882437512923379,
+        "rmse": 0.11038118046484215,
+        "r2": 0.9001613129497223
+      },
+      "training_mean_reference": {
+        "mae": 0.3111261831517674,
+        "rmse": 0.350389213056482,
+        "r2": -0.006028416063930786
+      },
+      "complete_validation_hours_only": {
+        "mae": 0.08866091781203912,
+        "rmse": 0.1097339053365586,
+        "r2": 0.9011945118268417
+      },
+      "intercept": -0.23601444828857832,
+      "coefficients": {
+        "mean_measured_wind_speed": 0.0922812879140583,
+        "mean_measured_temperature": 0.0003452687002399693
+      },
+      "predictions_outside_0_1": 978,
+      "eda": {
+        "training_means": {
+          "mean_normalized_power": 0.37024718683908875,
+          "mean_measured_wind_speed": 6.506320587333107,
+          "mean_measured_temperature": 16.94330167417381
+        },
+        "power_wind_correlation": 0.9553117202481347,
+        "power_temperature_correlation": -0.1547253198497477,
+        "highest_power_hour": 11,
+        "lowest_power_hour": 5,
+        "hourly_mean_range": [
+          0.326956555171088,
+          0.40976777251184826
+        ],
+        "highest_power_month": 12,
+        "lowest_power_month": 8,
+        "monthly_mean_range": [
+          0.24500786693639015,
+          0.4950522169705153
+        ],
+        "zero_power_training_hours": 7,
+        "wind_bins": {
+          "[-inf, 3.0)": {
+            "mean": 0.013997510822510797,
+            "count": 4620
+          },
+          "[3.0, 5.0)": {
+            "mean": 0.07055287256603042,
+            "count": 3458
+          },
+          "[5.0, 8.0)": {
+            "mean": 0.28347870553656046,
+            "count": 5557
+          },
+          "[8.0, 12.0)": {
+            "mean": 0.7734045701502077,
+            "count": 5215
+          },
+          "[12.0, inf)": {
+            "mean": 0.9611893897236132,
+            "count": 1797
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+,mean_normalized_power,mean_measured_wind_speed,mean_measured_temperature
+mean_normalized_power,1.0,0.9553117202481347,-0.1547253198497477
+mean_measured_wind_speed,0.9553117202481347,1.0,-0.17404886078796514
+mean_measured_temperature,-0.1547253198497477,-0.17404886078796514,1.0
