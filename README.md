@@ -93,6 +93,7 @@ Final models include data through January 31 23:00 in an unspecified source time
 
 ## Documentation and checks
 
+- [Kamila to Saule handoff: status, results, commands and local-only files](docs/HANDOFF_KAMILA_TO_SAULE.md).
 - [Prediction interface](prediction/README.md), [model metadata](models/metadata.json).
 - [Data contract and daily schedule](docs/data_contract.md).
 - [Provenance evidence](docs/weather_archive_provenance.md), [organizer questions](docs/organizer_questions.md).
