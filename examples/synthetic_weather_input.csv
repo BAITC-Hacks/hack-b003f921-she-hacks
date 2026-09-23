@@ -1,0 +1,5 @@
+issue_time_utc,weather_run_time_utc,target_time_utc,turbine_id,forecast_horizon_h,wind_speed_ms,temperature_c
+2026-02-01T00:00:00Z,2026-01-31T18:00:00Z,2026-02-02T00:00:00Z,turbine_1,24,7.5,5
+2026-02-01T00:00:00Z,2026-01-31T18:00:00Z,2026-02-02T00:00:00Z,turbine_2,24,7.5,5
+2026-02-01T00:00:00Z,2026-01-31T18:00:00Z,2026-02-03T00:00:00Z,turbine_1,48,11,-2
+2026-02-01T00:00:00Z,2026-01-31T18:00:00Z,2026-02-03T00:00:00Z,turbine_2,48,3,10

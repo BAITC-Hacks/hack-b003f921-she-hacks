@@ -1,0 +1,25 @@
+{
+  "request_url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.645150%2C43.643198&longitude=78.535604%2C78.538828&models=ecmwf_ifs&run=2026-02-14T00%3A00&hourly=temperature_2m%2Cwind_speed_10m%2Cwind_speed_100m%2Cwind_speed_200m%2Cwind_direction_100m&wind_speed_unit=ms&temperature_unit=celsius&timezone=GMT&timeformat=iso8601&forecast_hours=61&cell_selection=nearest&elevation=nan%2Cnan",
+  "request_parameters": {
+    "latitude": "43.645150,43.643198",
+    "longitude": "78.535604,78.538828",
+    "models": "ecmwf_ifs",
+    "run": "2026-02-14T00:00",
+    "hourly": "temperature_2m,wind_speed_10m,wind_speed_100m,wind_speed_200m,wind_direction_100m",
+    "wind_speed_unit": "ms",
+    "temperature_unit": "celsius",
+    "timezone": "GMT",
+    "timeformat": "iso8601",
+    "forecast_hours": 61,
+    "cell_selection": "nearest",
+    "elevation": "nan,nan"
+  },
+  "requested_at_utc": "2026-09-23T10:39Z",
+  "retrieved_at_utc": "2026-09-23T10:39Z",
+  "http_status": 200,
+  "http_date": "Wed, 23 Sep 2026 10:39:36 GMT",
+  "content_type": "application/json; charset=utf-8",
+  "response_sha256": "8d63004935ae0a58f65294d2179987933bfe46ad521c5a742e8d8c93f53cb92a",
+  "raw_file": "ecmwf_ifs_2026-02-14_00.json",
+  "historical_publication_time_utc": null
+}

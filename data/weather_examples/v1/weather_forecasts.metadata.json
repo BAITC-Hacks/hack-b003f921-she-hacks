@@ -1,0 +1,177 @@
+{
+  "schema_version": "1.0",
+  "dataset_id": "weather_handoff_example_v1",
+  "status": "integration_example_provenance_unresolved",
+  "csv_file": "weather_forecasts.csv",
+  "csv_sha256": "b88dc12d50ae3ba3792a17885a0cf0f6437fb5e211ce3c12153ab73a588c78b2",
+  "row_count": 192,
+  "columns": [
+    "issue_time_utc",
+    "weather_run_time_utc",
+    "target_time_utc",
+    "turbine_id",
+    "forecast_horizon_h",
+    "temperature_2m_c",
+    "wind_speed_10m_ms",
+    "wind_speed_100m_ms",
+    "wind_speed_200m_ms",
+    "wind_direction_100m_deg"
+  ],
+  "primary_key_within_dataset": [
+    "issue_time_utc",
+    "weather_run_time_utc",
+    "target_time_utc",
+    "turbine_id"
+  ],
+  "field_mapping": {
+    "temperature_2m_c": "temperature_2m",
+    "wind_speed_10m_ms": "wind_speed_10m",
+    "wind_speed_100m_ms": "wind_speed_100m",
+    "wind_speed_200m_ms": "wind_speed_200m",
+    "wind_direction_100m_deg": "wind_direction_100m"
+  },
+  "units": {
+    "forecast_horizon_h": "h",
+    "temperature_2m_c": "degC",
+    "wind_speed_10m_ms": "m/s",
+    "wind_speed_100m_ms": "m/s",
+    "wind_speed_200m_ms": "m/s",
+    "wind_direction_100m_deg": "degree"
+  },
+  "coordinate_reference_system": "WGS84",
+  "weather_height_reference": "above_model_ground",
+  "issue_time_semantics": "simulated_project_calculation_time_not_provider_publication",
+  "test_period_timezone": null,
+  "scada_interval_label_convention": null,
+  "transformations": "Select issue+1..48h, rename fields, label UTC; no value conversion or filling.",
+  "provenance_review": "docs/weather_archive_provenance.md",
+  "attribution": "ECMWF via Open-Meteo; https://open-meteo.com/en/licence (CC BY 4.0)",
+  "runs": [
+    {
+      "issue_time_utc": "2026-01-31T12:00:00Z",
+      "weather_run_time_utc": "2026-01-31T00:00:00Z",
+      "model": "ecmwf_ifs",
+      "source": "Open-Meteo Single Runs API / ECMWF IFS",
+      "request_url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.645150%2C43.643198&longitude=78.535604%2C78.538828&models=ecmwf_ifs&run=2026-01-31T00%3A00&hourly=temperature_2m%2Cwind_speed_10m%2Cwind_speed_100m%2Cwind_speed_200m%2Cwind_direction_100m&wind_speed_unit=ms&temperature_unit=celsius&timezone=GMT&timeformat=iso8601&forecast_hours=61&cell_selection=nearest&elevation=nan%2Cnan",
+      "request_parameters": {
+        "latitude": "43.645150,43.643198",
+        "longitude": "78.535604,78.538828",
+        "models": "ecmwf_ifs",
+        "run": "2026-01-31T00:00",
+        "hourly": "temperature_2m,wind_speed_10m,wind_speed_100m,wind_speed_200m,wind_direction_100m",
+        "wind_speed_unit": "ms",
+        "temperature_unit": "celsius",
+        "timezone": "GMT",
+        "timeformat": "iso8601",
+        "forecast_hours": 61,
+        "cell_selection": "nearest",
+        "elevation": "nan,nan"
+      },
+      "retrieved_at_utc": "2026-09-23T10:39Z",
+      "raw_response_path": "data/weather_source_check/ecmwf_ifs_2026-01-31_00.json",
+      "raw_response_sha256": "1a1b9d83c5ad94a821bc01124fd22ecab55aa597178baf1ccd6fd96524b372df",
+      "request_metadata_path": "data/weather_source_check/ecmwf_ifs_2026-01-31_00.request.json",
+      "request_metadata_sha256": "ea6dfbf151e5d60a5815dd7a19e7a3376fdb5e3e09ab64a7833f816dc7ba1a70",
+      "weather_publication_time_utc": null,
+      "historical_api_availability_time_utc": null,
+      "provenance_status": "unresolved_operational_vs_retrospective",
+      "locations": [
+        {
+          "turbine_id": "turbine_1",
+          "requested_latitude": 43.64515,
+          "requested_longitude": 78.535604,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "grid_elevation_m": 638.0
+        },
+        {
+          "turbine_id": "turbine_2",
+          "requested_latitude": 43.643198,
+          "requested_longitude": 78.538828,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "grid_elevation_m": 638.0
+        }
+      ],
+      "same_grid_cell": true,
+      "terrain_settings": {
+        "cell_selection": "nearest",
+        "elevation": [
+          "nan",
+          "nan"
+        ],
+        "elevation_downscaling": false
+      },
+      "availability_assumption": {
+        "lag_hours_from_initialization": 12,
+        "assumed_available_by_utc": "2026-01-31T12:00:00Z",
+        "verified": false,
+        "basis": "Typical 4-6 h processing plus 10 min propagation; 5 h 50 min extra margin.",
+        "limitation": "Does not prove original operational provenance or actual publication time."
+      }
+    },
+    {
+      "issue_time_utc": "2026-02-14T12:00:00Z",
+      "weather_run_time_utc": "2026-02-14T00:00:00Z",
+      "model": "ecmwf_ifs",
+      "source": "Open-Meteo Single Runs API / ECMWF IFS",
+      "request_url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.645150%2C43.643198&longitude=78.535604%2C78.538828&models=ecmwf_ifs&run=2026-02-14T00%3A00&hourly=temperature_2m%2Cwind_speed_10m%2Cwind_speed_100m%2Cwind_speed_200m%2Cwind_direction_100m&wind_speed_unit=ms&temperature_unit=celsius&timezone=GMT&timeformat=iso8601&forecast_hours=61&cell_selection=nearest&elevation=nan%2Cnan",
+      "request_parameters": {
+        "latitude": "43.645150,43.643198",
+        "longitude": "78.535604,78.538828",
+        "models": "ecmwf_ifs",
+        "run": "2026-02-14T00:00",
+        "hourly": "temperature_2m,wind_speed_10m,wind_speed_100m,wind_speed_200m,wind_direction_100m",
+        "wind_speed_unit": "ms",
+        "temperature_unit": "celsius",
+        "timezone": "GMT",
+        "timeformat": "iso8601",
+        "forecast_hours": 61,
+        "cell_selection": "nearest",
+        "elevation": "nan,nan"
+      },
+      "retrieved_at_utc": "2026-09-23T10:39Z",
+      "raw_response_path": "data/weather_source_check/ecmwf_ifs_2026-02-14_00.json",
+      "raw_response_sha256": "8d63004935ae0a58f65294d2179987933bfe46ad521c5a742e8d8c93f53cb92a",
+      "request_metadata_path": "data/weather_source_check/ecmwf_ifs_2026-02-14_00.request.json",
+      "request_metadata_sha256": "db4fa4e5c4bd3a2417e8cf6d39832892a1f60f80529cb77c7cd5400a71f480c2",
+      "weather_publication_time_utc": null,
+      "historical_api_availability_time_utc": null,
+      "provenance_status": "unresolved_operational_vs_retrospective",
+      "locations": [
+        {
+          "turbine_id": "turbine_1",
+          "requested_latitude": 43.64515,
+          "requested_longitude": 78.535604,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "grid_elevation_m": 638.0
+        },
+        {
+          "turbine_id": "turbine_2",
+          "requested_latitude": 43.643198,
+          "requested_longitude": 78.538828,
+          "grid_latitude": 43.620384,
+          "grid_longitude": 78.47891,
+          "grid_elevation_m": 638.0
+        }
+      ],
+      "same_grid_cell": true,
+      "terrain_settings": {
+        "cell_selection": "nearest",
+        "elevation": [
+          "nan",
+          "nan"
+        ],
+        "elevation_downscaling": false
+      },
+      "availability_assumption": {
+        "lag_hours_from_initialization": 12,
+        "assumed_available_by_utc": "2026-02-14T12:00:00Z",
+        "verified": false,
+        "basis": "Typical 4-6 h processing plus 10 min propagation; 5 h 50 min extra margin.",
+        "limitation": "Does not prove original operational provenance or actual publication time."
+      }
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+-r ../prediction/requirements.txt
+# Required by the existing User 1 evaluator/training-selection imports.
+scikit-learn==1.6.1
