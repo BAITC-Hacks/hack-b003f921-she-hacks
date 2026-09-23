@@ -1,0 +1,40 @@
+{
+  "alert_threshold": 0.2,
+  "alert_windows": 350,
+  "all_february_hours_covered": true,
+  "duplicate_keys": 0,
+  "failed_issue_times": [],
+  "february_forecast_rows": 2652,
+  "full_forecast_rows": 2784,
+  "issues_failed": 0,
+  "issues_requested": 29,
+  "issues_succeeded": 29,
+  "month_end_exclusive_utc": "2026-02-28T19:00:00Z",
+  "month_start_utc": "2026-01-31T19:00:00Z",
+  "observation_delay_hours": 0.0,
+  "outside_february_rows": 132,
+  "source_timezone": "Etc/GMT-5",
+  "timestamp_label": "interval_start_assumed",
+  "timezone_status": "assumed",
+  "turbines": [
+    {
+      "covered_hours": 672,
+      "expected_hours": 672,
+      "first_target_utc": "2026-01-31T19:00:00Z",
+      "forecast_rows": 1326,
+      "last_target_utc": "2026-02-28T18:00:00Z",
+      "missing_hours": 0,
+      "turbine_id": "turbine_1"
+    },
+    {
+      "covered_hours": 672,
+      "expected_hours": 672,
+      "first_target_utc": "2026-01-31T19:00:00Z",
+      "forecast_rows": 1326,
+      "last_target_utc": "2026-02-28T18:00:00Z",
+      "missing_hours": 0,
+      "turbine_id": "turbine_2"
+    }
+  ],
+  "wind_height_m": 100
+}

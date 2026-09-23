@@ -11,3 +11,7 @@ results/forecast_runs/**/*.json -text
 results/january_preliminary/**/*.csv -text
 results/january_preliminary/**/*.json -text
 results/january_preliminary/**/*.gz binary
+results/february_forecasts/**/*.csv -text
+results/february_forecasts/**/*.json -text
+results/february_forecasts/**/*.html -text
+results/february_forecasts/**/*.png binary

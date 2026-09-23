@@ -1,0 +1,235 @@
+{
+  "accuracy_evaluated": false,
+  "created_at_utc": "2026-09-23T12:32:37.668475+00:00",
+  "environment": {
+    "catboost": "1.2.8",
+    "matplotlib": "3.11.2",
+    "pandas": "2.2.3",
+    "python": "3.11.16"
+  },
+  "february_actual_power_available": false,
+  "file_sha256": {
+    "alerts.csv": "fe219ae82bc1ceeefcb980f0acb3982a76c890044bbe63b4fdd72b0c57e9cc82",
+    "coverage.json": "32b2a6992fd62294f994cf92b030fbcaddd57e5aef54b381aaad9a1cf0859b88",
+    "february_forecasts.csv": "20381f0d81c7287db629ff7e301ae37d7a7a389c590e04b67e393af3b28604ff",
+    "forecast.png": "b95d8e53929e23d4b5e6ecc315c8ab9c0b92aa2dbcf027d411513bb151864c26",
+    "forecasts.csv": "f78d2ade097fa2b9250bda2f7441069c66e983bfb7c43ee5b616391d35d4d764",
+    "issues.csv": "776996492284850e42aa5eb6eb440dae126af817b528a0fb611567d11e3a3fd4",
+    "missing_hours.csv": "d94ae935e3638621a4f67ebf51c30a92a33de5719b6da976652b3bc0baff6798",
+    "report.html": "1677abbba3e926193e032d74822563c7e1278af2d8126aed096a180c710fbc87",
+    "weather_evidence.json": "5cd94d07bb891852854e916e4f0afd960023ae08406f3e3379efda81b0d927de"
+  },
+  "historical_availability_verified": false,
+  "identity": {
+    "alerts_sha256": "fe219ae82bc1ceeefcb980f0acb3982a76c890044bbe63b4fdd72b0c57e9cc82",
+    "code_sha256": {
+      "agent/february_report.py": "f4455966175b85f54314e3a4cc446fcb43e434bd719de67214abfeb0cff95c9a",
+      "agent/forecast_reuse.py": "5d375c6da942fef7486dea1c8153e2fac33a6f01ccf68b750afdab09441d11ef",
+      "scripts/run_february_forecasts.py": "36f24fe6b94517326314cca8ef8877851e2919d12a8ec740183ee4fd2bfdb4d8"
+    },
+    "forecasts_sha256": "f78d2ade097fa2b9250bda2f7441069c66e983bfb7c43ee5b616391d35d4d764",
+    "issues": [
+      {
+        "error": "",
+        "issue_time_utc": "2026-01-31T12:00:00Z",
+        "model_role": "january",
+        "run_id": "a41206f2485ae9df4eec652b4e4e9dcdeca3490ae6de7602b96a32b088d60da3"
+      },
+      {
+        "error": "",
+        "issue_time_utc": "2026-02-01T12:00:00Z",
+        "model_role": "production",
+        "run_id": "c311f4dfd3fe5aef8a59cd8ef8ab2b0730335d4f0c926a58765c7f84d9c219a7"
+      },
+      {
+        "error": "",
+        "issue_time_utc": "2026-02-02T12:00:00Z",
+        "model_role": "production",
+        "run_id": "f9b794606d6f396f77861487124c01c43313c740046e0f55853fd4842283e528"
+      },
+      {
+        "error": "",
+        "issue_time_utc": "2026-02-03T12:00:00Z",
+        "model_role": "production",
+        "run_id": "51e73f4efa96819307e9b9669dc9c677613b4e6a45ff68cbca7e4da6c5b0b59a"
+      },
+      {
+        "error": "",
+        "issue_time_utc": "2026-02-04T12:00:00Z",
+        "model_role": "production",
+        "run_id": "c1d4784d726fbc5a5937223363f9f53166218c129b19ca582ed9146f4add4ad4"
+      },
+      {
+        "error": "",
+        "issue_time_utc": "2026-02-05T12:00:00Z",
+        "model_role": "production",
+        "run_id": "a85f3cdea9cc3cbd22faadfcd2ccf40c73ce2a0ae69e7a4f5c7233e94be90ef3"
+      },
+      {
+        "error": "",
+        "issue_time_utc": "2026-02-06T12:00:00Z",
+        "model_role": "production",
+        "run_id": "0cda43172eb31eaa04be4331f15cc574215edce3d8fc90501269efcec8acde53"
+      },
+      {
+        "error": "",
+        "issue_time_utc": "2026-02-07T12:00:00Z",
+        "model_role": "production",
+        "run_id": "5255f7e25f3b7cad8ca34dd9b71d85cc1eedefc8727c263fdd1469c0b48e4d9c"
+      },
+      {
+        "error": "",
+        "issue_time_utc": "2026-02-08T12:00:00Z",
+        "model_role": "production",
+        "run_id": "f43148327694aa18a66d7f04c308c82deb84340fb98ebedf0ac742b38e7b6964"
+      },
+      {
+        "error": "",
+        "issue_time_utc": "2026-02-09T12:00:00Z",
+        "model_role": "production",
+        "run_id": "da7b82006b9ace2529537b838ee686e277dc68a1c7b94b49afaff5fd401fb438"
+      },
+      {
+        "error": "",
+        "issue_time_utc": "2026-02-10T12:00:00Z",
+        "model_role": "production",
+        "run_id": "03f40cbc8fbda25e35c0cb7ae94db18509a3bc1e862da16c93c710a758a25765"
+      },
+      {
+        "error": "",
+        "issue_time_utc": "2026-02-11T12:00:00Z",
+        "model_role": "production",
+        "run_id": "cb9803c576c96ff098a2c3b484dcb3f3d70af8d92794c905faab4e2b2cb5c51d"
+      },
+      {
+        "error": "",
+        "issue_time_utc": "2026-02-12T12:00:00Z",
+        "model_role": "production",
+        "run_id": "b6390e90cb01ae9dee485239d2bca918ed8c5fba2f1ec36c000aaf746b90a07a"
+      },
+      {
+        "error": "",
+        "issue_time_utc": "2026-02-13T12:00:00Z",
+        "model_role": "production",
+        "run_id": "ac3bb0592fa374c5d1c606e812ca84ec6e44ce67e1bed50ea7ba7364f88dcb50"
+      },
+      {
+        "error": "",
+        "issue_time_utc": "2026-02-14T12:00:00Z",
+        "model_role": "production",
+        "run_id": "64248dfb5e925d39fbee2114f09b00df7d651c2e98a8186e8147ab230711af7d"
+      },
+      {
+        "error": "",
+        "issue_time_utc": "2026-02-15T12:00:00Z",
+        "model_role": "production",
+        "run_id": "6c7f1879e23f839feead74ffcd1b7d7dd9fbc87a2fee6dd530422a72c97d54e2"
+      },
+      {
+        "error": "",
+        "issue_time_utc": "2026-02-16T12:00:00Z",
+        "model_role": "production",
+        "run_id": "bc7a26b1a44aceb4aca0519c7cae3d85c753385ba18a169211ff3ba8d589c14b"
+      },
+      {
+        "error": "",
+        "issue_time_utc": "2026-02-17T12:00:00Z",
+        "model_role": "production",
+        "run_id": "65054584ce062201e2013f53c9ab79861a109c5e183b5063a40c3542dd9f6a40"
+      },
+      {
+        "error": "",
+        "issue_time_utc": "2026-02-18T12:00:00Z",
+        "model_role": "production",
+        "run_id": "4ae9d24a03fd22f9953c2f65392b26adb06b6e4707139858ae3778dbdba1e604"
+      },
+      {
+        "error": "",
+        "issue_time_utc": "2026-02-19T12:00:00Z",
+        "model_role": "production",
+        "run_id": "7ecaf27db5d6527699ac75a6ee293fa95578dd886b859cd317f7d74137dec40d"
+      },
+      {
+        "error": "",
+        "issue_time_utc": "2026-02-20T12:00:00Z",
+        "model_role": "production",
+        "run_id": "9dfa2e7ea05ef15088c8b12ff0c97da57be870d990be575cdd3c0a5adad909e3"
+      },
+      {
+        "error": "",
+        "issue_time_utc": "2026-02-21T12:00:00Z",
+        "model_role": "production",
+        "run_id": "7d8c08f4a2c920c2b9a17ceaaf70d5bf51e937149cc377e9bb2aae8e0943ca14"
+      },
+      {
+        "error": "",
+        "issue_time_utc": "2026-02-22T12:00:00Z",
+        "model_role": "production",
+        "run_id": "5353c5c30ef6c833731965ed6a363063a23f440d704f8849447b3e1bea012dd5"
+      },
+      {
+        "error": "",
+        "issue_time_utc": "2026-02-23T12:00:00Z",
+        "model_role": "production",
+        "run_id": "7c9d6b895283351d42a98698d28047e1b1b2dccbab1aa8ccb953d3ddf480a961"
+      },
+      {
+        "error": "",
+        "issue_time_utc": "2026-02-24T12:00:00Z",
+        "model_role": "production",
+        "run_id": "36e745468b2d75a2ecd79dd84632532b1a205e3f4b1edfb388394615dee7e2d0"
+      },
+      {
+        "error": "",
+        "issue_time_utc": "2026-02-25T12:00:00Z",
+        "model_role": "production",
+        "run_id": "a24faeb595b25e1fab86a60041a18b931d477fd6f7c30960e4f95332e92ec1a7"
+      },
+      {
+        "error": "",
+        "issue_time_utc": "2026-02-26T12:00:00Z",
+        "model_role": "production",
+        "run_id": "830eca3a24ec78b211378c29b4fe1b82e7d3d334e440552feb0b1bd473d925a4"
+      },
+      {
+        "error": "",
+        "issue_time_utc": "2026-02-27T12:00:00Z",
+        "model_role": "production",
+        "run_id": "a8ccb10b660eab5f11515acb1203d23a98aa118ee3403b35525e1f19f6c38092"
+      },
+      {
+        "error": "",
+        "issue_time_utc": "2026-02-28T12:00:00Z",
+        "model_role": "production",
+        "run_id": "14c41cb8157a34b1e7a7d8501418000aa23087964baf6f5599f3e5040072c4c1"
+      }
+    ],
+    "settings": {
+      "drop_threshold": 0.2,
+      "issue_schedule": "2026-01-31 through 2026-02-28 daily at 12:00 UTC, horizons 1..48",
+      "observation_availability_status": "assumed",
+      "observation_delay_hours": 0.0,
+      "source_timezone": "Etc/GMT-5",
+      "threshold_status": "demonstration_not_history_calibrated",
+      "timestamp_label": "interval_start_assumed",
+      "timezone_status": "assumed",
+      "weather_availability_lag_hours": 12,
+      "weather_availability_status": "assumed",
+      "weather_provenance_status": "unverified",
+      "wind_height_m": 100,
+      "wind_height_status": "technical_assumption"
+    }
+  },
+  "model_selection": "January artifacts on January 31; production artifacts on February 1..28",
+  "purpose": "February forecast coverage demonstration, not accuracy evaluation",
+  "status": "complete",
+  "validation": {
+    "all_february_hours_covered": true,
+    "all_successful_issues_have_96_rows": true,
+    "missing_forecast_fields": 0,
+    "models_and_training_boundaries_checked": true,
+    "predictions_finite_in_0_1": true,
+    "weather_fields_and_times_checked": true
+  },
+  "weather_provenance_status": "unverified"
+}
