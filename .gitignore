@@ -16,3 +16,6 @@ data/processed/*
 models/*
 !models/.gitkeep
 !models/README.md
+!models/turbine_1_catboost.cbm
+!models/turbine_2_catboost.cbm
+!models/metadata.json
