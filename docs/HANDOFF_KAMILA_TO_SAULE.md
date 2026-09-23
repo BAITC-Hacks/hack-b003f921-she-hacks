@@ -1,5 +1,7 @@
 # Handoff: Kamila (User 2) to Saule (User 1)
 
+**Subsequent User 2 completion update (same branch, no new merge/PR):** the February schedule is now complete, 29/29 issues and all 672 February hours per turbine under the existing UTC+05 assumption. Forecasts, 350 warning windows, a real two-turbine plot and an offline HTML report are in `results/february_forecasts/ba114e109ecee099/`. See [February completion report](february_forecast_completion.md) and README for commands and local cache/full-run requirements. January evaluation was not rerun. February accuracy is still unmeasured; `unverified`/`assumed` statuses remain. The checkpoint narrative below is retained as history; statements there that the February schedule was not executed describe that earlier checkpoint, not the current status.
+
 Checkpoint date: 2026-09-23. Branch: **`user2-weather-pipeline`**.
 Completed implementation/results were pushed in `e7b2f8d`; the commit adding this document is the handoff checkpoint. User 1's January artifacts/evaluator from `origin/data-model` (`7e72522`) were previously integrated in `76680ac`. No new merge, forecast calculation, download, training, or long test run was performed for this checkpoint.
 

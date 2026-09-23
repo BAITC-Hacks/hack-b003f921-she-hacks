@@ -59,6 +59,39 @@ The February 14 example connects ECMWF weather, the adapter and both actual `.cb
 
 See [integration evidence](docs/ml_weather_integration.md) and output metadata for actual results, hashes and package versions.
 
+## User 2: completed February forecast schedule and demonstration
+
+The February schedule is complete: **29/29 daily issues, January 31–February 28 at 12:00 UTC**, 48 future hours for both turbines. In the explicitly assumed UTC+05 source clock, **all 672 February hours are covered for each turbine**, with no missing issue or forecast value. This is forecast generation and coverage, not a February accuracy score. The earlier January evaluation was not rerun.
+
+Weather comes from **Open-Meteo Single Runs API, ECMWF IFS** (`https://single-runs-api.open-meteo.com/v1/forecast`), selecting each day's 00:00 UTC initialization with an assumed 12-hour availability delay. The two requested turbine locations use the same weather grid cell. Wind at 100 m is an explicit technical choice, not a confirmed hub/sensor height. Archive origin remains `unverified`; availability, UTC+05, interval-start labels and zero extra observation delay remain `assumed`.
+
+`scripts/run_february_forecasts.py` calls the existing weather-to-power cycle only for missing compatible results. It uses the January models on January 31 and production models on February 1–28, checking completed training intervals under the same timezone assumption. It validates model/response/output hashes, reuses exact weather caches, keeps every issue and overlapping forecast, records failures while continuing, and saves versioned tables, alerts, coverage and an offline HTML report. The already completed February 14 predictions were checked and reused without another model invocation; their original files remain unchanged.
+
+Results: [`results/february_forecasts/ba114e109ecee099/`](results/february_forecasts/ba114e109ecee099/).
+
+- [`forecasts.csv`](results/february_forecasts/ba114e109ecee099/forecasts.csv): all **2,784** forecast cases, retaining issue/run/target times and original weather fields.
+- [`february_forecasts.csv`](results/february_forecasts/ba114e109ecee099/february_forecasts.csv): **2,652** cases whose targets fall within February in UTC+05; overlapping issues are retained.
+- [`alerts.csv`](results/february_forecasts/ba114e109ecee099/alerts.csv): **350** three-hour warning windows (179 / 171 by turbine), preserving issue/run identity. The 0.20 absolute drop is a demonstration threshold; overlapping windows are not independent observed events.
+- [`report.html`](results/february_forecasts/ba114e109ecee099/report.html): offline report with a real February 14 plot and searchable warning table; [`forecast.png`](results/february_forecasts/ba114e109ecee099/forecast.png) is the standalone plot.
+- `coverage.json`, `issues.csv`, `missing_hours.csv`, `weather_evidence.json`, `metadata.json`: actual coverage, all issue outcomes, source evidence, checks and assumptions.
+
+```powershell
+# Show the completed demonstration; no downloads, inference or local SCADA needed.
+Start-Process .\results\february_forecasts\ba114e109ecee099\report.html
+
+# Continue only missing issues; reuse matching existing results and exact weather cache.
+.\.venv\ml\python.exe -B scripts/run_february_forecasts.py --source-timezone Etc/GMT-5 --observation-delay-hours 0 --wind-height-m 100
+
+# Validate/reuse the entire completed schedule offline in this workspace.
+.\.venv\ml\python.exe -B scripts/run_february_forecasts.py --source-timezone Etc/GMT-5 --observation-delay-hours 0 --wind-height-m 100 --offline
+```
+
+Use the Python 3.11 setup above. Full per-issue artifacts are local in ignored `data/processed/february_runs/`; the reused February 14 run is in the previously tracked `results/forecast_runs/`. Cache bodies stay in ignored `data/weather_cache/`. A clean clone can show the tracked report immediately; an offline schedule rerun additionally needs the local full-run/cache files, while an online rerun can rebuild missing results. The wrapper never trains models or uses SCADA for forecasting. Failed or corrupt data cannot be presented as a new successful issue.
+
+Validation: seven focused February tests passed; a real completed 96-row example was verified unchanged, and the full schedule was repeated with network and model calls forbidden. All 29 results were reused. See [February completion report](docs/february_forecast_completion.md). No branches were merged and no pull request was created for this completion.
+
+February actual power is absent, so accuracy and alert effectiveness remain unmeasured. Historical publication/SCADA timing, archive provenance, and wind-height comparability remain unresolved. These limitations do not become confirmed merely because coverage is complete. Saule's measured-weather metrics and the preliminary January scores remain separate experiments.
+
 ## Forecast quality with archived weather — preliminary January evaluation
 
 The [preliminary January evaluation](docs/january_preliminary_evaluation.md) uses the separate `models/backtest_january/` models and 30 daily ECMWF runs, with issues January 1–30 at 12:00 UTC. All 30 issues succeeded. **2,844 paired cases, 726 of 744 local-January hours per turbine** were evaluated; the first 18 hours are uncovered by this schedule. Original full 48-hour predictions remain in ignored `data/processed/january_runs/`; compact, versioned evidence is in [results/january_preliminary/3335d4b8ac8bba15/](results/january_preliminary/3335d4b8ac8bba15/).
