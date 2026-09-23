@@ -1,85 +1,37 @@
-# hack-b003f921-she-hacks
-Hackathon team repository for She hacks
-Our topic is 
-```md
-# She Hacks — Agentic AI for Wind Power Forecasting
+She Hacks — Agentic AI for Wind Power Forecasting
 
-**Track:** Energy  
-**Case provider:** Samruk-Kazyna  
-**Status:** In development
+Track: Energy
+Case provider: Samruk-Kazyna
+Project status: In development
 
-## Project Overview
+Project Overview
 
-We are developing an automated system to forecast the hourly normalized power output of two wind turbines over the next 24–48 hours.
+We are developing an automated system that predicts the hourly normalized power output of two wind turbines for the next 24–48 hours. The system will collect weather forecasts, generate predictions, update them when new weather data becomes available, and warn operators about expected sharp decreases in power output.
 
-The system will retrieve weather forecasts, prepare model inputs, generate power predictions, and update the results when new weather forecasts become available. It will also alert operators to expected sharp decreases in power output.
+Team and Responsibilities
 
-## Team and Responsibilities
+User 1 — Saule: Data and Machine Learning
 
-| Member | Role | Responsibilities |
-|---|---|---|
-| User 1 — Saule | Data and Machine Learning | Data quality checks, hourly aggregation, baseline development, model training, historical evaluation, and the prediction interface |
-| User 2 — Kamila | Weather Data and Automation | Turbine coordinates, archived weather forecasts, weather data validation, pipeline integration, forecast versioning, alerts, and documentation |
+Saule is responsible for checking and preparing the turbine datasets, converting 10-minute observations into hourly data, developing a baseline, training the forecasting model, and evaluating its performance. She also provides the model interface for integration into the system.
 
-Shared responsibilities include agreeing on data formats, integrating components, checking reproducibility, and preparing the final demonstration.
+User 2 — Kamila: Weather Data and Automation
 
-## Planned Workflow
+Kamila is responsible for verifying turbine coordinates, retrieving archived weather forecasts, checking weather data quality, and integrating the automated workflow. She also handles forecast versioning, operator alerts, and project documentation.
 
-1. Retrieve a weather forecast available at the prediction issue time.
-2. Validate its timestamps, units, coverage, and completeness.
-3. Prepare features and pass them to the trained model.
-4. Predict hourly normalized power for each turbine over 24–48 hours.
-5. Save predictions with weather source information and the model version.
-6. Identify expected sharp changes in power output.
-7. Recalculate predictions when a new weather forecast becomes available.
+Both team members work together on data formats, integration, reproducibility checks, and the final demonstration.
 
-## Data
+How the System Will Work
 
-The provided datasets contain 10-minute observations for two turbines from March 2023 through January 31, 2026.
+The system retrieves a weather forecast available at the prediction issue time and checks its completeness, timestamps, and units. It then prepares the inputs for the trained model and generates hourly power predictions for each turbine. Predictions are saved with their weather source and model version. When a new weather forecast becomes available, the system updates the predictions.
 
-Available variables include:
+Data and Evaluation
 
-- Observation timestamp
-- Average wind speed
-- Normalized active power
-- Average ambient temperature
+The provided datasets contain 10-minute observations from March 2023 through January 31, 2026, including wind speed, temperature, and normalized active power.
 
-Observations will be aggregated into hourly records, with the number of measurements per hour retained to identify incomplete periods.
+The required forecasting period is February 1–28, 2026. Historical predictions must use only information available at the time of each calculation, including archived weather forecasts.
 
-Predictions are expressed as normalized power values between **0 and 1**. Conversion to MW requires confirmed turbine capacities and the normalization method.
+Model performance will be compared with a baseline on a chronological holdout period. Actual February power values are not included in the provided datasets, so February accuracy can only be measured once those values become available.
 
-## Historical Forecasting and Evaluation
+Collaboration
 
-The required forecast period is **February 1–28, 2026**.
-
-Each historical prediction must use only information available at its issue time. Archived weather forecasts must be used instead of future observed weather or reanalysis.
-
-Model performance will be evaluated on a chronological holdout period and compared with a baseline. Results will be reported separately for each turbine and forecast horizon.
-
-The provided datasets do not contain actual February power values. February accuracy metrics can therefore only be calculated after those observations become available.
-
-## Collaboration
-
-- Saule develops the data preparation and modeling components.
-- Kamila develops the weather and automation components in `user2-weather-pipeline`.
-- Both members make meaningful commits and push updates at least once per hour, as required by the hackathon.
-- Changes to shared input and output formats are agreed upon before integration.
-- The complete workflow is checked before changes are merged.
-
-## Roadmap
-
-- [ ] Inspect the turbine datasets and identify data quality issues
-- [ ] Verify access to suitable archived weather forecasts
-- [ ] Agree on the model input and output formats
-- [ ] Prepare hourly turbine data
-- [ ] Implement a baseline and the main forecasting model
-- [ ] Evaluate performance using historical forecast runs
-- [ ] Integrate the automated forecasting workflow
-- [ ] Generate the February forecasts
-- [ ] Add operator alerts for sharp power decreases
-- [ ] Document installation and reproducible execution
-
-## Setup and Execution
-
-Verified installation instructions, dependencies, and execution commands will be added after the first complete workflow is implemented.
-```
+Each team member works in a separate Git branch and makes meaningful commits and pushes at least once per hour, as required by the hackathon. Changes to shared data formats are agreed upon before integration. Installation instructions and verified execution commands will be added as the project develops.
