@@ -1,0 +1,203 @@
+{
+  "features": [
+    "mean_measured_wind_speed",
+    "mean_measured_temperature"
+  ],
+  "target": "mean_normalized_power",
+  "configs": {
+    "Linear Regression": {},
+    "Random Forest": {
+      "n_estimators": 300,
+      "max_depth": 12,
+      "min_samples_leaf": 5,
+      "max_features": 1.0,
+      "random_state": 42,
+      "n_jobs": 2
+    },
+    "CatBoost": {
+      "iterations": 600,
+      "depth": 6,
+      "learning_rate": 0.05,
+      "loss_function": "RMSE",
+      "random_seed": 42,
+      "thread_count": 2,
+      "verbose": false,
+      "allow_writing_files": false
+    }
+  },
+  "datasets": {
+    "turbine_1": {
+      "training_rows": 19403,
+      "validation_rows": 4360,
+      "excluded_rows": 1629,
+      "excluded_reasons": {
+        "empty_hour": 1629
+      },
+      "training_period": [
+        "2023-03-11 00:00:00",
+        "2025-07-31 23:00:00"
+      ],
+      "validation_period": [
+        "2025-08-01 00:00:00",
+        "2026-01-31 23:00:00"
+      ],
+      "training_partial_hours": 83,
+      "validation_partial_hours": 13
+    },
+    "turbine_2": {
+      "training_rows": 20647,
+      "validation_rows": 4357,
+      "excluded_rows": 388,
+      "excluded_reasons": {
+        "empty_hour": 388
+      },
+      "training_period": [
+        "2023-03-11 00:00:00",
+        "2025-07-31 23:00:00"
+      ],
+      "validation_period": [
+        "2025-08-01 00:00:00",
+        "2026-01-31 23:00:00"
+      ],
+      "training_partial_hours": 203,
+      "validation_partial_hours": 16
+    }
+  },
+  "results": [
+    {
+      "turbine": "turbine_1",
+      "model": "Linear Regression",
+      "mae": 0.08616552643843449,
+      "rmse": 0.10352000179645221,
+      "r2": 0.9126726150919373,
+      "fit_seconds": 0.005352699998184107,
+      "training_metrics": {
+        "mae": 0.08701966440988544,
+        "rmse": 0.11599468374445994,
+        "r2": 0.8968352616770708
+      },
+      "complete_hours_metrics": {
+        "mae": 0.08617006509250247,
+        "rmse": 0.10350743189250805,
+        "r2": 0.9126292976921235
+      },
+      "predictions_outside_0_1": 968
+    },
+    {
+      "turbine": "turbine_1",
+      "model": "Random Forest",
+      "mae": 0.02148568455335047,
+      "rmse": 0.04278706488816705,
+      "r2": 0.9850814400180635,
+      "fit_seconds": 5.6912054999993416,
+      "training_metrics": {
+        "mae": 0.02226191192024628,
+        "rmse": 0.06040314753542434,
+        "r2": 0.9720247323561735
+      },
+      "complete_hours_metrics": {
+        "mae": 0.021437697164717898,
+        "rmse": 0.04259854748306882,
+        "r2": 0.9852016824834082
+      },
+      "predictions_outside_0_1": 0
+    },
+    {
+      "turbine": "turbine_1",
+      "model": "CatBoost",
+      "mae": 0.02099153779115385,
+      "rmse": 0.04143442124849491,
+      "r2": 0.9860097824655952,
+      "fit_seconds": 1.2157459000009112,
+      "training_metrics": {
+        "mae": 0.025191589355947498,
+        "rmse": 0.06629289845045715,
+        "r2": 0.9663031638757799
+      },
+      "complete_hours_metrics": {
+        "mae": 0.020938526616960836,
+        "rmse": 0.04123648315548459,
+        "r2": 0.9861328887844863
+      },
+      "predictions_outside_0_1": 4
+    },
+    {
+      "turbine": "turbine_2",
+      "model": "Linear Regression",
+      "mae": 0.08882437512923379,
+      "rmse": 0.11038118046484215,
+      "r2": 0.9001613129497223,
+      "fit_seconds": 0.0016826999926706776,
+      "training_metrics": {
+        "mae": 0.08363669759162057,
+        "rmse": 0.10603037589950558,
+        "r2": 0.912757947877016
+      },
+      "complete_hours_metrics": {
+        "mae": 0.08866091781203912,
+        "rmse": 0.1097339053365586,
+        "r2": 0.9011945118268417
+      },
+      "predictions_outside_0_1": 978
+    },
+    {
+      "turbine": "turbine_2",
+      "model": "Random Forest",
+      "mae": 0.020879437534731964,
+      "rmse": 0.05369133874771113,
+      "r2": 0.9763779677423665,
+      "fit_seconds": 4.04115350000211,
+      "training_metrics": {
+        "mae": 0.0180463774949873,
+        "rmse": 0.04624394172063465,
+        "r2": 0.983405087730493
+      },
+      "complete_hours_metrics": {
+        "mae": 0.020672011592968977,
+        "rmse": 0.05270367961477432,
+        "r2": 0.9772080611099109
+      },
+      "predictions_outside_0_1": 0
+    },
+    {
+      "turbine": "turbine_2",
+      "model": "CatBoost",
+      "mae": 0.020304255131490596,
+      "rmse": 0.05324314648374267,
+      "r2": 0.976770694897636,
+      "fit_seconds": 1.2362702999962494,
+      "training_metrics": {
+        "mae": 0.020370143355356363,
+        "rmse": 0.05057052644202113,
+        "r2": 0.9801545834161975
+      },
+      "complete_hours_metrics": {
+        "mae": 0.02009439813085883,
+        "rmse": 0.05225996817806385,
+        "r2": 0.9775902155722261
+      },
+      "predictions_outside_0_1": 0
+    }
+  ],
+  "input_sha256": {
+    "data\\raw\\turbine 1.csv": "c4c341582fb2dd348b7187f0128cff265fe055f469413871ebb5db50eef58b5b",
+    "data\\raw\\turbine 2.csv": "820578cd18bb557cd30c2e102f3ae5a386dfc6c489a5a15743339c2b017305e5",
+    "data\\processed\\turbine_1_baseline_excluded.csv": "f28f74a0de89592d48cddeb8ffe2fc51e07d42ea7870667d637c2ed9188a9c04",
+    "data\\processed\\turbine_1_baseline_training.csv": "47957c5149cb1e5c9a825cc83613c3f511dc255ab1b19f260382585eb0c89e64",
+    "data\\processed\\turbine_1_baseline_validation.csv": "1cf00ca58cf3b5b04ed2eb6aa8df5ef2cf84113267a7d82033a1964d078d7e0d",
+    "data\\processed\\turbine_1_hourly.csv": "a61619e174a892462674e2277526b863aab994df8ac872285b4d8eefffef766e",
+    "data\\processed\\turbine_2_baseline_excluded.csv": "1dd6ac5292af6874332032de92cfc7e714270f58cdd8a321c9c1187b9250bb0d",
+    "data\\processed\\turbine_2_baseline_training.csv": "1af8c33270f36a28d10e91a66580fa43d1f34cb629f2d758d2bcac45a79db32b",
+    "data\\processed\\turbine_2_baseline_validation.csv": "243012b946eddc46f5def91bebf36780e6c90585651e25a102c17476b2378671",
+    "data\\processed\\turbine_2_hourly.csv": "fd9d111ed43f7fa0cd6da4c9009e13691c65a2406b35d4ebb1b1d900fc7f9b40"
+  },
+  "python_executable": "C:\\Users\\Asus\\Downloads\\SheHaks\\hack-b003f921-she-hacks\\.venv\\Scripts\\python.exe",
+  "versions": {
+    "python": "3.11.9",
+    "catboost": "1.2.8",
+    "sklearn": "1.6.1",
+    "numpy": "2.2.6",
+    "pandas": "2.2.3"
+  },
+  "verification": "Passed: original split/rows/values, finite predictions, baseline reproduction, independent metrics, prediction export readback, unchanged inputs"
+}
