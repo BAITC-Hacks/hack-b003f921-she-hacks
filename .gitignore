@@ -19,3 +19,6 @@ models/*
 !models/turbine_1_catboost.cbm
 !models/turbine_2_catboost.cbm
 !models/metadata.json
+
+# Validated runtime caches; original small evidence remains tracked.
+data/weather_cache/

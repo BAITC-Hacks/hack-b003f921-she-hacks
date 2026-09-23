@@ -9,7 +9,10 @@ import io
 import json
 from pathlib import Path
 
-from check_weather_archive import DATES, ROOT, check
+try:
+    from .check_weather_archive import DATES, ROOT, check
+except ImportError:  # Direct script execution.
+    from check_weather_archive import DATES, ROOT, check
 
 FIELD_MAP = {
     "temperature_2m_c": "temperature_2m",
@@ -30,6 +33,24 @@ def parse(value):
     return datetime.fromisoformat(value.replace("Z", "+00:00"))
 
 
+def forecast_rows(payload, result):
+    """Map a validated single run to the shared weather contract."""
+    issue, run = parse(result["calculation_utc"]), parse(result["initialization_utc"])
+    rows = []
+    for location, grid in zip(payload, result["locations"]):
+        hourly = location["hourly"]
+        times = [datetime.fromisoformat(t).replace(tzinfo=timezone.utc) for t in hourly["time"]]
+        for horizon in range(1, 49):
+            target = issue + timedelta(hours=horizon)
+            i = times.index(target)
+            row = {"issue_time_utc": stamp(issue), "weather_run_time_utc": stamp(run),
+                   "target_time_utc": stamp(target), "turbine_id": f"turbine_{grid['turbine']}",
+                   "forecast_horizon_h": int((target - issue).total_seconds() / 3600)}
+            row.update({dest: hourly[src][i] for dest, src in FIELD_MAP.items()})
+            rows.append(row)
+    return sorted(rows, key=lambda r: tuple(r[k] for k in COLUMNS[:4]))
+
+
 def build(dataset_id="weather_handoff_example_v1"):
     rows, runs = [], []
     for day in DATES:
@@ -41,18 +62,7 @@ def build(dataset_id="weather_handoff_example_v1"):
         result = check(day, body, request)
         payload = json.loads(body)
         issue, run = parse(result["calculation_utc"]), parse(result["initialization_utc"])
-        for location, grid in zip(payload, result["locations"]):
-            turbine = f"turbine_{grid['turbine']}"
-            hourly = location["hourly"]
-            times = [datetime.fromisoformat(t).replace(tzinfo=timezone.utc) for t in hourly["time"]]
-            for horizon in range(1, 49):
-                target = issue + timedelta(hours=horizon)
-                i = times.index(target)
-                row = {"issue_time_utc": stamp(issue), "weather_run_time_utc": stamp(run),
-                       "target_time_utc": stamp(target), "turbine_id": turbine,
-                       "forecast_horizon_h": int((target - issue).total_seconds() / 3600)}
-                row.update({dest: hourly[src][i] for dest, src in FIELD_MAP.items()})
-                rows.append(row)
+        rows.extend(forecast_rows(payload, result))
         runs.append({
             "issue_time_utc": stamp(issue), "weather_run_time_utc": stamp(run),
             "model": request["request_parameters"]["models"],

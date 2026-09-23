@@ -36,12 +36,12 @@ def utc(value):
     return value.isoformat(timespec="minutes").replace("+00:00", "Z")
 
 
-def query(day):
+def query(day, *, run_time=None, forecast_hours=61):
     return {
         "latitude": ",".join(f"{p[0]:.6f}" for p in TURBINES),
         "longitude": ",".join(f"{p[1]:.6f}" for p in TURBINES),
         "models": MODEL,
-        "run": f"{day}T00:00",
+        "run": run_time or f"{day}T00:00",
         "hourly": ",".join(UNITS),
         "wind_speed_unit": "ms",
         "temperature_unit": "celsius",
@@ -49,7 +49,7 @@ def query(day):
         "timeformat": "iso8601",
         # Single Runs rejects start_hour. Fetch init+0 through init+60,
         # then select calculation+1 through calculation+48 by valid time.
-        "forecast_hours": 61,
+        "forecast_hours": forecast_hours,
         "cell_selection": "nearest",
         # Disable elevation downscaling to make the grid comparison explicit.
         "elevation": "nan,nan",
@@ -89,8 +89,8 @@ def fetch(url, raw_path, metadata_path, params):
     return body, metadata
 
 
-def check(day, body, metadata):
-    params = query(day)
+def check(day, body, metadata, *, params=None, calculation=None):
+    params = query(day) if params is None else params
     url = ENDPOINT + "?" + urlencode(params)
     if metadata["request_url"] != url or metadata["request_parameters"] != params:
         raise ValueError("Saved request does not match the required model, run and parameters")
@@ -102,8 +102,8 @@ def check(day, body, metadata):
     if not isinstance(payload, list) or len(payload) != len(TURBINES):
         raise ValueError(f"Expected exactly two location responses: {str(payload)[:500]}")
     init = datetime.fromisoformat(params["run"]).replace(tzinfo=timezone.utc)
-    calculation = init + timedelta(hours=12)
-    expected_raw = [init + timedelta(hours=i) for i in range(61)]
+    calculation = init + timedelta(hours=12) if calculation is None else calculation
+    expected_raw = [init + timedelta(hours=i) for i in range(params["forecast_hours"])]
     expected_target = [calculation + timedelta(hours=i) for i in range(1, 49)]
     result = {
         "date": day,
@@ -115,7 +115,8 @@ def check(day, body, metadata):
         "availability_verified": False,
         "target_start_utc": utc(expected_target[0]),
         "target_end_utc": utc(expected_target[-1]),
-        "model_lead_hours": [13, 60],
+        "model_lead_hours": [(expected_target[0] - init).total_seconds() / 3600,
+                             (expected_target[-1] - init).total_seconds() / 3600],
         "locations": [],
     }
     for index, (location, requested) in enumerate(zip(payload, TURBINES)):

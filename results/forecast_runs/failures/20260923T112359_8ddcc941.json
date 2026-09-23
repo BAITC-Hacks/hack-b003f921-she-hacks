@@ -1,0 +1,9 @@
+{
+  "error_type": "ValueError",
+  "forecast_produced": false,
+  "issue_time_utc": "2026-02-14T12:00:00Z",
+  "reason": "Weather cache miss for the exact selected run/request in offline mode; no forecast produced",
+  "requested_weather_run_time_utc": null,
+  "status": "failed",
+  "weather_provenance_status": "unverified"
+}

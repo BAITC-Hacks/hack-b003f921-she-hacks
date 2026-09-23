@@ -2,6 +2,8 @@
 
 Completed 2026-09-23 on `user2-weather-pipeline`. This is real inference with the saved CatBoost models, not a February accuracy evaluation.
 
+This document records the initial integration preserved in commit `689ed7b`. The CLI now runs the generalized [full cycle](forecast_cycle.md); current commands and versioned output paths are in the root README. The original artifacts below remain unchanged.
+
 ## Git integration and preservation
 
 Pre-existing work was saved using `git stash push --include-untracked`, including the untracked Word document. Safety snapshot: `bc6017aeb6bec46cfe6a0a5d1fbf9fafd1df8eb0`. It remains in the stash list; it was applied, not popped or deleted.

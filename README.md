@@ -2,19 +2,37 @@
 
 User 1 provides turbine-specific CatBoost models and the prediction interface. User 2 provides archived-weather checks, the data contract and the offline integration adapter.
 
-## Setup and real-model integration
+## Setup and full forecast cycle
 
 Use Python 3.11 with `prediction/requirements.txt`. This workspace uses `.venv/ml/python.exe`; the system Python is 3.14. Recreate the isolated environment with Conda, or use another Python 3.11 virtual environment:
 
 ```powershell
 conda create --prefix .venv/ml --override-channels --channel conda-forge python=3.11 pip --yes
 .\.venv\ml\python.exe -m pip install -r prediction/requirements.txt
-.\.venv\ml\python.exe -B scripts/run_weather_integration.py --issue-time 2026-02-14T12:00:00Z --wind-height-m 100
+.\.venv\ml\python.exe -B scripts/run_weather_integration.py --issue-time 2026-02-14T12:00:00Z --wind-height-m 100 --model-dir models --drop-threshold 0.20
 ```
 
-Run from the repository root. The adapter selects one issue from saved weather, preserves original fields and UTC times, adds `temperature_c` and `wind_speed_ms`, then invokes the real batch CLI. No download or training occurs. Wind height accepts 10, 100 or 200 m; 100 m here is a technical assumption, not an established hub/sensor height.
+Run from the repository root. The cycle selects the latest 00/06/12/18 UTC ECMWF initialization at least 12 hours before issue time, reads an exact validated cache or downloads that individual run, validates weather, prepares model features, invokes the real batch CLI, checks predictions, analyzes power drops and atomically saves results. No training occurs. The existing February example seeds the cache from saved API responses, without another download. Wind height accepts 10, 100 or 200 m; 100 m is a technical assumption, not an established hub/sensor height.
 
-Artifacts: [`examples/integration_20260214_100m/`](examples/integration_20260214_100m/) contains `weather_model_input.csv`, `predictions.csv` and `metadata.json`. Different prior results are never overwritten; use a fresh `--output-dir` for another height/model/environment. Identical reruns preserve files.
+Each successful version lives at `results/forecast_runs/<issue>/<weather-run>/<input-version>/`, containing `weather.csv`, `weather_model_input.csv`, `predictions.csv`, `alerts.csv` and `metadata.json`. Identical reruns validate and reuse cached weather and outputs, without model inference. New weather runs, changed input/model hashes, heights or thresholds create separate versions. Old versions are retained. The earlier [integration artifacts](examples/integration_20260214_100m/) remain unchanged.
+
+`--issue-time` accepts any supported date at an exact UTC hour (required by the integer 1..48-hour contract). Use `--weather-run-time 2026-02-14T00:00:00Z` to select an older eligible cycle explicitly. A model directory must implement User 1's two-turbine metadata/artifact schema and pass the training-cutoff guard. Weather outside actual archive coverage fails; it is not synthesized. Useful options:
+
+```powershell
+# Repeat entirely offline: valid cache or exact saved evidence required.
+.\.venv\ml\python.exe -B scripts/run_weather_integration.py --issue-time 2026-02-14T12:00:00Z --wind-height-m 100 --model-dir models --drop-threshold 0.20 --offline
+
+# Demonstrate a cache-miss error without network access, even with an old successful forecast present.
+.\.venv\ml\python.exe -B scripts/run_weather_integration.py --issue-time 2026-02-14T12:00:00Z --wind-height-m 100 --offline --cache-dir .venv/empty-weather-cache --seed-dir .venv/no-weather-seeds
+```
+
+The latter intentionally exits 1 and writes a failure report, not a forecast. Missing/corrupt weather or outputs never fall back to an older run or report a new success. `--cache-dir`, `--seed-dir` and `--output-root` control storage. The ignored runtime weather cache is separate from tracked original evidence. To deliberately refresh an archived response, use a new cache directory; existing evidence is never overwritten.
+
+## Three-hour power-drop alerts
+
+For each turbine independently, compare forecast `P(t)` with `P(t+3h)` within the same issue/run. Emit an alert when `P(t) - P(t+3h) >= --drop-threshold`. **0.20 means 20 percentage points of normalized power, not a relative 20% decrease.** This is a demonstration threshold, not calibrated on history. “Current” means the forecast value at each target time, not observed power or power at issue time. The last three targets have no +3h endpoint and are not extrapolated; 45 pairs per turbine are checked. No alerts is valid and produces a header-only CSV. Overlapping alert windows are retained, not counted as independent physical events.
+
+The checked February cycle produced **96 predictions and 7 alert windows** (4 for turbine 1, 3 for turbine 2). See [cycle verification](docs/forecast_cycle.md) for results, cache behavior and error handling.
 
 The actual User 1 batch syntax is:
 
@@ -53,6 +71,6 @@ Final models include data through January 31 23:00 in an unspecified source time
 - [Data contract and daily schedule](docs/data_contract.md).
 - [Provenance evidence](docs/weather_archive_provenance.md), [organizer questions](docs/organizer_questions.md).
 - Rebuild weather example offline: `python -B scripts/build_weather_example.py`.
-- Tests: `.\.venv\ml\python.exe -B -m unittest prediction.test_interface scripts.test_weather_integration`.
+- Tests: `.\.venv\ml\python.exe -B -m unittest prediction.test_interface scripts.test_weather_integration agent.test_weather_pipeline`.
 
 Local environments and production datasets remain ignored. The deployable models and small examples are retained for reproducibility.
